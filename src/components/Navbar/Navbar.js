@@ -20,11 +20,19 @@ const Navbar = () => {
 
     return (
         <div className={classes.root}>
-            <Button>Home</Button>
-            <Button>About</Button>
-            <Button>Portfolio</Button>
+            <Link to="/">
+                <Button>Home</Button>
+            </Link>
+            <Link to="/about">
+                <Button>About</Button>
+            </Link>
+            <Link to="/portfolio">
+                <Button>Portfolio</Button>
+            </Link>
             <Button>Resume</Button>
-            <Button>Contact</Button>
+            <Link to="/contact">
+                <Button>Contact</Button>
+            </Link>
         </div>
     )
 };

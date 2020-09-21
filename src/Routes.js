@@ -7,7 +7,10 @@ import Desktop from './layout/Desktop';
 
 //VIEWS
 import {
-    Home
+    About,
+    Contact,
+    Home,
+    Portfolio
 }
 from './views'
 
@@ -18,6 +21,24 @@ const Routes = () => {
                 layout={Desktop}
                 view={Home}
                 path='/'
+                exact
+            />
+            <RouteWithLayout 
+                layout={Desktop}
+                view={About}
+                path='/about'
+                exact
+            />
+            <RouteWithLayout 
+                layout={Desktop}
+                view={Contact}
+                path='/contact'
+                exact
+            />
+            <RouteWithLayout 
+                layout={Desktop}
+                view={Portfolio}
+                path='/portfolio'
                 exact
             />
         </Switch>
