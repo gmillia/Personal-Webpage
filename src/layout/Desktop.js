@@ -4,12 +4,13 @@ import { makeStyles } from "@material-ui/styles";
 //COMPONENTS
 import { Navbar } from '../components';
 
+//IMAGE
+
 const useStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'flex-start',
-        justifyContent: 'center'
+        height: '100vh',
     }
 }))
 
