@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        background: 'black',
+        background: props => props.atHome ? 'black' : '#ECEBF3',
         position: 'sticky',
         top: 0
     },
@@ -21,12 +21,11 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const Navbar = () => {
-    const classes = useStyles();
     const [selected, setSelected] = useState();
+    const classes = useStyles({atHome: selected !== undefined &&  (selected === '' || selected === 'home')});
 
     //Need to setup initial by looking at the url
     useEffect(() => {
-        console.log(1)
         let url = window.location.pathname;
         let view = url.split('/')[1];
         setSelected(view)
