@@ -5,7 +5,8 @@ import Grid from '@material-ui/core/Grid';
 //Componentns
 import { 
     PersonalCard,
-    Skills
+    Skills,
+    Education
 } 
 from './components';
 
@@ -34,7 +35,15 @@ const useStyles = makeStyles(theme => ({
     education: {
         paddingLeft: 15,
         paddingRight: 15,
-        textAlign: 'left'
+        paddingBottom: 15,
+        textAlign: 'left',
+        borderBottom: '1px solid rgba(220,220,220,0.2)',
+    },
+    individual: {
+        paddingTop: 15,
+        paddingLeft: 15,
+        paddingRight: 15,
+        textAlign: 'left',
     }
 }))
 
@@ -55,9 +64,10 @@ const About = () => {
                     <Grid item xs={12} md={7} direction="column">
                         <Grid item xs={12} className={classes.education}>
                             <div className={classes.partName}>Education</div>
+                            <Education />
                         </Grid>
-                        <Grid item xs={12}>
-                            Personal
+                        <Grid item xs={12} className={classes.individual}>
+                            <div className={classes.partName}>Individual</div>
                         </Grid>
                     </Grid>
                 </Grid>
