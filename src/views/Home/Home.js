@@ -9,8 +9,8 @@ import Background from '../../assets/background.jpg'
 
 const useStyles = makeStyles(theme => ({
     root: {
-        height: '100vh',
-        fontFamily: 'Solway, serif',
+        flex: 1,
+        fontFamily: 'Raleway, sans-serif',
         background: `url(` + Background + `) no-repeat center center fixed`,
         WebkitBackgroundSize: 'cover',
         MozBackgroundSize: 'cover',
@@ -43,6 +43,26 @@ const useStyles = makeStyles(theme => ({
     },
     link: {
         textDecoration: 'none'
+    },
+    button: {
+        paddingTop: 15,
+        paddingBottom: 15,
+        paddingLeft: 30,
+        paddingRight: 30,
+        fontSize: 16,
+        border: '1px solid black',
+        borderColor: '#00e1b7',
+        background: 'rgba(64, 145, 108, 0.1)',
+        fontWeight: 100,
+        cursor: 'pointer',
+        color: 'white',
+        '&:hover': {
+            border: '1px dashed',
+            borderColor: '#00e1b7',
+            paddingLeft: 35,
+            paddingRight: 35,
+            transition: '0.3s'
+        }
     }
 }))
 
@@ -55,7 +75,7 @@ const Home = () => {
                 <div className={classes.name}>ILLIA SHERSHUN</div>
                 <div className={classes.outro}>Full-Stack Developer</div>
                 <Link to='/about' className={classes.link}>
-                    <Button variant='contained' color='primary'>LEARN MORE</Button>
+                    <button className={classes.button}>READ MORE</button>
                 </Link>
             </Grid>
         </Grid>
