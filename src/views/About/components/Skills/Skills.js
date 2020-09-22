@@ -1,24 +1,43 @@
 import React from 'react';
+import { makeStyles } from "@material-ui/styles";
 
 //Skill component
 import { Skill } from '../../../../components';
 
 //ICONS
-import BootstrapIcon from '../../../../assets/bootstrap.svg';
-import CIcon from '../../../../assets/c.svg';
-import CssIcon from '../../../../assets/css.svg';
-import GithubIcon from '../../../../assets/github.svg';
-import HtmlIcon from '../../../../assets/html.svg';
-import JavaIcon from '../../../../assets/java.svg';
-import JavascriptIcon from '../../../../assets/javascript.svg';
-import MysqlIcon from '../../../../assets/mysql.svg';
-import NodeIcon from '../../../../assets/nodejs.svg';
-import PythonIcon from '../../../../assets/python.svg';
-import ReactIcon from '../../../../assets/react.svg';
-import SkillIcon from '../../../../assets/skill.svg';
+import One from '../../../../assets/skills/one.jpg';
+import Two from '../../../../assets/skills/two.jpg';
+import Three from '../../../../assets/skills/three.jpg';
+import Four from '../../../../assets/skills/four.jpg';
+import Five from '../../../../assets/skills/five.jpg';
+import Six from '../../../../assets/skills/six.jpg';
+
+const useStyles = makeStyles(theme => ({
+    root: {
+        width: '100%',
+        display: 'flex',
+        alignItems: 'flex-start',
+        justifyContent: 'flex-start',
+        flexWrap: 'wrap',
+    },
+    nameWrapper: {
+        display: 'flex',
+        selfAlign: 'stretch',
+        fontSize: 40,
+        fontWeight: 100,
+        fontFamily: 'Francois One, sans-serif',
+        margin: 15,
+        letterSpacing: 21.67,
+        height: 200,
+        [theme.breakpoints.up('sm')]: {
+            transform: 'rotate(180deg)',
+            writingMode: 'vertical-rl',
+        },
+    },
+}))
 
 //Skill data
-const skills = ['JavaScript', 'Python', 'Java', 'C++', 'C', 'React', 'HTML', 'SQL', 'No SQL', 'Bootstrap', 'CSS', 'Git', 'GCP', 'Firebase', 'jQuery' ]
+const skills = ['React', 'Node.js', 'Python', 'C++', 'SQL', 'HTML5']
 
 /**
  * Helper function which returns svg Icon based on the name of the skill
@@ -26,18 +45,13 @@ const skills = ['JavaScript', 'Python', 'Java', 'C++', 'C', 'React', 'HTML', 'SQ
  */
 const getIcon = (name) => {
     switch(name.toUpperCase()) {
-        case 'BOOTSTRAP': return BootstrapIcon;
-        case 'C': case 'C++': return CIcon;
-        case 'CSS': return CssIcon;
-        case 'GIT': case 'GITHUB': return GithubIcon;
-        case 'HTML': return HtmlIcon;
-        case 'JAVA': return JavaIcon;
-        case 'JS': case 'JAVASCRIPT': return JavascriptIcon;
-        case 'MYSQL': case 'SQL': return MysqlIcon;
-        case 'NODE': return NodeIcon;
-        case 'PYTHON': return PythonIcon;
-        case 'REACT': return ReactIcon;
-        default: return SkillIcon;
+        case 'REACT': return One;
+        case 'NODE.JS': return Two;
+        case 'PYTHON': return Three;
+        case 'C++': return Four;
+        case 'SQL': return Five;
+        case 'HTML5': return Six;
+        default: return One;
     }
 }
 
@@ -45,10 +59,19 @@ const getIcon = (name) => {
  * Component which creates and returns skills
  */
 const Skills = () => {
+    const classes = useStyles();
+
     return (
-        skills.map((skillName, index) => {
-            return <Skill key={index} name={skillName} icon={getIcon(skillName)} />
-        })
+        <div className={classes.root}>
+            <div className={classes.nameWrapper}>
+                Skills
+            </div>
+            {
+                skills.map((skillName, index) => {
+                    return <Skill key={index} name={skillName} icon={getIcon(skillName)} isFirst={index===0} />
+                })
+            }
+        </div>
     )
 };
 

@@ -26,7 +26,6 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
     },
     skills: {
-        borderRight: '1px solid rgba(220,220,220,0.2)',
         paddingLeft: 15,
         paddingRight: 15
     },
@@ -77,10 +76,10 @@ const About = () => {
                     <PersonalCard />
                 </Grid>
                 <Grid item xs={12} md={7} className={classes.right}>
-                    <Grid item xs={12} md={5} className={classes.skills}>
-                    <div className={classes.partName}>Skills:</div>
-                    <Skills />
+                    <Grid item xs={12} className={classes.skills}>
+                        <Skills />
                     </Grid>
+                    {/*
                     <Grid item xs={12} md={7} direction="column">
                         <Grid item xs={12} className={classes.education}>
                             <div className={classes.partName}>Education</div>
@@ -95,6 +94,7 @@ const About = () => {
                             <Languages />
                         </Grid>
                     </Grid>
+                    */}
                 </Grid>
                 <Grid item xs={12} className={classes.life}>
                     <Grid item xs={5} className={classes.facts}>

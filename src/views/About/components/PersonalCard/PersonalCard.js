@@ -19,21 +19,22 @@ const useStyles = makeStyles(theme => ({
         MozBackgroundSize: 'cover',
         OBackgroundSize: 'cover',
         backgroundSize: 'cover !important',
-        height: '100%'
+        height: '100%',
+        marginTop: 15,
     },
     wrapper: {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'rgba(93,223,253, 0.6)',
+        backgroundColor: 'rgba(114, 126, 158, 0.3)',
         color: 'black',
         fontFamily: 'Cinzel, serif',
         minHeight: 'calc(100vh - 50px)',
         height: '100%',
         transitionDuration: '0.5s, 0.5s',
         '&:hover': {
-            backgroundColor: 'rgba(93,223,253, 0.3)',
+            backgroundColor: 'rgba(114, 126, 158, 0.1)',
             color: 'white'
         }
     },

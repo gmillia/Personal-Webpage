@@ -3,34 +3,36 @@ import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles(theme => ({
     root: {
-        background: 'rgba(255,255,255,0.05)',
-        marginBottom: 10,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-        maxWidth: '100%',
-        minHeight: 35,
-        //border: '1px solid black',
-        //borderColor: '#a9def9',
-        paddingTop: 5,
-        paddingBottom: 5,
-        paddingLeft: 10,
-        paddingRight: 10,
-        cursor: 'pointer',
-        transition: '0.3s, 0.3s',
-        '&:hover': {
-            //border: '1px dashed',
-            //borderColor: '#a9def9',
-            paddingLeft: 15,
-            paddingRight: 15,
-            background: 'rgba(255,255,255,0.2)',
+        background: props => `url(` + props.background + `) no-repeat center`,
+        WebkitBackgroundSize: 'cover',
+        MozBackgroundSize: 'cover',
+        OBackgroundSize: 'cover',
+        backgroundSize: 'cover !important',
+        flex: 'auto',
+        height: 200,
+        minWidth: 250,
+        margin: 15,
+        '&:nth-child(4n+1)': {
+            width: 325
         }
     },
-    skillName: {
-        paddingLeft: 15,
-        paddingRight: 15,
+    wrapper: {
+        height: '100%',
+        width: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'rgba(0,0,0,0.3)',
+        color: 'lightgrey',
         fontFamily: 'Cinzel, serif',
-    }
+        fontSize: 25,
+        transitionDuration: '0.5s, 0.5s',
+        '&:hover': {
+            backgroundColor: 'rgba(0,0,0,0.1)',
+            color: 'white',
+            fontSize: 28
+        }
+    },
 }))
 
 /**
@@ -38,15 +40,12 @@ const useStyles = makeStyles(theme => ({
  * @param {String} name name of the skill (e.g.: Javascript) 
  * @param {Node}   icon svg icon for the skill
  */
-const Skill = ({ name, icon }) => {
-    const classes = useStyles();
+const Skill = ({ name, icon, isFirst }) => {
+    const classes = useStyles({background: icon, isFirst: isFirst});
 
     return (
         <div className={classes.root}>
-            <div className={classes.iconWrapper}>
-            { <img src={icon} alt=' ' width='30' height='30' /> }
-            </div>
-            <div className={classes.skillName}>
+            <div className={classes.wrapper}>
             {name}
             </div>
         </div>
