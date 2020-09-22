@@ -6,6 +6,7 @@ import IconButton from '@material-ui/core/IconButton';
 
 //IMAGE
 import Me from '../../../../assets/me.png'
+import Me2 from '../../../../assets/me2.png'
 
 //ICONS
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -13,11 +14,11 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        background: `url(` + Me + `) no-repeat center`,
+        background: props => props.introductory ? `url(` + Me + `) no-repeat center` : `url(` + Me2 + `) no-repeat center`,
         WebkitBackgroundSize: 'cover',
         MozBackgroundSize: 'cover',
         OBackgroundSize: 'cover',
-        backgroundSize: 'cover',
+        backgroundSize: 'cover !important',
         height: '100%'
     },
     wrapper: {
@@ -29,12 +30,17 @@ const useStyles = makeStyles(theme => ({
         color: 'black',
         fontFamily: 'Cinzel, serif',
         minHeight: 'calc(100vh - 50px)',
-        height: '100%'
+        height: '100%',
+        transitionDuration: '0.5s, 0.5s',
+        '&:hover': {
+            backgroundColor: 'rgba(93,223,253, 0.3)',
+            color: 'white'
+        }
     },
     intro: {
         fontSize: 30,
         fontWeight: 700,
-        paddingTop: 230
+        paddingTop: 230,
     },    
     introInfo: {
         paddingTop: 15,
@@ -49,26 +55,31 @@ const useStyles = makeStyles(theme => ({
     },
 }))
 
-const PersonalCard = () => {
-    const classes = useStyles();
+const PersonalCard = ({ introductory=true }) => {
+    const classes = useStyles({introductory: introductory});
 
     return (
         <div className={classes.root}>
-            <div className={classes.wrapper}>
-                <div className={classes.intro}>Hey, I'm Illia.</div>
-                <div className={classes.introInfo}>full-stack developer from Portland, OR</div>
-                <Link to='/contact' style={{textDecoration: 'none'}}>
-                    <Button variant='contained' color='primary'>GET IN TOUCH</Button>
-                </Link>
-                <div className={classes.links}>
-                    <IconButton href='https://github.com/gmillia' target='_blank'>
-                        <GitHubIcon fontSize='small'/>
-                    </IconButton>
-                    <IconButton href='https://www.linkedin.com/in/illia-shershun/' target='_blank'>
-                        <LinkedInIcon />
-                    </IconButton>
-                </div>
-            </div>
+            {
+                introductory ? 
+                    <div className={classes.wrapper}>
+                        <div className={classes.intro}>Hey, I'm Illia.</div>
+                        <div className={classes.introInfo}>full-stack developer from Portland, OR</div>
+                        <Link to='/contact' style={{textDecoration: 'none'}}>
+                            <Button variant='contained' color='primary'>GET IN TOUCH</Button>
+                        </Link>
+                        <div className={classes.links}>
+                            <IconButton href='https://github.com/gmillia' target='_blank'>
+                                <GitHubIcon fontSize='small'/>
+                            </IconButton>
+                            <IconButton href='https://www.linkedin.com/in/illia-shershun/' target='_blank'>
+                                <LinkedInIcon />
+                            </IconButton>
+                        </div>
+                    </div>
+                    :
+                    <div className={classes.wrapper} />
+            }
         </div>
     )
 };

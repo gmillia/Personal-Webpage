@@ -3,25 +3,27 @@ import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles(theme => ({
     root: {
+        background: 'rgba(255,255,255,0.05)',
         marginBottom: 10,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-start',
         maxWidth: '100%',
         minHeight: 35,
-        border: '1px solid black',
-        borderColor: '#a9def9',
+        //border: '1px solid black',
+        //borderColor: '#a9def9',
         paddingTop: 5,
         paddingBottom: 5,
         paddingLeft: 10,
         paddingRight: 10,
         cursor: 'pointer',
+        transition: '0.3s, 0.3s',
         '&:hover': {
-            border: '1px dashed',
-            borderColor: '#a9def9',
+            //border: '1px dashed',
+            //borderColor: '#a9def9',
             paddingLeft: 15,
             paddingRight: 15,
-            transition: '0.3s'
+            background: 'rgba(255,255,255,0.2)',
         }
     },
     skillName: {

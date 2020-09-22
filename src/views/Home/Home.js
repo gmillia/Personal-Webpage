@@ -56,12 +56,14 @@ const useStyles = makeStyles(theme => ({
         fontWeight: 100,
         cursor: 'pointer',
         color: 'white',
+        transition: '0.3s, 0.3s',
         '&:hover': {
             border: '1px dashed',
             borderColor: '#00e1b7',
-            paddingLeft: 35,
-            paddingRight: 35,
-            transition: '0.3s'
+            letterSpacing: 1,
+            paddingLeft: 45,
+            paddingRight: 45,
+            background: 'rgba(64, 145, 108, 0.4)',
         }
     }
 }))

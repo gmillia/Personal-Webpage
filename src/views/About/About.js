@@ -6,20 +6,24 @@ import Grid from '@material-ui/core/Grid';
 import { 
     PersonalCard,
     Skills,
-    Education
+    Education,
+    Individual,
+    Languages,
+    Facts
 } 
 from './components';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        paddingBottom: 25
+        paddingTop: 25,
+        paddingBottom: 25,
+        color: 'lightgrey'
     },
     wrapper: {
 
     },
     right: {
         display: 'flex',
-        color: 'lightgrey'
     },
     skills: {
         borderRight: '1px solid rgba(220,220,220,0.2)',
@@ -40,10 +44,26 @@ const useStyles = makeStyles(theme => ({
         borderBottom: '1px solid rgba(220,220,220,0.2)',
     },
     individual: {
-        paddingTop: 15,
-        paddingLeft: 15,
-        paddingRight: 15,
+        padding: 15,
         textAlign: 'left',
+        borderBottom: '1px solid rgba(220,220,220,0.2)',
+    },
+    languages: {
+        padding: 15,
+        textAlign: 'left',
+    },
+    life: {
+        display: 'flex',
+        paddingTop: 50,
+
+    },
+    facts: {
+        paddingRight: 10
+    },
+    factsWrapper: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'row'
     }
 }))
 
@@ -58,7 +78,7 @@ const About = () => {
                 </Grid>
                 <Grid item xs={12} md={7} className={classes.right}>
                     <Grid item xs={12} md={5} className={classes.skills}>
-                    <div className={classes.partName}>SKILLS:</div>
+                    <div className={classes.partName}>Skills:</div>
                     <Skills />
                     </Grid>
                     <Grid item xs={12} md={7} direction="column">
@@ -68,7 +88,23 @@ const About = () => {
                         </Grid>
                         <Grid item xs={12} className={classes.individual}>
                             <div className={classes.partName}>Individual</div>
+                            <Individual />
                         </Grid>
+                        <Grid item xs={12} className={classes.languages}>
+                            <div className={classes.partName}>Languages</div>
+                            <Languages />
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid item xs={12} className={classes.life}>
+                    <Grid item xs={5} className={classes.facts}>
+                        <div className={classes.partName}>Quick Facts: </div>
+                        <Grid item xs={12} className={classes.factsWrapper}>
+                            <Facts />
+                        </Grid>
+                    </Grid>
+                    <Grid item xs={7}>
+                        <PersonalCard introductory={false} />
                     </Grid>
                 </Grid>
             </Grid>
