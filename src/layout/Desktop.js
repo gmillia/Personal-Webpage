@@ -11,7 +11,8 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         flexDirection: 'column',
         background: 'linear-gradient(#000000, #242424)',
-        minHeight: '100vh'
+        minHeight: '100vh',
+        height: 'auto'
     }
 }))
 

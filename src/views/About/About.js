@@ -13,12 +13,15 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { CallReceived } from '@material-ui/icons';
 
+//Componentns
+import { Skill } from '../../components';
+
 const useStyles = makeStyles(theme => ({
     root: {
-        flex: 1
+
     },
     wrapper: {
-        height: '-webkit-fill-available'
+
     },
     left: {
         background: `url(` + Me + `) no-repeat center`,
@@ -29,7 +32,8 @@ const useStyles = makeStyles(theme => ({
         height: '100%'
     },
     right: {
-        height: '100%'
+        display: 'flex',
+        color: 'white'
     },
     leftContent: {
         display: 'flex',
@@ -39,6 +43,7 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: 'rgba(93,223,253, 0.6)',
         color: 'black',
         fontFamily: 'Cinzel, serif',
+        minHeight: 'calc(100vh - 50px)',
         height: '100%'
     },
     intro: {
@@ -48,22 +53,36 @@ const useStyles = makeStyles(theme => ({
     },
     introInfo: {
         paddingTop: 15,
-        paddingBottom: 15
+        paddingBottom: 15,
+        textAlign: 'center'
     },
     links: {
         paddingTop: 20,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
+    },
+    skills: {
+        borderRight: '1px solid rgba(220,220,220,0.2)',
+        paddingLeft: 15,
+        paddingRight: 15
+    },
+    skillsName: {
+        fontSize: 30,
+        fontWeight: 100,
+        fontFamily: 'Francois One, sans-serif',
+        paddingBottom: 20
     }
 }))
+
+const skills = ['JavaScript', 'Python', 'Java', 'C++', 'C', 'React', 'HTML', 'SQL', 'No SQL', 'Bootstrap', 'CSS', 'Git', 'GCP', 'Firebase', 'jQuery' ]
 
 const About = () => {
     const classes = useStyles();
 
     return (
         <Grid container spacing={0} item xs={12} alignContent='flex-start' justify="center" className={classes.root}>
-            <Grid container spacing={0} item xs={12} md={8} alignContent='flex-start' justify="center" className={classes.wrapper} >
+            <Grid container spacing={0} item xs={12} md={10} alignContent='flex-start' justify="center" className={classes.wrapper} >
                 <Grid item xs={12} md={5} className={classes.left}>
                     <div className={classes.leftContent}>
                         <div className={classes.intro}>Hey, I'm Illia.</div>
@@ -81,7 +100,24 @@ const About = () => {
                         </div>
                     </div>
                 </Grid>
-                <Grid item xs={12} md={7} className={classes.right}></Grid>
+                <Grid item xs={12} md={7} className={classes.right}>
+                    <Grid item xs={12} md={6} className={classes.skills}>
+                    <div className={classes.skillsName}>SKILLS:</div>
+                    {
+                        skills.map((skillName, index) => {
+                            return <Skill key={index} name={skillName} />
+                        })
+                    }
+                    </Grid>
+                    <Grid item xs={12} md={6} direction="column">
+                        <Grid item xs={12}>
+                            Education
+                        </Grid>
+                        <Grid item xs={12}>
+                            Personal
+                        </Grid>
+                    </Grid>
+                </Grid>
             </Grid>
         </Grid>
     )
