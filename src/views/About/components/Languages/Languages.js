@@ -12,9 +12,11 @@ import { Language } from '../../../../components';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        paddingLeft: 15,
         display: 'flex',
-        alignItems: 'flex-start'
+        alignItems: 'flex-start',
+        background: 'rgba(183, 151, 255, 0.5)',
+        marginLeft: 15,
+        marginRight: 15,
     },
     name: {
         display: 'flex',
@@ -33,6 +35,7 @@ const useStyles = makeStyles(theme => ({
     },
     content: {
         display: 'flex',
+        alignItems: 'flex-end',
         flexDirection: 'column',
         paddingLeft: 15
     },
@@ -50,7 +53,6 @@ const Languages = () => {
 
     return (
         <Grid container item xs={12} spacing={0} alignItems='center' className={classes.root} >
-            <Grid item xs={12} md={2} className={classes.name}>LANGUAGES</Grid>
             <Grid item xs={12} md={10} className={classes.content}>
                 <Grid item xs={12} className={classes.flag}>
                     <img src={EnglishIcon} alt=' ' width='100%' height='100%' />
@@ -62,6 +64,7 @@ const Languages = () => {
                     <img src={UkrainianIcon} alt=' ' width='100%' height='100%'/>
                 </Grid>
             </Grid>
+            <Grid item xs={12} md={2} className={classes.name}>LANGUAGES</Grid>
         </Grid>
     )
 };

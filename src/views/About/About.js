@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
     },
     pageTwoWrapper: {
         height: '100%',
-        flex: 1,
+        //flex: 1,
         backgroundColor: 'rgba(0,0,0, 0.7)',
         fontFamily: 'Cinzel, serif',
     },
@@ -55,15 +55,15 @@ const About = () => {
                     <Skills />
                 </Grid>
                 <Grid container spacing={0} item xs={12} className={classes.pageTwoRoot}>
-                    <Grid className={classes.pageTwoWrapper}>
+                    <Grid container spacing={0} item xs={12} className={classes.pageTwoWrapper}>
                         <Grid item xs={12}>
                             <Education />
                         </Grid>
-                        <Grid item xs={12} md={6}>
-                            <Languages />
+                        <Grid item xs={12} md={8}>
+                            <div style={{display:'flex',alignSelf:'stretch', width:'100%',height:'100px',background:'white'}}></div>
                         </Grid>
-                        <Grid item xs={12} md={6}>
-                            <div style={{display:'flex',alignSelf:'stretch', width:'100%',height:'530px',background:'white'}}></div>
+                        <Grid item xs={12} md={4}>
+                            <Languages />
                         </Grid>
                     </Grid>
                 </Grid>
