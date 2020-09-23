@@ -8,9 +8,9 @@ const useStyles = makeStyles(theme => ({
         MozBackgroundSize: 'cover',
         OBackgroundSize: 'cover',
         backgroundSize: 'cover !important',
-        flex: 'auto',
-        height: 'calc((100vh - 135px) / 4)', //50px navbar + 25px top + (3x15 paddings) + 15 bottom padding
-        width: '100%'
+        height: 150,
+        minWidth: 200,
+        color: 'black'
     },
     wrapper: {
         height: '100%',
@@ -19,15 +19,8 @@ const useStyles = makeStyles(theme => ({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'rgba(0,0,0,0.3)',
-        color: 'lightgrey',
         fontFamily: 'Cinzel, serif',
         fontSize: 25,
-        transitionDuration: '0.5s, 0.5s',
-        '&:hover': {
-            backgroundColor: 'rgba(0,0,0,0.1)',
-            color: 'white',
-            fontSize: 35
-        }
     },
 }))
 
@@ -36,7 +29,7 @@ const useStyles = makeStyles(theme => ({
  * @param {String} name name of the skill (e.g.: Javascript) 
  * @param {Node}   icon svg icon for the skill
  */
-const Skill = ({ name, icon,  }) => {
+const Language = ({ name, icon,  }) => {
     const classes = useStyles({background: icon});
 
     return (
@@ -48,4 +41,4 @@ const Skill = ({ name, icon,  }) => {
     )
 };
 
-export default Skill;
+export default Language;

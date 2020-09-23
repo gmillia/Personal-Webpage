@@ -1,56 +1,44 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        display: 'flex',
-        alignItems: 'flex-start',
-        justifyContent: 'flex-start',
-        marginBottom: 15
-    },
-    imageWrapper: {
-        border: '1px solid #a9def9',
-        padding: 10,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: 'white'
-    },
-    infoWrapper: {
+        backgroundColor: 'rgba(96, 48, 140, 0.3)',
+        minHeight: 200,
+        width: '100%',
+        padding: 25,
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'flex-startr',
-        justifyContent: 'flex-start',
-        alignSelf: 'stretch',
-        paddingLeft: 15,
-        paddingRight: 5
+        alignItems: 'flex-start',
+        justifyContent: 'flex-start'
     },
-    header: {
-        fontSize: 28,
-        color: 'white'
+    school: {
+        marginBottom: 25,
+        fontSize: 30,
+        fontWeight: 700
     },
-    text: {
-        paddingTop: 5
-    }
+    years: {
+        paddingBottom: 10,
+        fontSize: 20
+    },
+    diploma: {
+        paddingTop: 5,
+        paddingBottom: 5,
+        borderTop: '1px solid rgba(255,255,255,0.5)',
+        borderBottom: '1px solid rgba(255,255,255,0.5)',
+    }   
 }))
 
-const EducationCard = ({ icon, header, text }) => {
-    const classes = useStyles();
+const EducationCard = ({ school='School Name', years='0000-9999', diploma='Diploma of Moon' }) => {
+    const classes = useStyles({});
 
     return (
-        <div className={classes.root}>
-            <div className={classes.imageWrapper}>
-                <img src={icon} alt=' ' width='64' height='64' />
-            </div>
-            <div className={classes.infoWrapper}>
-                <div className={classes.header}>
-                    {header}
-                </div>
-                <div className={classes.text}>
-                    {text}
-                </div>
-            </div>
-        </div>
+        <Grid container item spacing={0} xs={12} className={classes.root} >
+            <Grid item xs={12} className={classes.school} >{school}</Grid>
+            <Grid item xs={12} className={classes.years} >{years}</Grid>
+            <Grid item xs={12} className={classes.diploma} >{diploma}</Grid>
+        </Grid>
     )
 };
 

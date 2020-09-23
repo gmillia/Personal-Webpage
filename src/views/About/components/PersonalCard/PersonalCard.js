@@ -19,31 +19,31 @@ const useStyles = makeStyles(theme => ({
         MozBackgroundSize: 'cover',
         OBackgroundSize: 'cover',
         backgroundSize: 'cover !important',
-        height: '100%',
-        marginTop: 15,
+        height: 'calc(100vh - 90px)'
     },
     wrapper: {
+        height: '100%',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'rgba(114, 126, 158, 0.3)',
+        backgroundColor: 'rgba(96, 48, 140, 0.3)',
         color: 'black',
         fontFamily: 'Cinzel, serif',
-        minHeight: 'calc(100vh - 50px)',
-        height: '100%',
         transitionDuration: '0.5s, 0.5s',
+        fontSize: 30, 
+        fontWeight: 700,
         '&:hover': {
-            backgroundColor: 'rgba(114, 126, 158, 0.1)',
-            color: 'white'
+            backgroundColor: 'rgba(	96, 48, 140, 0.1)',
+            color: 'white',
+            fontSize: 40
         }
     },
     intro: {
-        fontSize: 30,
-        fontWeight: 700,
         paddingTop: 230,
     },    
     introInfo: {
+        fontSize: 20,
         paddingTop: 15,
         paddingBottom: 15,
         textAlign: 'center'

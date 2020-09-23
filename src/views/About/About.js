@@ -13,57 +13,33 @@ import {
 } 
 from './components';
 
+//IMAGES
+import EducationBackground from '../../assets/education/education.jpg';
+
 const useStyles = makeStyles(theme => ({
     root: {
         paddingTop: 25,
         paddingBottom: 25,
         color: 'lightgrey'
     },
-    wrapper: {
-
-    },
-    right: {
-        display: 'flex',
-    },
-    skills: {
-        paddingLeft: 15,
-        paddingRight: 15
-    },
-    partName: {
-        fontSize: 30,
-        fontWeight: 100,
-        fontFamily: 'Francois One, sans-serif',
-        paddingBottom: 20
-    },
-    education: {
-        paddingLeft: 15,
-        paddingRight: 15,
+    pageItem: {
         paddingBottom: 15,
-        textAlign: 'left',
         borderBottom: '1px solid rgba(220,220,220,0.2)',
     },
-    individual: {
-        padding: 15,
-        textAlign: 'left',
-        borderBottom: '1px solid rgba(220,220,220,0.2)',
+    pageTwoRoot: {
+        background: `url(` + EducationBackground + `) no-repeat center`,
+        WebkitBackgroundSize: 'cover',
+        MozBackgroundSize: 'cover',
+        OBackgroundSize: 'cover',
+        backgroundSize: 'cover !important',
+        height: 'calc(100vh - 90px)'
     },
-    languages: {
-        padding: 15,
-        textAlign: 'left',
+    pageTwoWrapper: {
+        height: '100%',
+        flex: 1,
+        backgroundColor: 'rgba(0,0,0, 0.7)',
+        fontFamily: 'Cinzel, serif',
     },
-    life: {
-        display: 'flex',
-        paddingTop: 50,
-
-    },
-    facts: {
-        paddingRight: 10
-    },
-    factsWrapper: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        flexDirection: 'row'
-    }
 }))
 
 const About = () => {
@@ -72,39 +48,23 @@ const About = () => {
     return (
         <Grid container spacing={0} item xs={12} alignContent='flex-start' justify="center" className={classes.root}>
             <Grid container spacing={0} item xs={12} md={10} alignContent='flex-start' justify="center" className={classes.wrapper} >
-                <Grid item xs={12} md={5} className={classes.left}>
+                <Grid item xs={12} md={5} className={classes.pageItem}>
                     <PersonalCard />
                 </Grid>
-                <Grid item xs={12} md={7} className={classes.right}>
-                    <Grid item xs={12} className={classes.skills}>
-                        <Skills />
-                    </Grid>
-                    {/*
-                    <Grid item xs={12} md={7} direction="column">
-                        <Grid item xs={12} className={classes.education}>
-                            <div className={classes.partName}>Education</div>
+                <Grid item xs={12} md={7} className={classes.pageItem}>
+                    <Skills />
+                </Grid>
+                <Grid container spacing={0} item xs={12} className={classes.pageTwoRoot}>
+                    <Grid className={classes.pageTwoWrapper}>
+                        <Grid item xs={12}>
                             <Education />
                         </Grid>
-                        <Grid item xs={12} className={classes.individual}>
-                            <div className={classes.partName}>Individual</div>
-                            <Individual />
-                        </Grid>
-                        <Grid item xs={12} className={classes.languages}>
-                            <div className={classes.partName}>Languages</div>
+                        <Grid item xs={12} md={6}>
                             <Languages />
                         </Grid>
-                    </Grid>
-                    */}
-                </Grid>
-                <Grid item xs={12} className={classes.life}>
-                    <Grid item xs={5} className={classes.facts}>
-                        <div className={classes.partName}>Quick Facts: </div>
-                        <Grid item xs={12} className={classes.factsWrapper}>
-                            <Facts />
+                        <Grid item xs={12} md={6}>
+                            <div style={{display:'flex',alignSelf:'stretch', width:'100%',height:'530px',background:'white'}}></div>
                         </Grid>
-                    </Grid>
-                    <Grid item xs={7}>
-                        <PersonalCard introductory={false} />
                     </Grid>
                 </Grid>
             </Grid>

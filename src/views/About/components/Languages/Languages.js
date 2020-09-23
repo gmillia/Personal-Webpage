@@ -1,34 +1,68 @@
 import React from 'react';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
 
 //ICONS
-import EnglishIcon from '../../../../assets/english.svg';
-import RussianIcon from '../../../../assets/russia.svg';
-import UkrainianIcon from '../../../../assets/ukraine.svg';
-import SkillIcon from '../../../../assets/skill.svg';
+import EnglishIcon from '../../../../assets/languages/english.jpg';
+import RussianIcon from '../../../../assets/languages/russian.png';
+import UkrainianIcon from '../../../../assets/languages/ukrainian.jpg';
 
 //Skill component
-import { Skill } from '../../../../components';
+import { Language } from '../../../../components';
 
-const languages = ['English', 'Russian', 'Ukrainian', ]
-
-/**
- * Helper function which returns svg Icon based on the name of the skill
- * @param {String} name name of the skill
- */
-const getIcon = (name) => {
-    switch(name.toUpperCase()) {
-        case 'ENGLISH': return EnglishIcon;
-        case 'RUSSIAN': return RussianIcon;
-        case 'UKRAINIAN': return UkrainianIcon;
-        default: return SkillIcon;
+const useStyles = makeStyles(theme => ({
+    root: {
+        paddingLeft: 15,
+        display: 'flex',
+        alignItems: 'flex-start'
+    },
+    name: {
+        display: 'flex',
+        alignItems: 'flex-end',
+        paddingTop: 15,
+        paddingBottom: 15,
+        fontSize: 40,
+        fontWeight: 100,
+        fontFamily: 'Francois One, sans-serif',
+        [theme.breakpoints.up('sm')]: {
+            height: 'calc(100vh - 90px - 317px)',
+            letterSpacing: 'calc(((100vh - 90px - 317px - 179px - 75px) / 8))',
+            transform: 'rotate(360deg)',
+            writingMode: 'vertical-rl',
+        },
+    },
+    content: {
+        display: 'flex',
+        flexDirection: 'column',
+        paddingLeft: 15
+    },
+    flag: {
+        maxWidth: 250,
+        height: 'calc((100vh - 90px - 317px - 30px) / 3)',
+        display: 'flex',
+        alignItems: 'flex-start',
+        padding: 15,
     }
-}
+}))
 
 const Languages = () => {
+    const classes = useStyles();
+
     return (
-        languages.map((language, index) => {
-            return <Skill key={index} name={language} icon={getIcon(language)} />
-        })
+        <Grid container item xs={12} spacing={0} alignItems='center' className={classes.root} >
+            <Grid item xs={12} md={2} className={classes.name}>LANGUAGES</Grid>
+            <Grid item xs={12} md={10} className={classes.content}>
+                <Grid item xs={12} className={classes.flag}>
+                    <img src={EnglishIcon} alt=' ' width='100%' height='100%' />
+                </Grid>
+                <Grid item xs={12} className={classes.flag}>
+                    <img src={RussianIcon} alt=' ' width='100%' height='100%'/>
+                </Grid>
+                <Grid item xs={12} className={classes.flag}>
+                    <img src={UkrainianIcon} alt=' ' width='100%' height='100%'/>
+                </Grid>
+            </Grid>
+        </Grid>
     )
 };
 
