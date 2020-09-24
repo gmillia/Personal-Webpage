@@ -16,13 +16,14 @@ const useStyles = makeStyles(theme => ({
     wrapper: {
         display: 'flex',
         alignItems: 'flex-start',
-        background: 'rgba(183, 151, 255, 0.5)',
+        background: 'rgba(130,106,237, 0.3)',
         padding: 15
     },
     name: {
         fontSize: 37,
         fontWeight: 100,
         fontFamily: 'Francois One, sans-serif',
+        color: "white",
         [theme.breakpoints.up('sm')]: {
             transform: 'rotate(360deg)',
             writingMode: 'vertical-rl',

@@ -23,11 +23,13 @@ const useStyles = makeStyles(theme => ({
         padding: 15
     },
     name: {
+        paddingRight: 15,
         fontSize: 37,
         fontWeight: 100,
         fontFamily: 'Francois One, sans-serif',
         textAlign: 'end',
-        textDecoration: 'overline'
+        textDecoration: 'overline',
+        color: 'white'
     },
     personal: {
         padding: 15

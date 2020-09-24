@@ -1,3 +1,4 @@
+export * from './Page';
 export * from './Navbar';
 export * from './RouteWithLayout';
 export * from './PortfolioCard';
@@ -6,3 +7,4 @@ export * from './Buttons';
 export * from './EducationCard';
 export * from './Fact';
 export * from './Language';
+export * from './PersonalCard';

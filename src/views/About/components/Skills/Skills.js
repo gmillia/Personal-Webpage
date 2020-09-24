@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
         paddingLeft: 15,
         [theme.breakpoints.down('xs')]: {
             paddingLeft: 0
-        }
+        },
     },
     nameWrapper: {
         fontSize: 40,
@@ -30,6 +30,7 @@ const useStyles = makeStyles(theme => ({
         fontFamily: 'Francois One, sans-serif',
         letterSpacing: 45,
         paddingLeft: 15,
+        color: 'white',
         [theme.breakpoints.up('sm')]: {
             height: 'calc((100vh - 135px) / 4)',
             letterSpacing: 'calc((((100vh - 135px) / 4) - 114px) / 5)', //get height: (100vh - 135px) / 5, subtract regular space that letters take (114 px), and divide by 5 (number of spaces we need)

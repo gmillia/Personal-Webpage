@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
         fontFamily: 'Francois One, sans-serif',
         textDecoration: 'underline',
         paddingLeft:15,
-
+        color: 'white'
     },
 }))
 
