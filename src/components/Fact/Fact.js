@@ -1,8 +1,6 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/styles";
 
-//Circle icon
-import CircleIcon from '../../assets/circle.svg';
 
 const useStyles = makeStyles(theme => ({
     root: {

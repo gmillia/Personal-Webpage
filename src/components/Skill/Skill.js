@@ -18,14 +18,14 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'rgba(0,0,0,0.3)',
+        backgroundColor: 'rgba(0,0,0,0.6)',
         color: 'white',
         fontFamily: 'Cinzel, serif',
         fontSize: 25,
         transitionDuration: '0.5s, 0.5s',
         '&:hover': {
-            backgroundColor: 'rgba(0,0,0,0.1)',
-            color: 'black',
+            backgroundColor: 'rgba(0,0,0,0.3)',
+            color: 'lightgrey',
             fontSize: 35
         }
     },

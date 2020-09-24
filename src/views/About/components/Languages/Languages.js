@@ -7,9 +7,6 @@ import EnglishIcon from '../../../../assets/languages/english.jpg';
 import RussianIcon from '../../../../assets/languages/russian.png';
 import UkrainianIcon from '../../../../assets/languages/ukrainian.jpg';
 
-//Skill component
-import { Language } from '../../../../components';
-
 const useStyles = makeStyles(theme => ({
     root: {
         padding: 15,
@@ -37,6 +34,7 @@ const useStyles = makeStyles(theme => ({
         flexDirection: 'column',
     },
     flag: {
+        opacity: '0.7',
         maxWidth: 250,
         display: 'flex',
         alignItems: 'flex-start',

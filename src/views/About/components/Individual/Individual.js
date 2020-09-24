@@ -1,37 +1,60 @@
 import React from 'react';
+import { makeStyles } from "@material-ui/styles";
+import Grid from '@material-ui/core/Grid';
 
-//Skill component
+//Images
+import Analytics from '../../../../assets/skills/analytics.jpeg'
+import Leadership from '../../../../assets/skills/leadership.jpeg'
+import Organization from '../../../../assets/skills/organization.jpeg'
+import Communication from '../../../../assets/skills/communication.jpeg'
+
 import { Skill } from '../../../../components';
 
-//ICONS
-import AnalyticsIcon from '../../../../assets/analytics.svg';
-import LeadershipIcon from '../../../../assets/leadership.svg';
-import OrganizationIcon from '../../../../assets/organization.svg';
-import CollaborationIcon from '../../../../assets/collaboration.svg';
-import SkillIcon from '../../../../assets/skill.svg';
-
-//data
-const skills = ['Analytics', 'Leadership', 'Organization', 'Collaboration']
-
-/**
- * Helper function which returns svg Icon based on the name of the skill
- * @param {String} name name of the skill
- */
-const getIcon = (name) => {
-    switch(name.toUpperCase()) {
-        case 'ANALYTICS': return AnalyticsIcon;
-        case 'LEADERSHIP': case 'GITHUB': return LeadershipIcon;
-        case 'ORGANIZATION': return OrganizationIcon;
-        case 'COLLABORATION': return CollaborationIcon;
-        default: return SkillIcon;
+const useStyles = makeStyles(theme => ({
+    root: {
+        padding: 15,
+        height: '100%',
+        flex: 1
+    },
+    wrapper: {
+        display: 'flex',
+        alignItems: 'flex-start',
+        background: 'rgba(130,106,237, 0.3)',
+        padding: 15
+    },
+    name: {
+        fontSize: 37,
+        fontWeight: 100,
+        fontFamily: 'Francois One, sans-serif',
+        textAlign: 'end',
+        textDecoration: 'overline'
+    },
+    personal: {
+        padding: 15
     }
-}
+}))
 
 const Individual = () => {
+    const classes = useStyles();
+
     return (
-        skills.map((skillName, index) => {
-            return <Skill key={index} name={skillName} icon={getIcon(skillName)} />
-        })
+        <Grid container spacing={0} className={classes.root}>
+            <Grid container spacing={0} className={classes.wrapper}>
+                <Grid item xs={12} className={classes.name}>PERSONALITY</Grid>
+                <Grid item xs={12} md={6} className={classes.personal} >
+                    <Skill icon={Analytics} name="Analytics" />
+                </Grid>
+                <Grid item xs={12} md={6} className={classes.personal} >
+                    <Skill icon={Leadership} name='Leadership' />
+                </Grid>
+                <Grid item xs={12} md={6} className={classes.personal} >
+                    <Skill icon={Organization} name='Organization' />
+                </Grid>
+                <Grid item xs={12} md={6} className={classes.personal} >
+                    <Skill icon={Communication} name='Communication' />
+                </Grid>
+            </Grid>
+        </Grid>
     )
 };
 

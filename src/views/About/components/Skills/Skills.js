@@ -6,12 +6,12 @@ import Grid from '@material-ui/core/Grid';
 import { Skill } from '../../../../components';
 
 //ICONS
-import One from '../../../../assets/skills/one.jpg';
-import Two from '../../../../assets/skills/two.jpg';
-import Three from '../../../../assets/skills/three.jpg';
-import Four from '../../../../assets/skills/four.jpg';
-import Five from '../../../../assets/skills/five.jpg';
-import Six from '../../../../assets/skills/six.jpg';
+import ProgrammingOne from '../../../../assets/skills/programming1.jpeg';
+import ProgrammingTwo from '../../../../assets/skills/programming2.jpg';
+import ProgrammingThree from '../../../../assets/skills/programming3.jpg';
+import ProgrammingFour from '../../../../assets/skills/programming4.jpg';
+import ProgrammingFive from '../../../../assets/skills/programming5.jpg';
+import ProgrammingSix from '../../../../assets/skills/programming6.jpeg';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -55,9 +55,6 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-//Skill data
-const skills = ['React', 'Node.js', 'Python', 'C++', 'SQL', 'HTML5']
-
 /**
  * Component which creates and returns skills
  */
@@ -70,22 +67,22 @@ const Skills = () => {
                 SKILLS
             </Grid>
             <Grid item xs={12} md={11} className={classes.skill}>
-                <Skill name='React' icon={One} />
+                <Skill name='React' icon={ProgrammingOne} />
             </Grid>
             <Grid item xs={12} md={8} className={classes.skill}>
-                <Skill name='Node.js' icon={Two} />
+                <Skill name='Node.js' icon={ProgrammingTwo} />
             </Grid>
             <Grid item xs={12} md={4} className={classes.skill}>
-                <Skill name='Python' icon={Three} />
+                <Skill name='Python' icon={ProgrammingThree} />
             </Grid>
             <Grid item xs={12} md={5} className={classes.skill}>
-                <Skill name='C++' icon={Four} />
+                <Skill name='C++' icon={ProgrammingFour} />
             </Grid>
             <Grid item xs={12} md={7} className={classes.skill}>
-                <Skill name='SQL' icon={Five} />
+                <Skill name='SQL' icon={ProgrammingFive} />
             </Grid>
             <Grid item xs={12} className={classes.lastSkill}>
-                <Skill name='HTML5' icon={Six} />
+                <Skill name='HTML5' icon={ProgrammingSix} />
             </Grid>
         </Grid>
     )
