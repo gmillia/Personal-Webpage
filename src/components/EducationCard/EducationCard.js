@@ -4,19 +4,20 @@ import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles(theme => ({
     root: {
+        padding: 15,
+    },
+    wrapper: {
         backgroundColor: 'rgba(96, 48, 140, 0.3)',
-        minHeight: 200,
+        height: '100%',
         width: '100%',
         padding: 25,
         display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        justifyContent: 'flex-start'
+        alignItems: 'flex-end'
     },
     school: {
         marginBottom: 25,
         fontSize: 30,
-        fontWeight: 700
+        fontWeight: 700,
     },
     years: {
         paddingBottom: 10,
@@ -34,10 +35,12 @@ const EducationCard = ({ school='School Name', years='0000-9999', diploma='Diplo
     const classes = useStyles({});
 
     return (
-        <Grid container item spacing={0} xs={12} className={classes.root} >
-            <Grid item xs={12} className={classes.school} >{school}</Grid>
-            <Grid item xs={12} className={classes.years} >{years}</Grid>
-            <Grid item xs={12} className={classes.diploma} >{diploma}</Grid>
+        <Grid item xs={12} md={6} className={classes.root} >
+            <Grid container spacing={0} item xs={12} className={classes.wrapper}>
+                <Grid item xs={12} className={classes.school} >{school}</Grid>
+                <Grid item xs={12} className={classes.years} >{years}</Grid>
+                <Grid item xs={12} className={classes.diploma} >{diploma}</Grid>
+            </Grid>
         </Grid>
     )
 };

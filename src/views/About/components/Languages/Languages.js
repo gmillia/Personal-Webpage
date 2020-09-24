@@ -12,23 +12,21 @@ import { Language } from '../../../../components';
 
 const useStyles = makeStyles(theme => ({
     root: {
+        padding: 15,
+        height: '100%',
+        flex: 1
+    },
+    wrapper: {
         display: 'flex',
         alignItems: 'flex-start',
         background: 'rgba(183, 151, 255, 0.5)',
-        marginLeft: 15,
-        marginRight: 15,
+        padding: 15
     },
     name: {
-        display: 'flex',
-        alignItems: 'flex-end',
-        paddingTop: 15,
-        paddingBottom: 15,
-        fontSize: 40,
+        fontSize: 37,
         fontWeight: 100,
         fontFamily: 'Francois One, sans-serif',
         [theme.breakpoints.up('sm')]: {
-            height: 'calc(100vh - 90px - 317px)',
-            letterSpacing: 'calc(((100vh - 90px - 317px - 179px - 75px) / 8))',
             transform: 'rotate(360deg)',
             writingMode: 'vertical-rl',
         },
@@ -37,14 +35,19 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         alignItems: 'flex-end',
         flexDirection: 'column',
-        paddingLeft: 15
     },
     flag: {
         maxWidth: 250,
-        height: 'calc((100vh - 90px - 317px - 30px) / 3)',
         display: 'flex',
         alignItems: 'flex-start',
-        padding: 15,
+        "&:nth-child(2)":{
+            paddingTop: 15,
+            paddingBottom: 15
+        },
+    }, 
+    middle: {
+        paddingTop: 15,
+        paddingBottom: 15
     }
 }))
 
@@ -52,19 +55,21 @@ const Languages = () => {
     const classes = useStyles();
 
     return (
-        <Grid container item xs={12} spacing={0} alignItems='center' className={classes.root} >
-            <Grid item xs={12} md={10} className={classes.content}>
-                <Grid item xs={12} className={classes.flag}>
-                    <img src={EnglishIcon} alt=' ' width='100%' height='100%' />
+        <Grid container spacing={0} className={classes.root} >
+            <Grid container spacing={0} className={classes.wrapper}>
+                <Grid item xs={12} md={10} className={classes.content}>
+                    <Grid item xs={12} className={classes.flag}>
+                        <img src={EnglishIcon} alt=' ' width='100%' height='100%' />
+                    </Grid>
+                    <Grid item xs={12} className={classes.flag}>
+                        <img src={RussianIcon} alt=' ' width='100%' height='100%'/>
+                    </Grid>
+                    <Grid item xs={12} className={classes.flag}>
+                        <img src={UkrainianIcon} alt=' ' width='100%' height='100%'/>
+                    </Grid>
                 </Grid>
-                <Grid item xs={12} className={classes.flag}>
-                    <img src={RussianIcon} alt=' ' width='100%' height='100%'/>
-                </Grid>
-                <Grid item xs={12} className={classes.flag}>
-                    <img src={UkrainianIcon} alt=' ' width='100%' height='100%'/>
-                </Grid>
+                <Grid item xs={12} md={2} className={classes.name}>LANGUAGES</Grid>
             </Grid>
-            <Grid item xs={12} md={2} className={classes.name}>LANGUAGES</Grid>
         </Grid>
     )
 };

@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
         MozBackgroundSize: 'cover',
         OBackgroundSize: 'cover',
         backgroundSize: 'cover !important',
-        height: 150,
+        //height: 150,
         minWidth: 200,
         color: 'black'
     },

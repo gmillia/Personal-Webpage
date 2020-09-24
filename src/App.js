@@ -8,7 +8,18 @@ import { createMuiTheme } from "@material-ui/core/styles";
 const browserHistory = createBrowserHistory();
 
 function App() {
-	const theme = createMuiTheme();
+	const theme = createMuiTheme({
+		page: {
+			//50px navbar, 15 top and bottom paddings
+			height: 'calc(100vh - 51px - 15px - 15px)',
+			padding: 15,
+			margin: 15
+		},
+		block: {
+			padding: 15,
+			margin: 15,
+		}
+	});
 
 	return (
 		<ThemeProvider theme={theme}>

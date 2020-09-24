@@ -18,13 +18,12 @@ import EducationBackground from '../../assets/education/education.jpg';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        paddingTop: 25,
-        paddingBottom: 25,
+        width: '100%',
         color: 'lightgrey'
     },
-    pageItem: {
-        paddingBottom: 15,
-        borderBottom: '1px solid rgba(220,220,220,0.2)',
+    pageWrapper:{
+        minHeight: theme.page.height,
+        margin: theme.page.margin
     },
     pageTwoRoot: {
         background: `url(` + EducationBackground + `) no-repeat center`,
@@ -32,13 +31,13 @@ const useStyles = makeStyles(theme => ({
         MozBackgroundSize: 'cover',
         OBackgroundSize: 'cover',
         backgroundSize: 'cover !important',
-        height: 'calc(100vh - 90px)'
+        minHeight: theme.page.height,
+        margin: theme.page.margin
     },
     pageTwoWrapper: {
-        height: '100%',
-        //flex: 1,
         backgroundColor: 'rgba(0,0,0, 0.7)',
         fontFamily: 'Cinzel, serif',
+
     },
 }))
 
@@ -48,22 +47,24 @@ const About = () => {
     return (
         <Grid container spacing={0} item xs={12} alignContent='flex-start' justify="center" className={classes.root}>
             <Grid container spacing={0} item xs={12} md={10} alignContent='flex-start' justify="center" className={classes.wrapper} >
-                <Grid item xs={12} md={5} className={classes.pageItem}>
-                    <PersonalCard />
+                <Grid item container spacing={0} xs={12} className={classes.pageWrapper}>
+                    <Grid item xs={12} md={5} >
+                        <PersonalCard />
+                    </Grid>
+                    <Grid item xs={12} md={7} >
+                        <Skills />
+                    </Grid>
                 </Grid>
-                <Grid item xs={12} md={7} className={classes.pageItem}>
-                    <Skills />
-                </Grid>
-                <Grid container spacing={0} item xs={12} className={classes.pageTwoRoot}>
-                    <Grid container spacing={0} item xs={12} className={classes.pageTwoWrapper}>
-                        <Grid item xs={12}>
-                            <Education />
-                        </Grid>
-                        <Grid item xs={12} md={8}>
-                            <div style={{display:'flex',alignSelf:'stretch', width:'100%',height:'100px',background:'white'}}></div>
-                        </Grid>
-                        <Grid item xs={12} md={4}>
-                            <Languages />
+                <Grid container spacing={0} className={classes.pageTwoRoot}>
+                    <Grid item xs={12} className={classes.pageTwoWrapper}>
+                        <Education />
+                        <Grid container spacing={0} >
+                            <Grid item xs={12} md={8}>
+                                <Languages />
+                            </Grid>
+                            <Grid item xs={12} md={4} >
+                                <Languages />
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Grid>

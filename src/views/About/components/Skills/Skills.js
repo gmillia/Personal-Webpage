@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         alignItems: 'flex-start',
         justifyContent: 'flex-start',
-        minHeight: 'calc(100vh - 90px)',
+        minHeight: theme.page.height,
         paddingLeft: 15,
         [theme.breakpoints.down('xs')]: {
             paddingLeft: 0

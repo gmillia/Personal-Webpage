@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
         OBackgroundSize: 'cover',
         backgroundSize: 'cover !important',
         flex: 'auto',
-        height: 'calc((100vh - 135px) / 4)', //50px navbar + 25px top + (3x15 paddings) + 15 bottom padding
+        height: 'calc((' + theme.page.height + ' - 45px) / 4)',
         width: '100%'
     },
     wrapper: {
@@ -19,13 +19,13 @@ const useStyles = makeStyles(theme => ({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'rgba(0,0,0,0.3)',
-        color: 'lightgrey',
+        color: 'white',
         fontFamily: 'Cinzel, serif',
         fontSize: 25,
         transitionDuration: '0.5s, 0.5s',
         '&:hover': {
             backgroundColor: 'rgba(0,0,0,0.1)',
-            color: 'white',
+            color: 'black',
             fontSize: 35
         }
     },

@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
         MozBackgroundSize: 'cover',
         OBackgroundSize: 'cover',
         backgroundSize: 'cover !important',
-        height: 'calc(100vh - 90px)'
+        height: '100%'
     },
     wrapper: {
         height: '100%',
