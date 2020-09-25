@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/illia/static/js/main.ae594b38.chunk.js",
-    "main.js.map": "/illia/static/js/main.ae594b38.chunk.js.map",
+    "main.js": "/illia/static/js/main.15d32c9e.chunk.js",
+    "main.js.map": "/illia/static/js/main.15d32c9e.chunk.js.map",
     "runtime-main.js": "/illia/static/js/runtime-main.afbf09d6.js",
     "runtime-main.js.map": "/illia/static/js/runtime-main.afbf09d6.js.map",
-    "static/js/2.2fff062c.chunk.js": "/illia/static/js/2.2fff062c.chunk.js",
-    "static/js/2.2fff062c.chunk.js.map": "/illia/static/js/2.2fff062c.chunk.js.map",
+    "static/js/2.c64553d1.chunk.js": "/illia/static/js/2.c64553d1.chunk.js",
+    "static/js/2.c64553d1.chunk.js.map": "/illia/static/js/2.c64553d1.chunk.js.map",
     "index.html": "/illia/index.html",
-    "precache-manifest.ca6c38701567d339a0d4f17df323c582.js": "/illia/precache-manifest.ca6c38701567d339a0d4f17df323c582.js",
+    "precache-manifest.eac1de54edb31cd0277d87830dbbab81.js": "/illia/precache-manifest.eac1de54edb31cd0277d87830dbbab81.js",
     "service-worker.js": "/illia/service-worker.js",
-    "static/js/2.2fff062c.chunk.js.LICENSE.txt": "/illia/static/js/2.2fff062c.chunk.js.LICENSE.txt",
+    "static/js/2.c64553d1.chunk.js.LICENSE.txt": "/illia/static/js/2.c64553d1.chunk.js.LICENSE.txt",
     "static/media/analytics.jpeg": "/illia/static/media/analytics.2eb36274.jpeg",
     "static/media/background.jpg": "/illia/static/media/background.d10b02c9.jpg",
     "static/media/betting.jpg": "/illia/static/media/betting.748e7ce4.jpg",
@@ -35,7 +35,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.afbf09d6.js",
-    "static/js/2.2fff062c.chunk.js",
-    "static/js/main.ae594b38.chunk.js"
+    "static/js/2.c64553d1.chunk.js",
+    "static/js/main.15d32c9e.chunk.js"
   ]
 }
