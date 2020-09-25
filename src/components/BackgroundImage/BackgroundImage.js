@@ -11,12 +11,12 @@ const useStyles = makeStyles(theme => ({
         flex: 'auto',
         width: '100%',
         height: '100%',
-
+        minHeight: props => props.minHeight
     },
 }))
 
-const BackgroundImage = ({ background, children}) => {
-    const classes = useStyles({background: background });
+const BackgroundImage = ({ background, children, minHeight='auto'}) => {
+    const classes = useStyles({background: background, minHeight: minHeight });
 
     return (
         <div className={classes.root}>

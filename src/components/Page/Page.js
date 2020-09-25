@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     wrapper: {
         backgroundColor: props => props.useBackground ? 'rgba(0,0,0, 0.7)' : '',
         fontFamily: 'Cinzel, serif',
-        padding: 15,
+
         display: 'flex',
         flexDirection: 'column'
     },
@@ -26,7 +26,7 @@ const Page = ({ background='', children, changeHeight='' }) => {
     const classes = useStyles({ background: background, useBackground: background.length > 0, changeHeight });
 
     return (
-        <Grid container spacing={0} className={classes.root}>
+        <Grid container spacing={4} className={classes.root}>
             <Grid item xs={12} className={classes.wrapper}>
             {children}
             </Grid>

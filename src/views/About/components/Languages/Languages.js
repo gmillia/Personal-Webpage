@@ -9,24 +9,33 @@ import UkrainianIcon from '../../../../assets/languages/ukrainian.jpg';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        padding: '0px 0px 0px 0px',
         height: '100%',
-        flex: 1
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap'
     },
     wrapper: {
-        display: 'flex',
-        alignItems: 'space-between',
         background: 'rgba(130,106,237, 0.3)',
-        padding: 15
+        flex: 1,
+        display: 'flex',
+        flexFlow: 'row wrap',
     },
     name: {
-        fontSize: 37,
+        width: '100%',
+        fontSize: 40,
         fontWeight: 100,
         fontFamily: 'Francois One, sans-serif',
         color: "white",
+        textAlign: 'center',
+        textDecoration: 'underline',
+        paddingBottom: 16,
         [theme.breakpoints.up('sm')]: {
             transform: 'rotate(360deg)',
             writingMode: 'vertical-rl',
+            textAlign: 'end',
+            paddingBottom: 0,
+            paddingLeft: 16,
+            width: 'auto'
         },
     },
     content: {
@@ -39,16 +48,7 @@ const useStyles = makeStyles(theme => ({
         maxWidth: 250,
         display: 'flex',
         alignItems: 'flex-start',
-        '&:nth-child(1)': {
-            paddingBottom: 15
-        },
-        "&:nth-child(2)":{
-            paddingTop: 15,
-            paddingBottom: 15
-        },
-        '&:nth-child(3)': {
-            paddingTop: 15
-        }
+
     }, 
 }))
 
@@ -58,19 +58,17 @@ const Languages = () => {
     return (
         <Grid container spacing={0} className={classes.root} >
             <Grid container spacing={0} className={classes.wrapper}>
-                <Grid item xs={12} md={10} className={classes.content}>
-                    <Grid item xs={12} className={classes.flag}>
-                        <img src={EnglishIcon} alt=' ' width='100%' height='100%' />
-                    </Grid>
-                    <Grid item xs={12} className={classes.flag}>
-                        <img src={RussianIcon} alt=' ' width='100%' height='100%'/>
-                    </Grid>
-                    <Grid item xs={12} className={classes.flag}>
-                        <img src={UkrainianIcon} alt=' ' width='100%' height='100%'/>
-                    </Grid>
+                <Grid item xs={12} className={classes.flag}>
+                    <img src={EnglishIcon} alt=' ' width='100%' height='100%' />
                 </Grid>
-                <Grid item xs={12} md={2} className={classes.name}>LANGUAGES</Grid>
+                <Grid item xs={12} className={classes.flag}>
+                    <img src={RussianIcon} alt=' ' width='100%' height='100%'/>
+                </Grid>
+                <Grid item xs={12} className={classes.flag}>
+                    <img src={UkrainianIcon} alt=' ' width='100%' height='100%'/>
+                </Grid>
             </Grid>
+            <Grid className={classes.name}>LANGUAGES</Grid>
         </Grid>
     )
 };

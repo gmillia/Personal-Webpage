@@ -41,13 +41,13 @@ const useStyles = makeStyles(theme => ({
         flexDirection: 'row'
     },
     skill: {
-        padding: '0px 0px 15px 15px',
+
         [theme.breakpoints.down('xs')]: {
             //margin: 15,
         }
     },
     lastSkill: {
-        padding: '0px 0px 0px 15px',
+
         [theme.breakpoints.down('xs')]: {
             //padding: 15,
         }

@@ -10,3 +10,6 @@ export * from './Language';
 export * from './PersonalCard';
 export * from './BackgroundImage';
 export * from './Foreground';
+
+//Building block
+export * from './Container';

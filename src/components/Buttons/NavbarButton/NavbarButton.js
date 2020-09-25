@@ -18,7 +18,8 @@ const useStyles = makeStyles(theme => ({
         fontFamily: 'Raleway, sans-serif',
         background: 'none',
         cursor: 'pointer',
-        outline: 'none'
+        outline: 'none',
+        fontWeight: 400
     },
     selected: {
         color: 'white',

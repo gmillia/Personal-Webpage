@@ -19,9 +19,7 @@ const One = () => {
                 <Grid item xs={12} md={5} >
                     <PersonalCard />
                 </Grid>
-                <Grid item xs={12} md={7} >
-                    <Skills />
-                </Grid>
+
             </Grid>
         </Page>
     )

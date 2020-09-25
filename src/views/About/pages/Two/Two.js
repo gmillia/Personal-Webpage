@@ -12,8 +12,13 @@ import EducationBackground from '../../../../assets/education/education.jpg';
 
 const useStyles = makeStyles(theme => ({
     wrapper: {
-        flex: '1 1 auto'
 
+        height: '100%'
+    },
+    individualWrapper: {
+        [theme.breakpoints.up('sm')]: {
+            minHeight: '70%',
+        }
     }
 }))
 
@@ -25,14 +30,14 @@ const Two = () => {
 
     return (
         <Page background={EducationBackground} changeHeight={' + 30px'}>
-            <Education />
-            <Grid container spacing={0} className={classes.wrapper} >
-                <Grid item xs={12} md={8}>
+            <Grid container spacing={4} className={classes.wrapper} >
+                <Grid item xs={12}>
+                    <Education />
+                </Grid>
+                <Grid item xs={12} className={classes.individualWrapper}>
                     <Individual />
                 </Grid>
-                <Grid item xs={12} md={4} >
-                    <Languages />
-                </Grid>
+
             </Grid>
         </Page>
     )

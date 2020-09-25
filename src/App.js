@@ -18,6 +18,9 @@ function App() {
 		block: {
 			padding: 15,
 			margin: 15,
+		},
+		overrides: {
+			
 		}
 	});
 
