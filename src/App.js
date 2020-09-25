@@ -11,7 +11,7 @@ function App() {
 	const theme = createMuiTheme({
 		page: {
 			//50px navbar, 15 top and bottom paddings
-			height: 'calc(100vh - 51px - 15px - 15px)',
+			height: 'calc(100vh - 51px - 15px - 15px - 15px - 15px)',
 			padding: 15,
 			margin: 15
 		},

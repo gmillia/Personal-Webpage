@@ -9,17 +9,21 @@ const useStyles = makeStyles(theme => ({
         MozBackgroundSize: 'cover',
         OBackgroundSize: 'cover',
         backgroundSize: 'cover !important',
-        minHeight: theme.page.height,
-        margin: theme.page.margin
+        minHeight: props => 'calc(' + theme.page.height + props.changeHeight + ')',
+        margin: theme.page.margin,
     },
     wrapper: {
         backgroundColor: props => props.useBackground ? 'rgba(0,0,0, 0.7)' : '',
         fontFamily: 'Cinzel, serif',
+        padding: 15,
+        display: 'flex',
+        flexDirection: 'column'
     },
 }))
 
-const Page = ({ background='', children }) => {
-    const classes = useStyles({ background: background, useBackground: background.length > 0 });
+const Page = ({ background='', children, changeHeight='' }) => {
+    console.log(changeHeight)
+    const classes = useStyles({ background: background, useBackground: background.length > 0, changeHeight });
 
     return (
         <Grid container spacing={0} className={classes.root}>

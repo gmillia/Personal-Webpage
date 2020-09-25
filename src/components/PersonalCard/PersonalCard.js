@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        background: 'rgba(4,5,46, 0.5)',
+        background: 'rgba(0,0,0, 0.2)',
         color: 'white',
         fontFamily: 'Cinzel, serif',
         transitionDuration: '0.5s, 0.5s',

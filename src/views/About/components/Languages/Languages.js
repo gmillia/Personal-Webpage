@@ -9,13 +9,13 @@ import UkrainianIcon from '../../../../assets/languages/ukrainian.jpg';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        padding: 15,
+        padding: '0px 0px 0px 0px',
         height: '100%',
         flex: 1
     },
     wrapper: {
         display: 'flex',
-        alignItems: 'flex-start',
+        alignItems: 'space-between',
         background: 'rgba(130,106,237, 0.3)',
         padding: 15
     },
@@ -39,15 +39,17 @@ const useStyles = makeStyles(theme => ({
         maxWidth: 250,
         display: 'flex',
         alignItems: 'flex-start',
+        '&:nth-child(1)': {
+            paddingBottom: 15
+        },
         "&:nth-child(2)":{
             paddingTop: 15,
             paddingBottom: 15
         },
+        '&:nth-child(3)': {
+            paddingTop: 15
+        }
     }, 
-    middle: {
-        paddingTop: 15,
-        paddingBottom: 15
-    }
 }))
 
 const Languages = () => {

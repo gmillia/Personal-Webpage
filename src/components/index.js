@@ -8,3 +8,5 @@ export * from './EducationCard';
 export * from './Fact';
 export * from './Language';
 export * from './PersonalCard';
+export * from './BackgroundImage';
+export * from './Foreground';

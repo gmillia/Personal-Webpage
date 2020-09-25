@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/styles";
 import Grid from '@material-ui/core/Grid';
 
 //Skill component
-import { Skill } from '../../../../components';
+import { Skill, BackgroundImage, Foreground } from '../../../../components';
 
 //ICONS
 import ProgrammingOne from '../../../../assets/skills/programming1.jpeg';
@@ -18,8 +18,6 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         alignItems: 'flex-start',
         justifyContent: 'flex-start',
-        minHeight: theme.page.height,
-        paddingLeft: 15,
         [theme.breakpoints.down('xs')]: {
             paddingLeft: 0
         },
@@ -32,8 +30,8 @@ const useStyles = makeStyles(theme => ({
         paddingLeft: 15,
         color: 'white',
         [theme.breakpoints.up('sm')]: {
-            height: 'calc((100vh - 135px) / 4)',
-            letterSpacing: 'calc((((100vh - 135px) / 4) - 114px) / 5)', //get height: (100vh - 135px) / 5, subtract regular space that letters take (114 px), and divide by 5 (number of spaces we need)
+            height: 'calc((100vh - 165px) / 4)',
+            letterSpacing: 'calc((((100vh - 165px) / 4) - 114px) / 5)', //get height: (100vh - 135px) / 5, subtract regular space that letters take (114 px), and divide by 5 (number of spaces we need)
             transform: 'rotate(180deg)',
             writingMode: 'vertical-rl',
         },
@@ -45,13 +43,13 @@ const useStyles = makeStyles(theme => ({
     skill: {
         padding: '0px 0px 15px 15px',
         [theme.breakpoints.down('xs')]: {
-            padding: 15,
+            //margin: 15,
         }
     },
     lastSkill: {
         padding: '0px 0px 0px 15px',
         [theme.breakpoints.down('xs')]: {
-            padding: 15,
+            //padding: 15,
         }
     }
 }))

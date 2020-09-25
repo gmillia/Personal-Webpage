@@ -9,8 +9,7 @@ const useStyles = makeStyles(theme => ({
         OBackgroundSize: 'cover',
         backgroundSize: 'cover !important',
         flex: 'auto',
-        height: 'calc((' + theme.page.height + ' - 45px) / 4)',
-        width: '100%'
+        height: props => props.calcHeight ? 'calc((' + theme.page.height + ' - 45px) / 4)' : 'inherit',
     },
     wrapper: {
         height: '100%',
@@ -26,7 +25,7 @@ const useStyles = makeStyles(theme => ({
         '&:hover': {
             backgroundColor: 'rgba(0,0,0,0.3)',
             color: 'lightgrey',
-            fontSize: 35
+            fontSize: 35,
         }
     },
 }))
@@ -36,8 +35,8 @@ const useStyles = makeStyles(theme => ({
  * @param {String} name name of the skill (e.g.: Javascript) 
  * @param {Node}   icon svg icon for the skill
  */
-const Skill = ({ name, icon,  }) => {
-    const classes = useStyles({background: icon});
+const Skill = ({ name, icon, calcHeight=true }) => {
+    const classes = useStyles({background: icon, calcHeight: calcHeight});
 
     return (
         <div className={classes.root}>
