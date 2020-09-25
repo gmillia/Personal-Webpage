@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "44e51e5dfad76e61734c3676c9a1bdc8",
+    "revision": "a04a18fb1136943a98b927ce61700839",
     "url": "/illia/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/illia/static/js/2.2fff062c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "839d5b5668aa5d46ce4c",
-    "url": "/illia/static/js/main.96213134.chunk.js"
+    "revision": "3f282e568f5f40e91b8c",
+    "url": "/illia/static/js/main.79afa113.chunk.js"
   },
   {
     "revision": "65a13ac2ffc1e95ba30c",
