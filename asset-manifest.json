@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/illia/static/js/main.ae594b38.chunk.js",
-    "main.js.map": "/illia/static/js/main.ae594b38.chunk.js.map",
+    "main.js": "/illia/static/js/main.96213134.chunk.js",
+    "main.js.map": "/illia/static/js/main.96213134.chunk.js.map",
     "runtime-main.js": "/illia/static/js/runtime-main.afbf09d6.js",
     "runtime-main.js.map": "/illia/static/js/runtime-main.afbf09d6.js.map",
     "static/js/2.2fff062c.chunk.js": "/illia/static/js/2.2fff062c.chunk.js",
     "static/js/2.2fff062c.chunk.js.map": "/illia/static/js/2.2fff062c.chunk.js.map",
     "index.html": "/illia/index.html",
-    "precache-manifest.c83373f2069d25d144b890fd90493850.js": "/illia/precache-manifest.c83373f2069d25d144b890fd90493850.js",
+    "precache-manifest.75bd09c2bf782b3e4428293047f7e556.js": "/illia/precache-manifest.75bd09c2bf782b3e4428293047f7e556.js",
     "service-worker.js": "/illia/service-worker.js",
     "static/js/2.2fff062c.chunk.js.LICENSE.txt": "/illia/static/js/2.2fff062c.chunk.js.LICENSE.txt",
     "static/media/analytics.jpeg": "/illia/static/media/analytics.2eb36274.jpeg",
@@ -36,6 +36,6 @@
   "entrypoints": [
     "static/js/runtime-main.afbf09d6.js",
     "static/js/2.2fff062c.chunk.js",
-    "static/js/main.ae594b38.chunk.js"
+    "static/js/main.96213134.chunk.js"
   ]
 }
