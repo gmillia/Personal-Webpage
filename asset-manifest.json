@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.js": "/illia/static/js/main.ae594b38.chunk.js",
+    "main.js.map": "/illia/static/js/main.ae594b38.chunk.js.map",
+    "runtime-main.js": "/illia/static/js/runtime-main.afbf09d6.js",
+    "runtime-main.js.map": "/illia/static/js/runtime-main.afbf09d6.js.map",
+    "static/js/2.2fff062c.chunk.js": "/illia/static/js/2.2fff062c.chunk.js",
+    "static/js/2.2fff062c.chunk.js.map": "/illia/static/js/2.2fff062c.chunk.js.map",
+    "index.html": "/illia/index.html",
+    "precache-manifest.ca6c38701567d339a0d4f17df323c582.js": "/illia/precache-manifest.ca6c38701567d339a0d4f17df323c582.js",
+    "service-worker.js": "/illia/service-worker.js",
+    "static/js/2.2fff062c.chunk.js.LICENSE.txt": "/illia/static/js/2.2fff062c.chunk.js.LICENSE.txt",
+    "static/media/analytics.jpeg": "/illia/static/media/analytics.2eb36274.jpeg",
+    "static/media/background.jpg": "/illia/static/media/background.d10b02c9.jpg",
+    "static/media/betting.jpg": "/illia/static/media/betting.748e7ce4.jpg",
+    "static/media/car.jpg": "/illia/static/media/car.92fb6c90.jpg",
+    "static/media/communication.jpeg": "/illia/static/media/communication.f39001fd.jpeg",
+    "static/media/cosmos.jpeg": "/illia/static/media/cosmos.72ee12ea.jpeg",
+    "static/media/education.jpg": "/illia/static/media/education.75c83678.jpg",
+    "static/media/english.jpg": "/illia/static/media/english.d17f65a5.jpg",
+    "static/media/leadership.jpeg": "/illia/static/media/leadership.9a55e69b.jpeg",
+    "static/media/me.png": "/illia/static/media/me.3687dfb8.png",
+    "static/media/me2.png": "/illia/static/media/me2.feb1105c.png",
+    "static/media/ml.jpg": "/illia/static/media/ml.1a2ba7f4.jpg",
+    "static/media/ohsrank.jpg": "/illia/static/media/ohsrank.8feb4728.jpg",
+    "static/media/organization.jpeg": "/illia/static/media/organization.0c76a707.jpeg",
+    "static/media/programming1.jpeg": "/illia/static/media/programming1.26a383c7.jpeg",
+    "static/media/programming2.jpg": "/illia/static/media/programming2.054d9e10.jpg",
+    "static/media/programming3.jpg": "/illia/static/media/programming3.28bd3ae3.jpg",
+    "static/media/programming4.jpg": "/illia/static/media/programming4.13bdbc65.jpg",
+    "static/media/programming5.jpg": "/illia/static/media/programming5.031b8347.jpg",
+    "static/media/programming6.jpeg": "/illia/static/media/programming6.84ce9aae.jpeg",
+    "static/media/relay.jpg": "/illia/static/media/relay.1355fdd0.jpg",
+    "static/media/stopspot.jpg": "/illia/static/media/stopspot.36851808.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.afbf09d6.js",
+    "static/js/2.2fff062c.chunk.js",
+    "static/js/main.ae594b38.chunk.js"
+  ]
+}
