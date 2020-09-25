@@ -1,11 +1,11 @@
 import React from 'react';
 import { createBrowserHistory } from "history";
-import { Router } from "react-router-dom";
+import { Router, HashRouter } from "react-router-dom";
 import Routes from './Routes';
 import { ThemeProvider } from "@material-ui/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 
-const browserHistory = createBrowserHistory();
+//const browserHistory = createBrowserHistory();
 
 function App() {
 	const theme = createMuiTheme({
@@ -26,9 +26,9 @@ function App() {
 
 	return (
 		<ThemeProvider theme={theme}>
-			<Router history={browserHistory}>
+			<HashRouter basename={'/'} >
 				<Routes />
-			</Router>
+			</HashRouter>
 		</ThemeProvider>
   	);
 }

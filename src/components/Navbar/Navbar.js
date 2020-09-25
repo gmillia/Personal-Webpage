@@ -37,8 +37,8 @@ const Navbar = () => {
             <NavbarButton linkTo='/' name='HOME' isSelected={selected === ''} />
             <NavbarButton linkTo='/about' name='ABOUT' isSelected={selected === 'about'} />
             <NavbarButton linkTo='/portfolio' name='PORTFOLIO' isSelected={selected === 'portfolio'} />
-            <NavbarButton linkTo='/resume' name='RESUME' isSelected={selected === 'resume'} />
-            <NavbarButton linkTo='/contact' name='CONTACT' isSelected={selected === 'contact'} />
+
+
         </div>
     )
 };

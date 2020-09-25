@@ -77,7 +77,7 @@ const Home = () => {
                 <div className={classes.name}>ILLIA SHERSHUN</div>
                 <div className={classes.outro}>Full-Stack Developer</div>
                 <Link to='/about' className={classes.link}>
-                    <button className={classes.button}>READ MORE</button>
+                    <button className={classes.button}>READ </button>
                 </Link>
             </Grid>
         </Grid>
