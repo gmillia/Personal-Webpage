@@ -7,7 +7,9 @@ const useStyles = makeStyles(theme => ({
         color: 'white',
         padding: 30,
         [theme.breakpoints.up('sm')]: {
-            padding: 0
+            padding: 0,
+            paddingLeft: 15,
+            borderLeft: '2px solid rgba(0,0,0,0.5)'
         }
     },
     header: {
@@ -34,7 +36,7 @@ const Personal = () => {
     return (
         <Grid item xs={12} className={classes.root} >
             <Grid item className={classes.header}>
-                <span>Kiev</span>
+                <span style={{color: 'black'}}>Kiev</span>
                 <span>Portland</span>
             </Grid>
             <Grid item xs={12} sm={8} className={classes.text}>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/styles";
 import Grid from '@material-ui/core/Grid';
+import clsx from 'clsx'
 
 //Local components
 import { Languages } from './Languages';
@@ -27,7 +28,6 @@ const useStyles = makeStyles(theme => ({
         height: 'auto',
         width: '100%',
         [theme.breakpoints.up('sm')]: {
-
             height: 'auto'
         }
     },
@@ -40,7 +40,6 @@ const useStyles = makeStyles(theme => ({
         padding: 30,
         flex: 1,
         [theme.breakpoints.up('sm')]: {
-
             height: 'auto'
         }
     },

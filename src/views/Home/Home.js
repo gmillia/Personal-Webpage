@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
         color: 'white',
         maxWidth: '100%',
         padding: 30,
-        minHeight: '10%',
+        flex: 1,
         [theme.breakpoints.up('sm')]: {
             maxWidth: '50%',
         }
@@ -45,7 +45,7 @@ const useStyles = makeStyles(theme => ({
         flexWrap: 'wrap',
         backgroundColor: 'rgba(0,0,0,0.5)',
         padding: 30,
-        minHeight: '90%',
+        flex: 1,
         [theme.breakpoints.up('sm')]: {
             flexFlow:"column",
             minHeight: '100%',
@@ -64,9 +64,11 @@ const useStyles = makeStyles(theme => ({
     contactWrapper: {
         display: 'flex',
         width: '100%',
+        flex: 1,
+        paddingTop: '100%',
         [theme.breakpoints.up('sm')]: {
-            flex: 1,
             alignItems: 'flex-end',
+            paddingTop: 0
         }
     },
 })) 
