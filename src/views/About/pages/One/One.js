@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import { Languages } from './Languages';
 import { Personal } from './Personal';
 import { Skills } from './Skills';
+import { Projects } from './Projects';
 
 //Global components
 import { Page } from '../../../../components'
@@ -91,7 +92,9 @@ const One = () => {
                 <Grid item xs={12} sm={8} className={classes.skillsWrapper}>
                     <Skills />
                 </Grid>
-                <Grid item xs={12} sm={4} className={classes.projectsWrapper}></Grid>
+                <Grid item xs={12} sm={4} className={classes.projectsWrapper}>
+                    <Projects />
+                </Grid>
             </Grid>
         )
     }
