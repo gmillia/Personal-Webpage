@@ -16,9 +16,8 @@ const useStyles = makeStyles(theme => ({
         height: '100%',
     },
     wrapper: {
-        backgroundColor: props => props.useBackground ? 'rgba(0,0,0, 0.3)' : '',
+        backgroundImage: props => props.useBackground ? 'linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.9))' : '',
         fontFamily: 'Cinzel, serif',
-
         display: 'flex',
         flexDirection: 'column'
     },

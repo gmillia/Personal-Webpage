@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
         justifyContent: "center",
         flexFlow: 'row',
         flexWrap: 'wrap',
-        backgroundColor: 'rgba(0,0,0,0.7)',
+        backgroundColor: 'rgba(0,0,0,0.5)',
         padding: 30,
         minHeight: '90%',
         [theme.breakpoints.up('sm')]: {
@@ -99,8 +99,8 @@ const Home = () => {
 
     return (
         <Page background={Abstract}>
-            {
-                desktop ? 
+        {
+            desktop ? 
                 <Grid container spacing={0} className={classes.root}>
                     {leftAndBottom()}
                     {rightAndTop()}
@@ -110,7 +110,7 @@ const Home = () => {
                     {rightAndTop()}
                     {leftAndBottom()}
                 </Grid>
-            }
+        }
         </Page>
     )
 };
