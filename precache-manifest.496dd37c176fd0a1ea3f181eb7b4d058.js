@@ -1,31 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "16fb210dcee81c85bf2b2f2e001f2342",
+    "revision": "1ea666733f277b92707610552634c45b",
     "url": "/illia/index.html"
   },
   {
-    "revision": "28d984b37532fe619a11",
-    "url": "/illia/static/js/2.d21a2361.chunk.js"
+    "revision": "22970818ad2f6889680e",
+    "url": "/illia/static/js/2.4c6097eb.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/illia/static/js/2.d21a2361.chunk.js.LICENSE.txt"
+    "url": "/illia/static/js/2.4c6097eb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9e411d866148a411ec41",
-    "url": "/illia/static/js/main.fbeb6d02.chunk.js"
+    "revision": "78fafcf943cbf8bd8a2b",
+    "url": "/illia/static/js/main.5de997a0.chunk.js"
   },
   {
     "revision": "65a13ac2ffc1e95ba30c",
     "url": "/illia/static/js/runtime-main.afbf09d6.js"
   },
   {
-    "revision": "2eb36274246be084970f3d11ecce8ab4",
-    "url": "/illia/static/media/analytics.2eb36274.jpeg"
+    "revision": "ba792ffd22c283c0f41012e5456a0a83",
+    "url": "/illia/static/media/aboutOne.ba792ffd.jpg"
   },
   {
-    "revision": "d10b02c93d1a2f37ccaa59dcbb759fb0",
-    "url": "/illia/static/media/background.d10b02c9.jpg"
+    "revision": "b253996966aba7b7e79c4be32223755f",
+    "url": "/illia/static/media/abstract.b2539969.jpg"
+  },
+  {
+    "revision": "2eb36274246be084970f3d11ecce8ab4",
+    "url": "/illia/static/media/analytics.2eb36274.jpeg"
   },
   {
     "revision": "748e7ce4d94be67a5c232444990da620",
@@ -38,10 +42,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f39001fd9ae081cc98f98eac951ad07b",
     "url": "/illia/static/media/communication.f39001fd.jpeg"
-  },
-  {
-    "revision": "72ee12eae0696fdb798fb1d8f8601df6",
-    "url": "/illia/static/media/cosmos.72ee12ea.jpeg"
   },
   {
     "revision": "75c83678ef1e97c0fc493279ddbbbc0e",
@@ -76,35 +76,35 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/illia/static/media/organization.0c76a707.jpeg"
   },
   {
-    "revision": "26a383c76c806d4b2d3b17c8ed7c97aa",
-    "url": "/illia/static/media/programming1.26a383c7.jpeg"
-  },
-  {
-    "revision": "054d9e107d52e5c463e12c2534a29d19",
-    "url": "/illia/static/media/programming2.054d9e10.jpg"
-  },
-  {
-    "revision": "28bd3ae31ada8f30de7c43ca89625852",
-    "url": "/illia/static/media/programming3.28bd3ae3.jpg"
-  },
-  {
-    "revision": "13bdbc6584fe2f4a50a511d4d8ba64c1",
-    "url": "/illia/static/media/programming4.13bdbc65.jpg"
-  },
-  {
-    "revision": "031b8347bbf20b4a8339162b46ba6503",
-    "url": "/illia/static/media/programming5.031b8347.jpg"
-  },
-  {
-    "revision": "84ce9aae404a1a039fa782b52a6fdbf4",
-    "url": "/illia/static/media/programming6.84ce9aae.jpeg"
+    "revision": "554fa3187852301c1600b328d8478071",
+    "url": "/illia/static/media/otherSkills.554fa318.jpg"
   },
   {
     "revision": "1355fdd0d0598d5f98cac2c15e613808",
     "url": "/illia/static/media/relay.1355fdd0.jpg"
   },
   {
+    "revision": "4272e87120bcd57bd780b74e9cd22c5b",
+    "url": "/illia/static/media/right.4272e871.svg"
+  },
+  {
+    "revision": "169413c82ea4ec62b04fa6afdb4869fc",
+    "url": "/illia/static/media/rightArrow.169413c8.svg"
+  },
+  {
+    "revision": "cb229a99896875caeba5eca26d416298",
+    "url": "/illia/static/media/rightWhite.cb229a99.svg"
+  },
+  {
     "revision": "368518083f4664312791755f07a7222c",
     "url": "/illia/static/media/stopspot.36851808.jpg"
+  },
+  {
+    "revision": "b509c9331bb6eb63ac4e6e6d99965eea",
+    "url": "/illia/static/media/touchedSkills.b509c933.jpg"
+  },
+  {
+    "revision": "d6c7f3b3e3dcc127e379e299aa61a954",
+    "url": "/illia/static/media/workingSkills.d6c7f3b3.jpg"
   }
 ]);
