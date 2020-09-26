@@ -6,6 +6,7 @@ import { One, Two } from './pages';
 
 const useStyles = makeStyles(theme => ({
     root: {
+        height: '100%',
         width: '100%',
     },
 }))
@@ -15,10 +16,7 @@ const About = () => {
 
     return (
         <Grid container spacing={0} item xs={12} alignContent='flex-start' justify="center" className={classes.root}>
-            <Grid container spacing={0} item xs={12} md={10} alignContent='flex-start' justify="center" >
-                <One />
-                <Two />
-            </Grid>
+            <One />
         </Grid>
     )
 };
