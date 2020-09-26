@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 //Local components
 import { Languages } from './Languages';
 import { Personal } from './Personal';
+import { Skills } from './Skills';
 
 //Global components
 import { Page } from '../../../../components'
@@ -25,11 +26,18 @@ const useStyles = makeStyles(theme => ({
         height: 'auto',
         width: '100%',
         [theme.breakpoints.up('sm')]: {
-            minHeight: '70%'
+            minHeight: '75%'
         }
     },
     bottomWrapper: {
-
+        display: 'flex',
+        flexFlow: 'row wrap',
+        height: 'auto',
+        width: '100%',
+        background: 'rgba(0,0,0,0.5)',
+        [theme.breakpoints.up('sm')]: {
+            minHeight: '25%'
+        }
     },
     contentWrapper: {
         display: 'flex',
@@ -61,7 +69,11 @@ const One = () => {
     const bottomContent = () => {
         return (
             <Grid item xs={12} className={classes.bottomWrapper} >
-
+                <Grid item xs={12} sm={6} className={classes.skillsWrapper}>
+                    <Skills />
+                </Grid>
+                <Grid item xs={12} sm={2} className={classes.imageWrapper}></Grid>
+                <Grid item xs={12} sm={4} className={classes.projectsWrapper}></Grid>
             </Grid>
         )
     }
@@ -70,6 +82,7 @@ const One = () => {
         <Page full={true} background={AboutOne}>
             <Grid item xs={12} className={classes.root}>
             {topContent()}
+            {bottomContent()}
             </Grid>
         </Page>
     )
