@@ -26,7 +26,8 @@ const useStyles = makeStyles(theme => ({
         height: 'auto',
         width: '100%',
         [theme.breakpoints.up('sm')]: {
-            minHeight: '75%'
+
+            height: 'auto'
         }
     },
     bottomWrapper: {
@@ -35,8 +36,11 @@ const useStyles = makeStyles(theme => ({
         height: 'auto',
         width: '100%',
         background: 'rgba(0,0,0,0.5)',
+        padding: 30,
+        flex: 1,
         [theme.breakpoints.up('sm')]: {
-            minHeight: '25%'
+
+            height: 'auto'
         }
     },
     contentWrapper: {
@@ -44,7 +48,18 @@ const useStyles = makeStyles(theme => ({
         alignItems: 'center',
         justifyContent: 'flex-start',
         width: '100%',
-    }
+    },
+    bottomHeaderWrapper: {
+        display: 'flex',
+        flexFlow: 'row wrap',
+        fontSize: 24,
+        paddingBottom: 25,
+        justifyContent: "flex-start",
+        color: 'white',
+        [theme.breakpoints.up('sm')]: {
+            paddingLeft: 105,
+        }
+    },
 }))
 
 /**
@@ -69,10 +84,13 @@ const One = () => {
     const bottomContent = () => {
         return (
             <Grid item xs={12} className={classes.bottomWrapper} >
-                <Grid item xs={12} sm={6} className={classes.skillsWrapper}>
+                <Grid item xs={12} className={classes.bottomHeaderWrapper}>
+                    <Grid item xs={12} sm={8}>Skills</Grid>
+                    <Grid item xs={12} sm={4}>Projects</Grid>
+                </Grid>
+                <Grid item xs={12} sm={8} className={classes.skillsWrapper}>
                     <Skills />
                 </Grid>
-                <Grid item xs={12} sm={2} className={classes.imageWrapper}></Grid>
                 <Grid item xs={12} sm={4} className={classes.projectsWrapper}></Grid>
             </Grid>
         )

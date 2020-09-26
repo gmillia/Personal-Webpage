@@ -38,7 +38,7 @@ const Personal = () => {
                 <span>Portland</span>
             </Grid>
             <Grid item xs={12} sm={8} className={classes.text}>
-                Having moved from Ukraine to USA, I have graduated from Portland State University with a Bachelor of Computer Science degree.
+                Having moved from Ukraine to USA, I have graduated Portland State University with a Bachelor of Computer Science degree.
             </Grid>
         </Grid>
     )

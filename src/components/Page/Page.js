@@ -13,7 +13,6 @@ const useStyles = makeStyles(theme => ({
         margin: props => props.full ? null : theme.page.margin,
         flex: 'auto',
         width: '100%',
-        height: '100%',
     },
     wrapper: {
         backgroundImage: props => props.useBackground ? 'linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.9))' : '',
