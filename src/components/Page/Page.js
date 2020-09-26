@@ -9,11 +9,14 @@ const useStyles = makeStyles(theme => ({
         MozBackgroundSize: 'cover',
         OBackgroundSize: 'cover',
         backgroundSize: 'cover !important',
-        minHeight: props => 'calc(' + theme.page.height + props.changeHeight + ')',
-        margin: theme.page.margin,
+        minHeight: props => props.full ? theme.page.height : 'calc(' + theme.page.height + props.changeHeight + ')',
+        margin: props => props.full ? null : theme.page.margin,
+        flex: 'auto',
+        width: '100%',
+        height: '100%',
     },
     wrapper: {
-        backgroundColor: props => props.useBackground ? 'rgba(0,0,0, 0.7)' : '',
+        backgroundColor: props => props.useBackground ? 'rgba(0,0,0, 0.3)' : '',
         fontFamily: 'Cinzel, serif',
 
         display: 'flex',
@@ -21,12 +24,12 @@ const useStyles = makeStyles(theme => ({
     },
 }))
 
-const Page = ({ background='', children, changeHeight='' }) => {
+const Page = ({ full=true, background='', children, changeHeight='' }) => {
     console.log(changeHeight)
-    const classes = useStyles({ background: background, useBackground: background.length > 0, changeHeight });
+    const classes = useStyles({ background: background, useBackground: background.length > 0, changeHeight, full: full });
 
     return (
-        <Grid container spacing={4} className={classes.root}>
+        <Grid container spacing={full ? 0 : 4} className={classes.root}>
             <Grid item xs={12} className={classes.wrapper}>
             {children}
             </Grid>

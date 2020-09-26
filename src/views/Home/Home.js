@@ -1,86 +1,117 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from "@material-ui/styles";
-import { Link } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+
+//COMPONENTS
+import { Page } from '../../components'
+import { Content } from './Content';
+import { Contact } from './Contact';
+import { Links } from './Links';
 
 //Images
-import Background from '../../assets/background.jpg'
+import Abstract from '../../assets/abstract.jpg'
 
 const useStyles = makeStyles(theme => ({
     root: {
-        flex: 1,
-        fontFamily: 'Raleway, sans-serif',
-        background: `url(` + Background + `) no-repeat center center fixed`,
-        WebkitBackgroundSize: 'cover',
-        MozBackgroundSize: 'cover',
-        OBackgroundSize: 'cover',
-        backgroundSize: 'cover',
-        color: 'white'
-    },
-    wrapper: {
         display: 'flex',
-        flexDirection: 'column',
-        alignSelf: 'stretch',
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingLeft: 15
-    },
-    intro: {
-        fontSize: 15,
-        fontWeight: 200,
-        paddingBottom: 15
-    },
-    name: {
-        fontSize: 35,
-        fontWeight: 400,
-        paddingBottom: 15
-    },
-    outro: {
-        fontSize: 24,
-        fontWeight: 300,
-        paddingBottom: 20
-    },
-    link: {
-        textDecoration: 'none'
-    },
-    button: {
-        paddingTop: 15,
-        paddingBottom: 15,
-        paddingLeft: 30,
-        paddingRight: 30,
-        fontSize: 16,
-        border: '1px solid black',
-        borderColor: '#00e1b7',
-        background: 'rgba(64, 145, 108, 0.1)',
-        fontWeight: 100,
-        cursor: 'pointer',
-        color: 'white',
-        transition: '0.3s, 0.3s',
-        '&:hover': {
-            border: '1px dashed',
-            borderColor: '#00e1b7',
-            letterSpacing: 1,
-            paddingLeft: 45,
-            paddingRight: 45,
-            background: 'rgba(64, 145, 108, 0.4)',
+        justifyContent: 'flex-start',
+        alignContent: "flex-start",
+        width: '100%',
+        height: "100%",
+        [theme.breakpoints.up('sm')]: {
+            justifyContent: 'flex-end',
+            alignContent: "flex-end",
         }
-    }
-}))
+    },
+    leftWrapper: {
+        display: 'flex',
+        alignItems: 'flex-end',
+        color: 'white',
+        maxWidth: '100%',
+        padding: 30,
+        minHeight: '10%',
+        [theme.breakpoints.up('sm')]: {
+            maxWidth: '50%',
+        }
+    },
+    rightWrapper: {
+        color: "white",
+        display: "flex",
+        alignItems: 'center',
+        justifyContent: "center",
+        flexFlow: 'row',
+        flexWrap: 'wrap',
+        backgroundColor: 'rgba(0,0,0,0.7)',
+        padding: 30,
+        minHeight: '90%',
+        [theme.breakpoints.up('sm')]: {
+            flexFlow:"column",
+            minHeight: '100%',
+            width: '100%',
+            borderLeft: '2px solid rgba(255,255,255,0.2)',
+        }
+    },
+    contentWrapper: {
+        display: 'flex',
+        width: '100%',
+        minHeight: '60%',
+        [theme.breakpoints.up('sm')]: {
+            alignItems: 'flex-end'
+        }
+    },
+    contactWrapper: {
+        display: 'flex',
+        width: '100%',
+        [theme.breakpoints.up('sm')]: {
+            flex: 1,
+            alignItems: 'flex-end',
+        }
+    },
+})) 
 
 const Home = () => {
     const classes = useStyles();
+    const theme = useTheme();
+    const desktop = useMediaQuery(theme.breakpoints.up('sm'));
+
+    const leftAndBottom = () => {
+        return (
+            <Grid item xs={12} sm={6} className={classes.leftWrapper}>
+                <Links />
+            </Grid>
+        )
+    }
+
+    const rightAndTop = () => {
+        return (
+            <Grid item xs={12} sm={6} className={classes.rightWrapper}>
+                <Grid className={classes.contentWrapper}>
+                    <Content />
+                </Grid>
+                <Grid className={classes.contactWrapper}>
+                    <Contact />
+                </Grid>
+            </Grid>
+        )
+    }
 
     return (
-        <Grid container spacing={0} item xs={12} alignItems="center" justify="center" className={classes.root}>
-            <Grid item xs={12} className={classes.wrapper}>
-                <div className={classes.name}>ILLIA SHERSHUN</div>
-                <div className={classes.outro}>Full-Stack Developer</div>
-                <Link to='/about' className={classes.link}>
-                    <button className={classes.button}>READ </button>
-                </Link>
-            </Grid>
-        </Grid>
+        <Page background={Abstract}>
+            {
+                desktop ? 
+                <Grid container spacing={0} className={classes.root}>
+                    {leftAndBottom()}
+                    {rightAndTop()}
+                </Grid>
+                :
+                <Grid container spacing={0} className={classes.root}>
+                    {rightAndTop()}
+                    {leftAndBottom()}
+                </Grid>
+            }
+        </Page>
     )
 };
 
