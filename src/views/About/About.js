@@ -17,6 +17,7 @@ const About = () => {
     return (
         <Grid container spacing={0} item xs={12} alignContent='flex-start' justify="center" className={classes.root}>
             <One />
+            <Two />
         </Grid>
     )
 };

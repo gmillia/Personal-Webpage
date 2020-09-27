@@ -17,7 +17,6 @@ const useStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
         justifyContent: 'flex-start',
-        alignContent: "flex-start",
         width: '100%',
         height: "100%",
         [theme.breakpoints.up('sm')]: {
@@ -65,10 +64,10 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         width: '100%',
         flex: 1,
-        paddingTop: '100%',
+        alignSelf: "bottom",
         [theme.breakpoints.up('sm')]: {
+            paddingTop: 0,
             alignItems: 'flex-end',
-            paddingTop: 0
         }
     },
 })) 
@@ -100,7 +99,7 @@ const Home = () => {
     }
 
     return (
-        <Page background={Abstract}>
+        <Page background={Abstract} useBackground={true} >
         {
             desktop ? 
                 <Grid container spacing={0} className={classes.root}>

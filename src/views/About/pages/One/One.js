@@ -84,10 +84,6 @@ const One = () => {
     const bottomContent = () => {
         return (
             <Grid item xs={12} className={classes.bottomWrapper} >
-                <Grid item xs={12} className={classes.bottomHeaderWrapper}>
-                    <Grid item xs={12} sm={8}>Skills</Grid>
-                    <Grid item xs={12} sm={4}>Projects</Grid>
-                </Grid>
                 <Grid item xs={12} sm={8} className={classes.skillsWrapper}>
                     <Skills />
                 </Grid>
@@ -99,7 +95,7 @@ const One = () => {
     }
 
     return (
-        <Page full={true} background={AboutOne}>
+        <Page full={true} background={AboutOne} useBackground={true} >
             <Grid item xs={12} className={classes.root}>
             {topContent()}
             {bottomContent()}

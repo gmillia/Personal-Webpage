@@ -3,22 +3,30 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 
 //Local components
-import { Education, Individual, Languages } from '../../components'
+import { Personality } from './Personality';
+
 //Global components
 import { Page } from '../../../../components'
 
 //Background image
-import EducationBackground from '../../../../assets/education/education.jpg';
+import EducationBackground from '../../../../assets/aboutTwo.jpg';
 
 const useStyles = makeStyles(theme => ({
-    wrapper: {
-
-        height: '100%'
+    root: {
+        display: 'flex',
+        flexDirection: 'column',
+        background: 'linear-gradient(180deg, rgba(0,0,0,0.5) 50%, transparent 50%)'
     },
-    individualWrapper: {
+    wrapper:{
+        display: 'flex',
+        flexFlow: 'row wrap',
+        padding: 30,
         [theme.breakpoints.up('sm')]: {
-            minHeight: '70%',
+            paddingLeft: 130
         }
+    },
+    left: {
+        display: 'flex',
     }
 }))
 
@@ -29,15 +37,16 @@ const Two = () => {
     const classes = useStyles()
 
     return (
-        <Page background={EducationBackground} changeHeight={' + 30px'}>
-            <Grid container spacing={4} className={classes.wrapper} >
-                <Grid item xs={12}>
-                    <Education />
+        <Page background={EducationBackground} useBackground={true} wrapperDirection='to left' >
+            <Grid item xs={12} className={classes.root}>
+                <Grid item xs={12} className={classes.wrapper}>
+                    <Grid item xs={12} sm={8} className={classes.left}>
+                        <Personality />
+                    </Grid>
+                    <Grid item xs={12} sm={4} className={classes.right}>
+                        
+                    </Grid>
                 </Grid>
-                <Grid item xs={12} className={classes.individualWrapper}>
-                    <Individual />
-                </Grid>
-
             </Grid>
         </Page>
     )

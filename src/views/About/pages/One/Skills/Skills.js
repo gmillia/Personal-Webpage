@@ -81,6 +81,7 @@ const Skills = () => {
         <Grid item xs={12} className={classes.root} >
 
             <Grid item xs={12} className={classes.skillsWrapper}>
+                <Grid item xs={12} className={classes.header}>Skills</Grid>
                 {skillColumn(WorkingSkills, 'Working', 'JavaScript / Python / C++ / React / HTML5')}
                 {skillColumn(OtherSkills, 'Other', 'MongoDB / SQL / NoSQL / Firebase / Bootstrap / CSS')}
                 {skillColumn(TouchedSkills, 'Touched', 'Java / C / SCSS')}

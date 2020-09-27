@@ -6,16 +6,16 @@ const useStyles = makeStyles(theme => ({
         width: '100%',
         height: "100%",
         display: 'flex',
+        alignItems: props => props.align,
+        justifyContent: props => props.justify,
         flexFlow: 'row wrap',
         backgroundColor: 'rgba(0,0,0,0.5)',
         color: 'white',
         fontFamily: 'Cinzel, serif',
         fontSize: 25,
-        transitionDuration: '0.5s, 0.5s',
-        '&:hover': {
-            backgroundColor: props => props.addEffect ? 'rgba(0,0,0,0.3)' : '',
-            color: props => props.addEffect ? 'lightgrey' : '',
-            fontSize: props => props.addEffect ? 35 : '',
+        [theme.breakpoints.up('sm')]: {
+            writingMode: props => props.transformText ? 'vertical-rl' : 'normal',
+            transform: props => props.transformText ? 'rotate(180deg)' : '',
         }
     },
 }))
@@ -25,8 +25,8 @@ const useStyles = makeStyles(theme => ({
  * @param {String} name name of the skill (e.g.: Javascript) 
  * @param {Node}   icon svg icon for the skill
  */
-const Foreground = ({ text, children, addEffect=false }) => {
-    const classes = useStyles({ addEffect: addEffect });
+const Foreground = ({ children, align='flex-start', justify='flex-start', transformText=false }) => {
+    const classes = useStyles({align: align, justify: justify, transformText: transformText});
 
     return (
         <div className={classes.root}>
