@@ -9,9 +9,10 @@ const useStyles = makeStyles(theme => ({
         OBackgroundSize: 'cover',
         backgroundSize: 'cover !important',
         flex: 'auto',
+        display: 'flex',
         width: '100%',
         height: '100%',
-        minHeight: props => props.minHeight
+        minHeight: props => props.minHeight,
     },
 }))
 

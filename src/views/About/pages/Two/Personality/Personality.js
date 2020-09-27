@@ -15,74 +15,109 @@ const useStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
         flexDirection: 'row',
+        flexWrap: 'wrap',
+        [theme.breakpoints.up('sm')]: {
+            flexWrap: 'nowrap',
+            flexDirection: "row",
+        }
     },
     wrapper: {
         display: 'flex',
-        flexFlow: 'row wrap'
-    },
-    row: {
-        display: 'flex',
-        flexFlow: 'row wrap',
-    },
-    qualityWrapper: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
+        flexDirection: 'column'
     },
     header: {
-        display: 'table',
-        width: 'auto',
-        fontWeight: 700,
-        letterSpacing: 2,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         color: 'white',
+        fontFamily: 'Nanum Myeongjo, serif',
+        fontSize: 24,
+        paddingBottom: 20,
         [theme.breakpoints.up('sm')]: {
-            display: 'inline-block',
+            fontSize: 35,
+            fontWeight: 700,
+            textOrientation: 'upright',
             writingMode: 'vertical-rl',
-            transform: 'rotate(180deg)',
+            //Text transformation
+            background: 'linear-gradient(white 50%, black 50%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            paddingRight: 20,
+            paddingBottom: 0,
         }
     },
+    contentWrapper: {
+        display: 'flex',
+        flexDirection: "column",
+        color: 'white'
+    },
+    topContent: {
+        width: '100%',
+        display: 'flex',
+        alignItems: 'flex-end',
+        justifyContent: "flex-end",
+        flexDirection: 'column',
+        [theme.breakpoints.up('sm')]: {
+            flexDirection: 'row'
+        }
+    },
+    bottomContent: {
+        width: '100%',
+        display: 'flex',
+        display: 'flex',
+        alignItems: 'flex-start',
+        justifyContent: "flex-end",
+        flexDirection: 'column',
+        [theme.breakpoints.up('sm')]: {
+            flexDirection: 'row'
+        }
+    },
+    quality: {
+        display: "flex", 
+        flex: 1, 
+        width: 'inherit'
+    },
+    pageHeader: {
+        display: 'none',
+        [theme.breakpoints.up('sm')]: {
+            display: "block",
+            fontSize: 70,
+            lineHeight: 0.95
+        }
+    }
 }))
 
 const Personality = () => {
     const classes = useStyles();
 
-    const column = (background, text) => {
+    const quality = (background, text, dark) => {
         return (
-            <Grid item xs={12} sm={6} >
-                {
-                    background ? 
-                        <BackgroundImage background={background} minHeight={200}>
-                            <Foreground align="center" justify="center" transformText={true} >
-                            {text}
-                            </Foreground>
-                        </BackgroundImage>
-                        : null
-                }
-            </Grid> 
-        )
-    }
-
-    const row = (rowNumber, background, text) => {
-        const contentOnLeft = rowNumber % 2 !== 0;
-        console.log(contentOnLeft)
-        return (
-            <Grid item xs={12} className={classes.row}>
-                { contentOnLeft ?  column(background, text) : column()}
-                { !contentOnLeft ? column(background, text) : column()}
+            <Grid item xs={12} sm={6} className={classes.quality}>
+                <BackgroundImage background={background} minHeight={200}>
+                    <Foreground align="center" justify="center" dark={dark} >{text}</Foreground>
+                </BackgroundImage>
             </Grid>
         )
     }
 
     return (
-        <Grid item xs={12} className={classes.root}>
-            <div className={classes.header}>PERSONALITY</div>
-            <Grid item xs={12} className={classes.wrapper} >
-                {row(1, Analytics, 'Analytics')}
-                {row(2, Leadership, 'Leadership')}
-            </Grid>
-            <Grid item xs={12} className={classes.wrapper} >
-                {row(3, Organization, 'Organization')}
-                {row(4, Communication, 'Communication')}
+        <Grid item xs={12} className={classes.root} >
+            <div className={classes.header}>QUALITITES</div>
+            <Grid item xs={12} className={classes.wrapper}>
+                <Grid item xs={12} className={classes.contentWrapper} >
+                    <div className={classes.pageHeader}>INNOVATE</div>
+                    <Grid item xs={12} className={classes.topContent}>
+                        {quality(Analytics, 'Analytics', false)}
+                        {quality(Leadership, 'Leadership', true)}
+                    </Grid>
+                </Grid>
+                <Grid item xs={12} className={classes.contentWrapper} >
+                    <Grid item xs={12} className={classes.bottomContent}>
+                        {quality(Organization, 'Organization', true)}
+                        {quality(Communication, 'Communication', false)}
+                    </Grid>
+                    <div className={classes.pageHeader} style={{textAlign: 'end'}} >CREATE</div>
+                </Grid>
             </Grid>
         </Grid>
     )

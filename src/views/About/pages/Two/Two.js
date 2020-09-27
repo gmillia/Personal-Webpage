@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 //Local components
 import { Personality } from './Personality';
+import { Soccer } from './Soccer';
 
 //Global components
 import { Page } from '../../../../components'
@@ -15,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
         flexDirection: 'column',
-        background: 'linear-gradient(180deg, rgba(0,0,0,0.5) 50%, transparent 50%)'
+        background: 'linear-gradient(180deg, rgba(0,0,0,0.5) 50%, rgba(255,255,255,0.5) 50%)'
     },
     wrapper:{
         display: 'flex',
@@ -44,7 +45,7 @@ const Two = () => {
                         <Personality />
                     </Grid>
                     <Grid item xs={12} sm={4} className={classes.right}>
-                        
+                        <Soccer />
                     </Grid>
                 </Grid>
             </Grid>
