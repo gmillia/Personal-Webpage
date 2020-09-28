@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/styles";
 import Grid from '@material-ui/core/Grid';
+import { Fade } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -44,16 +45,18 @@ const Languages = () => {
     const classes = useStyles();
 
     return (
-        <Grid item xs={12} className={classes.root} >
-            <div className={classes.header}>
-                /03/Languages
-            </div>
-            <Grid item className={classes.languages}>
-                <div>English</div>
-                <div>Russian</div>
-                <div>Ukrainian</div>
+        <Fade in={true} timeout={2000}>
+            <Grid item xs={12} className={classes.root} >
+                <div className={classes.header}>
+                    /03/Languages
+                </div>
+                <Grid item className={classes.languages}>
+                    <div>English</div>
+                    <div>Russian</div>
+                    <div>Ukrainian</div>
+                </Grid>
             </Grid>
-        </Grid>
+        </Fade>
     )
 };  
 

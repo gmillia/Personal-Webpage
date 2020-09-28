@@ -3,9 +3,11 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { Fade } from '@material-ui/core';
+import Visibility from 'react-visibility-sensor';
 
 //Button
-import { Underline as Button } from '../../../../../components';
+import { Underline as Button, FakeEmpty } from '../../../../../components';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -49,16 +51,26 @@ const Soccer = () => {
     const desktop = useMediaQuery(theme.breakpoints.up('sm'));
 
     return (
-        <Grid item xs={12} className={classes.root} >
-            <Grid item xs={12} className={classes.wrapper}>
-                { desktop ? null : <div className={classes.header}>{desktop ? 'SOCCER' : 'Soccer' }</div> }
-                <div className={classes.text}>
-                    Due to my ACL injury, my passion for this game transformed into coaching positions at a David Douglas High School and Portland State University.
-                    <Button linkTo='/resume' name='Resume' />
-                </div>
-                { desktop ? <div className={classes.header}>SOCCER</div> : null }
-            </Grid>
-        </Grid>
+        <Visibility partialVisibility={true} >
+            {
+            ({isVisible}) => 
+                isVisible ? 
+                <Fade in={true} timeout={2000}>
+                    <Grid item xs={12} className={classes.root} >
+                        <Grid item xs={12} className={classes.wrapper}>
+                            { desktop ? <div></div> : <div className={classes.header}>{desktop ? 'SOCCER' : 'Soccer' }</div> }
+                            <div className={classes.text}>
+                                Due to my ACL injury, my passion for this game transformed into coaching positions at a David Douglas High School and Portland State University.
+                                <Button linkTo='/resume' name='Resume' />
+                            </div>
+                            { desktop ? <div className={classes.header}>SOCCER</div> : null }
+                        </Grid>
+                    </Grid>
+                </Fade>
+                :
+                <FakeEmpty />
+            }
+        </Visibility>
     )
 };
 

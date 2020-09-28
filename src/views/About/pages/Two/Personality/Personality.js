@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { Grow } from '@material-ui/core';
 
 //Components
 import { BackgroundImage, Foreground } from '../../../../../components';
@@ -95,31 +96,35 @@ const Personality = () => {
     const theme = useTheme();
     const desktop = useMediaQuery(theme.breakpoints.up('sm'));
 
-    const quality = (background, text, dark) => {
+    const quality = (background, text, dark, offset) => {
         return (
-            <Grid item xs={12} sm={6} className={classes.quality}>
-                <BackgroundImage background={background} minHeight={200}>
-                    <Foreground align="center" justify="center" dark={dark} >{text}</Foreground>
-                </BackgroundImage>
-            </Grid>
+            <Grow in={true} timeout={offset}>
+                <Grid item xs={12} sm={6} className={classes.quality}>
+                    <BackgroundImage background={background} minHeight={200}>
+                        <Foreground align="center" justify="center" dark={dark} >{text}</Foreground>
+                    </BackgroundImage>
+                </Grid>
+            </Grow>
         )
     }
 
     return (
         <Grid item xs={12} className={classes.root} >
+
             <div className={classes.header}>{ desktop ? 'QUALITIES' : 'Qualities' }</div>
+
             <Grid item xs={12} className={classes.wrapper}>
                 <Grid item xs={12} className={classes.contentWrapper} >
                     <div className={classes.pageHeader}>INNOVATE</div>
                     <Grid item xs={12} className={classes.topContent}>
-                        {quality(Analytics, 'Analytics', false)}
-                        {quality(Leadership, 'Leadership', true)}
+                        {quality(Analytics, 'Analytics', false, 500)}
+                        {quality(Leadership, 'Leadership', true, 1500)}
                     </Grid>
                 </Grid>
                 <Grid item xs={12} className={classes.contentWrapper} >
                     <Grid item xs={12} className={classes.bottomContent}>
-                        {quality(Organization, 'Organization', desktop ? true : false)}
-                        {quality(Communication, 'Communication', desktop ? false : true)}
+                        {quality(Organization, 'Organization', desktop ? true : false, 2500)}
+                        {quality(Communication, 'Communication', desktop ? false : true, 3500)}
                     </Grid>
                     <div className={classes.pageHeader} style={{textAlign: 'end', color: 'black'}} >CREATE</div>
                 </Grid>

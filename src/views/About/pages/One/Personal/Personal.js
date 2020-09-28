@@ -1,6 +1,9 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/styles";
 import Grid from '@material-ui/core/Grid';
+import { Fade } from '@material-ui/core';
+
+import { FakeEmpty }
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -34,15 +37,17 @@ const Personal = () => {
     const classes = useStyles();
 
     return (
-        <Grid item xs={12} className={classes.root} >
-            <Grid item className={classes.header}>
-                <span style={{color: 'black'}}>Kiev</span>
-                <span>Portland</span>
+        <Fade in={true} timeout={4000}>
+            <Grid item xs={12} className={classes.root} >
+                <Grid item className={classes.header}>
+                    <span style={{color: 'black'}}>Kiev</span>
+                    <span>Portland</span>
+                </Grid>
+                <Grid item xs={12} sm={8} className={classes.text}>
+                    Having moved from Ukraine to USA, I have graduated Portland State University with a Bachelor of Computer Science degree.
+                </Grid>
             </Grid>
-            <Grid item xs={12} sm={8} className={classes.text}>
-                Having moved from Ukraine to USA, I have graduated Portland State University with a Bachelor of Computer Science degree.
-            </Grid>
-        </Grid>
+        </Fade>
     )
 };  
 

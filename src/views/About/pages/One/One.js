@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from "@material-ui/styles";
 import Grid from '@material-ui/core/Grid';
-import clsx from 'clsx'
+import Visibility from 'react-visibility-sensor';
 
 //Local components
 import { Languages } from './Languages';
@@ -17,6 +17,9 @@ import AboutOne from '../../../../assets/aboutOne.jpg'
 
 const useStyles = makeStyles(theme => ({
     root: {
+        display: 'flex',
+    },
+    wrapper: {
         display: 'flex',
         flexDirection: 'column',
         width: '100%',
@@ -96,12 +99,24 @@ const One = () => {
     }
 
     return (
-        <Page full={true} background={AboutOne} useBackground={true} >
-            <Grid item xs={12} className={classes.root}>
-            {topContent()}
-            {bottomContent()}
-            </Grid>
-        </Page>
+        <Visibility partialVisibility={true} offset={{top: 80}} >
+        {
+            ({isVisible}) => 
+            <Page full={true} background={AboutOne} useBackground={true} >
+                <Grid item xs={12} className={classes.root} >
+                {
+                    isVisible ? 
+                    <div className={classes.wrapper}>
+                        {topContent()}
+                        {bottomContent()}
+                    </div>
+                    :
+                    null
+                }
+                </Grid>
+            </Page>
+        }
+        </Visibility>
     )
 };
 
