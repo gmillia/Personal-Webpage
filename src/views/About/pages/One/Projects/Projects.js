@@ -1,10 +1,9 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/styles";
 import Grid from '@material-ui/core/Grid';
-import { Link } from 'react-router-dom';
 
-//Icon
-import RightArrow from '../../../../../assets/rightArrow.svg'
+//Button
+import { Underline as Button } from '../../../../../components';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -37,37 +36,6 @@ const useStyles = makeStyles(theme => ({
     },
     buttonWrapper: {
         display: 'flex',
-        flexDirection: 'row wrap',
-        paddingBottom: 1,
-        paddingTop: 15,
-        [theme.breakpoints.up('sm')]: {
-            paddingTop: 'auto'
-        }
-    },
-    button: {
-        color: "white",
-        background: 'transparent',
-        width: 'auto',
-        border: 'none',
-        outline: 'none',
-        fontSize: 16,
-        cursor: 'pointer',
-        paddingBottom: 2,
-        borderBottom: '1px solid white',
-        display: 'flex',
-        flexDirection: 'row wrap'
-    },
-    arrowWrapper: {
-        paddingLeft: 5,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'flex-end'
-    },
-    link: {
-        textDecoration: 'none',
-    },
-    wrapper: {
-        display: 'flex',
         alignItems: 'flex-end'
     }
 }));
@@ -81,17 +49,8 @@ const Projects = () => {
             <Grid item xs={12} className={classes.text}>
                 Using those skills, I have written various projects throughout the years. 
             </Grid>
-            <Grid item xs={12} className={classes.wrapper}>
-                <Link to='/portfolio' className={classes.link}>
-                    <div className={classes.buttonWrapper}>
-                        <span className={classes.button}>
-                            View
-                            <div className={classes.arrowWrapper}>
-                                <img src={RightArrow} alt=' ' width='15' height='15' />
-                            </div>
-                        </span>
-                    </div>
-                </Link>
+            <Grid item xs={12} className={classes.buttonWrapper}>
+                <Button linkTo='/portfolio' name='View' />
             </Grid>
         </Grid>
     )

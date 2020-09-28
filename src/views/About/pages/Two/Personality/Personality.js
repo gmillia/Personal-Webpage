@@ -1,6 +1,8 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 //Components
 import { BackgroundImage, Foreground } from '../../../../../components';
@@ -89,6 +91,8 @@ const useStyles = makeStyles(theme => ({
 
 const Personality = () => {
     const classes = useStyles();
+    const theme = useTheme();
+    const desktop = useMediaQuery(theme.breakpoints.up('sm'));
 
     const quality = (background, text, dark) => {
         return (
@@ -113,10 +117,10 @@ const Personality = () => {
                 </Grid>
                 <Grid item xs={12} className={classes.contentWrapper} >
                     <Grid item xs={12} className={classes.bottomContent}>
-                        {quality(Organization, 'Organization', true)}
-                        {quality(Communication, 'Communication', false)}
+                        {quality(Organization, 'Organization', desktop ? true : false)}
+                        {quality(Communication, 'Communication', desktop ? false : true)}
                     </Grid>
-                    <div className={classes.pageHeader} style={{textAlign: 'end'}} >CREATE</div>
+                    <div className={classes.pageHeader} style={{textAlign: 'end', color: 'black'}} >CREATE</div>
                 </Grid>
             </Grid>
         </Grid>

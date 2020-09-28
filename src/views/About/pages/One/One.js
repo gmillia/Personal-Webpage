@@ -40,7 +40,8 @@ const useStyles = makeStyles(theme => ({
         padding: 30,
         flex: 1,
         [theme.breakpoints.up('sm')]: {
-            height: 'auto'
+            height: 'auto',
+            paddingLeft: 130,
         }
     },
     contentWrapper: {
