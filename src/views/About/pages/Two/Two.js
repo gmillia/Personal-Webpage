@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import { useTheme } from '@material-ui/core/styles';
 
 //Local components
 import { Personality } from './Personality';
@@ -11,7 +10,7 @@ import { Soccer } from './Soccer';
 import { Page } from '../../../../components'
 
 //Background image
-import EducationBackground from '../../../../assets/aboutTwo.jpg';
+import Background from 'assets/about/backgroundTwo.jpg';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -35,18 +34,11 @@ const useStyles = makeStyles(theme => ({
 /**
  * Page two of the about page
  */
-const Two = ({isVisible}) => {
+const Two = () => {
     const classes = useStyles();
-    const theme = useTheme();
-
-    /*
-    useEffect(() => {
-        console.log(isVisible)
-    }, [isVisible])
-    */
 
     return (
-        <Page background={EducationBackground} useBackground={true} wrapperDirection='to left' >
+        <Page background={Background} useBackground={true} wrapperDirection='to left' >
             <Grid item xs={12} className={classes.root}>
                 <Grid item xs={12} className={classes.wrapper}>
                     <Grid item xs={12} sm={8} className={classes.left}>

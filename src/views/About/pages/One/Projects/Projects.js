@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/styles";
 import Grid from '@material-ui/core/Grid';
 
 //Button
-import { Underline as Button } from '../../../../../components';
+import { Underline as Button } from 'components';
 
 const useStyles = makeStyles(theme => ({
     root: {

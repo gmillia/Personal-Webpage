@@ -3,10 +3,10 @@ import { makeStyles } from "@material-ui/styles";
 import Grid from '@material-ui/core/Grid';
 
 //tests
-import { BackgroundImage, Foreground } from '../../../../../components';
-import WorkingSkills from '../../../../../assets/workingSkills.jpg';
-import OtherSkills from '../../../../../assets/otherSkills.jpg';
-import TouchedSkills from '../../../../../assets/touchedSkills.jpg';
+import { BackgroundImage, Foreground } from 'components';
+import WorkingSkills from 'assets/about/workingSkills.jpg';
+import OtherSkills from 'assets/about/otherSkills.jpg';
+import TouchedSkills from 'assets/about/touchedSkills.jpg';
 
 const useStyles = makeStyles(theme => ({
     root: {

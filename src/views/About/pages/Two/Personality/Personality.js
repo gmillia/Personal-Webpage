@@ -4,25 +4,21 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { Grow } from '@material-ui/core';
+import { Fade } from '@material-ui/core';
 
 //Components
-import { BackgroundImage, Foreground } from '../../../../../components';
+import { BackgroundImage, Foreground, Visibility } from 'components';
 
 //Bacgkround
-import Analytics from '../../../../../assets/skills/analytics.jpeg';
-import Leadership from '../../../../../assets/skills/leadership.jpeg';
-import Organization from '../../../../../assets/skills/organization.jpeg';
-import Communication from '../../../../../assets/skills/communication.jpeg';
+import Analytics from 'assets/skills/analytics.jpeg';
+import Leadership from 'assets/skills/leadership.jpeg';
+import Organization from 'assets/skills/organization.jpeg';
+import Communication from 'assets/skills/communication.jpeg';
 
 const useStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-        [theme.breakpoints.up('sm')]: {
-            flexWrap: 'nowrap',
-            flexDirection: "row",
-        }
+        flexDirection: 'column'
     },
     wrapper: {
         display: 'flex',
@@ -68,7 +64,6 @@ const useStyles = makeStyles(theme => ({
     bottomContent: {
         width: '100%',
         display: 'flex',
-        display: 'flex',
         alignItems: 'flex-start',
         justifyContent: "flex-end",
         flexDirection: 'column',
@@ -83,10 +78,26 @@ const useStyles = makeStyles(theme => ({
     },
     pageHeader: {
         display: 'none',
+        color: "white",
         [theme.breakpoints.up('sm')]: {
             display: "block",
             fontSize: 70,
             lineHeight: 0.95
+        }
+    },
+    topHeader: {
+        flex: 0,
+    },
+    bottomHeader: {
+        flex: 0,
+    },
+    content: {
+        flex: 1,
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        [theme.breakpoints.up('sm')]: {
+            flexWrap: 'nowrap'
         }
     }
 }))
@@ -96,39 +107,62 @@ const Personality = () => {
     const theme = useTheme();
     const desktop = useMediaQuery(theme.breakpoints.up('sm'));
 
-    const quality = (background, text, dark, offset) => {
+    const header = (last=false, text='') => {
         return (
-            <Grow in={true} timeout={offset}>
-                <Grid item xs={12} sm={6} className={classes.quality}>
-                    <BackgroundImage background={background} minHeight={200}>
-                        <Foreground align="center" justify="center" dark={dark} >{text}</Foreground>
-                    </BackgroundImage>
-                </Grid>
-            </Grow>
+            <Visibility>
+                <Fade in={true} timeout={last ? 3000 : 500}>
+                    <div className={classes.pageHeader} style={{ textAlign: last ? 'end' : 'start', color: last ? 'black' : 'white' }}>
+                        {text}
+                    </div>
+                </Fade>
+            </Visibility>
         )
     }
 
+    const qualityHeader = () => {
+        return (
+            <Visibility>
+                <Fade in={true} timeout={1500}>
+                    <div className={classes.header}>{ desktop ? 'QUALITIES' : 'Qualities' }</div>
+                </Fade>
+            </Visibility>
+        )
+    }
+
+    const quality = (background, text, dark, offset) => {
+        return (
+            <Visibility>
+                <Grow in={true} timeout={offset}>
+                    <Grid item xs={12} sm={6} className={classes.quality}>
+                        <BackgroundImage background={background} minHeight={200}>
+                            <Foreground align="center" justify="center" dark={dark} >{text}</Foreground>
+                        </BackgroundImage>
+                    </Grid>
+                </Grow>
+            </Visibility>
+        )
+    }
+
+
     return (
-        <Grid item xs={12} className={classes.root} >
-
-            <div className={classes.header}>{ desktop ? 'QUALITIES' : 'Qualities' }</div>
-
-            <Grid item xs={12} className={classes.wrapper}>
-                <Grid item xs={12} className={classes.contentWrapper} >
-                    <div className={classes.pageHeader}>INNOVATE</div>
+        <Grid item xs={12} className={classes.root}>
+            <Grid item xs={12} className={classes.topHeader}>
+                {header(false, 'INNOVATE')}
+            </Grid>
+            <Grid item xs={12} className={classes.content} >
+                {qualityHeader()}
+                <Grid item xs={12} className={classes.wrapper}>
                     <Grid item xs={12} className={classes.topContent}>
                         {quality(Analytics, 'Analytics', false, 500)}
                         {quality(Leadership, 'Leadership', true, 1500)}
                     </Grid>
-                </Grid>
-                <Grid item xs={12} className={classes.contentWrapper} >
                     <Grid item xs={12} className={classes.bottomContent}>
                         {quality(Organization, 'Organization', desktop ? true : false, 2500)}
                         {quality(Communication, 'Communication', desktop ? false : true, 3500)}
                     </Grid>
-                    <div className={classes.pageHeader} style={{textAlign: 'end', color: 'black'}} >CREATE</div>
                 </Grid>
             </Grid>
+            <Grid item xs={12} className={classes.bottomHeader} >{header(true, 'CREATE')}</Grid>
         </Grid>
     )
 };
