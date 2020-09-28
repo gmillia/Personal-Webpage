@@ -32,10 +32,11 @@ const useStyles = makeStyles(theme => ({
         alignItems: 'center',
         justifyContent: 'center',
         color: 'white',
-        fontFamily: 'Nanum Myeongjo, serif',
+        fontFamily: 'Cinzel, serif',
         fontSize: 24,
         paddingBottom: 20,
         [theme.breakpoints.up('sm')]: {
+            fontFamily: 'Nanum Myeongjo, serif',
             fontSize: 35,
             fontWeight: 700,
             textOrientation: 'upright',
@@ -106,7 +107,7 @@ const Personality = () => {
 
     return (
         <Grid item xs={12} className={classes.root} >
-            <div className={classes.header}>QUALITITES</div>
+            <div className={classes.header}>{ desktop ? 'QUALITIES' : 'Qualities' }</div>
             <Grid item xs={12} className={classes.wrapper}>
                 <Grid item xs={12} className={classes.contentWrapper} >
                     <div className={classes.pageHeader}>INNOVATE</div>
