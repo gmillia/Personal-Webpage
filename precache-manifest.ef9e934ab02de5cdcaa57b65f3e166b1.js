@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1ea666733f277b92707610552634c45b",
+    "revision": "86d74792bafe0afd38d6897c872a9472",
     "url": "/illia/index.html"
   },
   {
-    "revision": "22970818ad2f6889680e",
-    "url": "/illia/static/js/2.4c6097eb.chunk.js"
+    "revision": "f11904036d674c7e57d3",
+    "url": "/illia/static/js/2.3a01a74d.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/illia/static/js/2.4c6097eb.chunk.js.LICENSE.txt"
+    "url": "/illia/static/js/2.3a01a74d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "78fafcf943cbf8bd8a2b",
-    "url": "/illia/static/js/main.5de997a0.chunk.js"
+    "revision": "6e09f62be53d3ea67c10",
+    "url": "/illia/static/js/main.39d7230e.chunk.js"
   },
   {
     "revision": "65a13ac2ffc1e95ba30c",
@@ -22,6 +22,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ba792ffd22c283c0f41012e5456a0a83",
     "url": "/illia/static/media/aboutOne.ba792ffd.jpg"
+  },
+  {
+    "revision": "18a47739c16b298fa5342078aa66d510",
+    "url": "/illia/static/media/aboutTwo.18a47739.jpg"
   },
   {
     "revision": "b253996966aba7b7e79c4be32223755f",
@@ -44,24 +48,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/illia/static/media/communication.f39001fd.jpeg"
   },
   {
-    "revision": "75c83678ef1e97c0fc493279ddbbbc0e",
-    "url": "/illia/static/media/education.75c83678.jpg"
-  },
-  {
-    "revision": "d17f65a5804981b79d8b201c5044475d",
-    "url": "/illia/static/media/english.d17f65a5.jpg"
-  },
-  {
     "revision": "9a55e69be49748b6a835bf4b89b1b837",
     "url": "/illia/static/media/leadership.9a55e69b.jpeg"
-  },
-  {
-    "revision": "3687dfb8f435d0140230b49e53afbe46",
-    "url": "/illia/static/media/me.3687dfb8.png"
-  },
-  {
-    "revision": "feb1105cfbe1cb476a8b05e1de80e31b",
-    "url": "/illia/static/media/me2.feb1105c.png"
   },
   {
     "revision": "1a2ba7f441ac99c642e77ed0bf6457f0",

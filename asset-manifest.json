@@ -1,26 +1,23 @@
 {
   "files": {
-    "main.js": "/illia/static/js/main.5de997a0.chunk.js",
-    "main.js.map": "/illia/static/js/main.5de997a0.chunk.js.map",
+    "main.js": "/illia/static/js/main.39d7230e.chunk.js",
+    "main.js.map": "/illia/static/js/main.39d7230e.chunk.js.map",
     "runtime-main.js": "/illia/static/js/runtime-main.afbf09d6.js",
     "runtime-main.js.map": "/illia/static/js/runtime-main.afbf09d6.js.map",
-    "static/js/2.4c6097eb.chunk.js": "/illia/static/js/2.4c6097eb.chunk.js",
-    "static/js/2.4c6097eb.chunk.js.map": "/illia/static/js/2.4c6097eb.chunk.js.map",
+    "static/js/2.3a01a74d.chunk.js": "/illia/static/js/2.3a01a74d.chunk.js",
+    "static/js/2.3a01a74d.chunk.js.map": "/illia/static/js/2.3a01a74d.chunk.js.map",
     "index.html": "/illia/index.html",
-    "precache-manifest.496dd37c176fd0a1ea3f181eb7b4d058.js": "/illia/precache-manifest.496dd37c176fd0a1ea3f181eb7b4d058.js",
+    "precache-manifest.ef9e934ab02de5cdcaa57b65f3e166b1.js": "/illia/precache-manifest.ef9e934ab02de5cdcaa57b65f3e166b1.js",
     "service-worker.js": "/illia/service-worker.js",
-    "static/js/2.4c6097eb.chunk.js.LICENSE.txt": "/illia/static/js/2.4c6097eb.chunk.js.LICENSE.txt",
+    "static/js/2.3a01a74d.chunk.js.LICENSE.txt": "/illia/static/js/2.3a01a74d.chunk.js.LICENSE.txt",
     "static/media/aboutOne.jpg": "/illia/static/media/aboutOne.ba792ffd.jpg",
+    "static/media/aboutTwo.jpg": "/illia/static/media/aboutTwo.18a47739.jpg",
     "static/media/abstract.jpg": "/illia/static/media/abstract.b2539969.jpg",
     "static/media/analytics.jpeg": "/illia/static/media/analytics.2eb36274.jpeg",
     "static/media/betting.jpg": "/illia/static/media/betting.748e7ce4.jpg",
     "static/media/car.jpg": "/illia/static/media/car.92fb6c90.jpg",
     "static/media/communication.jpeg": "/illia/static/media/communication.f39001fd.jpeg",
-    "static/media/education.jpg": "/illia/static/media/education.75c83678.jpg",
-    "static/media/english.jpg": "/illia/static/media/english.d17f65a5.jpg",
     "static/media/leadership.jpeg": "/illia/static/media/leadership.9a55e69b.jpeg",
-    "static/media/me.png": "/illia/static/media/me.3687dfb8.png",
-    "static/media/me2.png": "/illia/static/media/me2.feb1105c.png",
     "static/media/ml.jpg": "/illia/static/media/ml.1a2ba7f4.jpg",
     "static/media/ohsrank.jpg": "/illia/static/media/ohsrank.8feb4728.jpg",
     "static/media/organization.jpeg": "/illia/static/media/organization.0c76a707.jpeg",
@@ -35,7 +32,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.afbf09d6.js",
-    "static/js/2.4c6097eb.chunk.js",
-    "static/js/main.5de997a0.chunk.js"
+    "static/js/2.3a01a74d.chunk.js",
+    "static/js/main.39d7230e.chunk.js"
   ]
 }
