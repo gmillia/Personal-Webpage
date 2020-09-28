@@ -2,9 +2,8 @@ import React from 'react';
 import { makeStyles } from "@material-ui/styles";
 import Grid from '@material-ui/core/Grid';
 import { Fade } from '@material-ui/core';
-import Visibility from 'react-visibility-sensor';
 
-import { FakeEmpty } from 'components';
+import { Visibility } from 'components';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -47,29 +46,20 @@ const useStyles = makeStyles(theme => ({
 const Languages = () => {
     const classes = useStyles();
 
-    const getContent = () => {
-        return (
-            <Grid item xs={12} className={classes.root} >
-                <div className={classes.header}>
-                    /03/Languages
-                </div>
-                <Grid item className={classes.languages}>
-                    <div>English</div>
-                    <div>Russian</div>
-                    <div>Ukrainian</div>
-                </Grid>
-            </Grid>
-        )
-    }
-
     return (
-        <Visibility partialVisibility={true}>
-            {({isVisible}) => 
-                isVisible ?
-                <Fade in={true} timeout={2000}>{getContent()}</Fade>
-                :
-                <FakeEmpty>{getContent()}</FakeEmpty>
-            }
+        <Visibility >
+            <Fade in={true} timeout={1500}>
+                <Grid item xs={12} className={classes.root} >
+                    <div className={classes.header}>
+                        /03/Languages
+                    </div>
+                    <Grid item className={classes.languages}>
+                        <div>English</div>
+                        <div>Russian</div>
+                        <div>Ukrainian</div>
+                    </Grid>
+                </Grid>
+            </Fade>
         </Visibility>
     )
 };  
