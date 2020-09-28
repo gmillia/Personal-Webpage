@@ -5,7 +5,8 @@ import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { Grow } from '@material-ui/core';
 import { Fade } from '@material-ui/core';
-
+import clsx from 'clsx';
+ 
 //Components
 import { BackgroundImage, Foreground, Visibility } from 'components';
 
@@ -80,11 +81,20 @@ const useStyles = makeStyles(theme => ({
             lineHeight: 0.95
         }
     },
+    pageHeaderBottom: {
+        color: 'black',
+        textAlign: 'end'
+    },
     topHeader: {
+        display: "flex",
         flex: 0,
     },
     bottomHeader: {
         flex: 0,
+        display: 'flex',
+        width: '100%',
+        color: 'black',
+        justifyContent: "flex-end"
     },
     content: {
         flex: 1,
@@ -109,11 +119,9 @@ const Personality = () => {
 
     const header = (last=false, text='') => {
         return (
-            <Visibility active={desktop} >
-                <Fade in={true} timeout={last ? 3000 : 500}>
-                    <div className={classes.pageHeader} style={{ textAlign: last ? 'end' : 'start', color: last ? 'black' : 'white' }}>
-                        {text}
-                    </div>
+            <Visibility >
+                <Fade in={true} timeout={2000}>
+                    <div style={{display: 'flex'}}>{text}</div>
                 </Fade>
             </Visibility>
         )
@@ -146,7 +154,7 @@ const Personality = () => {
 
     return (
         <Grid item xs={12} className={classes.root}>
-            <Grid item xs={12} className={classes.topHeader}>
+            <Grid item xs={12} className={clsx(classes.topHeader, classes.pageHeader)}>
                 {header(false, 'INNOVATE')}
             </Grid>
             <Grid item xs={12} className={classes.content} >
@@ -162,7 +170,7 @@ const Personality = () => {
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid item xs={12} className={classes.bottomHeader} >{header(true, 'CREATE')}</Grid>
+            <Grid item xs={12} className={clsx(classes.bottomHeader, classes.pageHeader)}>{header(true, 'CREATE')}</Grid>
         </Grid>
     )
 };
