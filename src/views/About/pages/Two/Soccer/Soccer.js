@@ -6,7 +6,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { Fade } from '@material-ui/core';
 
 //Button
-import { Underline as Button, Visibility } from '../../../../../components';
+import { Underline as Button, Visibility } from 'components';
 
 const useStyles = makeStyles(theme => ({
     root: {

@@ -46,11 +46,6 @@ const useStyles = makeStyles(theme => ({
             paddingBottom: 0,
         }
     },
-    contentWrapper: {
-        display: 'flex',
-        flexDirection: "column",
-        color: 'white'
-    },
     topContent: {
         width: '100%',
         display: 'flex',
@@ -77,10 +72,10 @@ const useStyles = makeStyles(theme => ({
         width: 'inherit'
     },
     pageHeader: {
-        display: 'none',
+        visibility: 'hidden',
         color: "white",
         [theme.breakpoints.up('sm')]: {
-            display: "block",
+            visibility: 'visible',
             fontSize: 70,
             lineHeight: 0.95
         }
@@ -99,6 +94,11 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('sm')]: {
             flexWrap: 'nowrap'
         }
+    },
+    qualityHeaderWrapper: {
+        display: 'flex',
+        flex: 0,
+        alignItems: 'center'
     }
 }))
 
@@ -109,7 +109,7 @@ const Personality = () => {
 
     const header = (last=false, text='') => {
         return (
-            <Visibility>
+            <Visibility active={desktop} >
                 <Fade in={true} timeout={last ? 3000 : 500}>
                     <div className={classes.pageHeader} style={{ textAlign: last ? 'end' : 'start', color: last ? 'black' : 'white' }}>
                         {text}
@@ -150,7 +150,7 @@ const Personality = () => {
                 {header(false, 'INNOVATE')}
             </Grid>
             <Grid item xs={12} className={classes.content} >
-                {qualityHeader()}
+                <Grid item className={classes.qualityHeaderWrapper} >{qualityHeader()}</Grid>
                 <Grid item xs={12} className={classes.wrapper}>
                     <Grid item xs={12} className={classes.topContent}>
                         {quality(Analytics, 'Analytics', false, 500)}
