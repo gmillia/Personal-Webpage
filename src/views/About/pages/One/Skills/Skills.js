@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/styles";
 import Grid from '@material-ui/core/Grid';
 import Slide from '@material-ui/core/Slide';
 import { Visibility } from 'components';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 //tests
 import { BackgroundImage, Foreground } from 'components';
@@ -58,6 +60,8 @@ const useStyles = makeStyles(theme => ({
 
 const Skills = () => {
     const classes = useStyles();
+    const theme = useTheme();
+    const desktop = useMediaQuery(theme.breakpoints.up('sm'));
 
     const skillColumn = (background, header, content, timeout) => {
         return (
@@ -79,7 +83,7 @@ const Skills = () => {
     }
 
     return (
-        <Visibility partialVisibility="top" offset={{top: -190}} onChange={(value) => {console.log(value)}} >
+        <Visibility partialVisibility="top" offset={{top: desktop ? -190 : -450}} >
             <Grid item xs={12} className={classes.root} >
                 <Grid item xs={12} className={classes.skillsWrapper}>
                     <Grid item xs={12} className={classes.header}>Skills</Grid>

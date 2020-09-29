@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        background: props => props.useBackground ? `url(` + props.background + `) no-repeat center` : 'transparent',
+        background: props => props.useBackground ? `url(${props.background}) no-repeat center` : 'transparent', 
         WebkitBackgroundSize: 'cover',
         MozBackgroundSize: 'cover',
         OBackgroundSize: 'cover',
@@ -14,15 +14,15 @@ const useStyles = makeStyles(theme => ({
         width: '100%',
     },
     wrapper: {
-        backgroundImage: props => props.useBackground ? 'linear-gradient(' + props.wrapperDirection + ', rgba(0,0,0,0.1), rgba(0,0,0,0.9))' : '',
+        backgroundImage: props => props.useBackground && props.darken ? `linear-gradient(${props.wrapperDirection}, rgba(0,0,0,0.1), rgba(0,0,0,0.9))` : ``,
         fontFamily: 'Cinzel, serif',
         display: 'flex',
         flexDirection: 'column'
     },
 }))
 
-const Page = ({ background='', useBackground=false, wrapperDirection='to right', children }) => {
-    const classes = useStyles({ background: background, useBackground: useBackground, wrapperDirection: wrapperDirection });
+const Page = ({ background='', useBackground=false, wrapperDirection='to right', darken=true, children }) => {
+    const classes = useStyles({ background: background, useBackground: useBackground, wrapperDirection: wrapperDirection, darken: darken });
 
     return (
         <Grid container spacing={0} className={classes.root}>

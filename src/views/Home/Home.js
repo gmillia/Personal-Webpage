@@ -3,72 +3,44 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from "@material-ui/styles";
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import Slide from '@material-ui/core/Slide';
+import { Textfit } from 'react-textfit';
 
 //COMPONENTS
-import { Page } from '../../components'
+import { Page, Visibility } from 'components'
 import { Content } from './Content';
 import { Contact } from './Contact';
 import { Links } from './Links';
 
 //Images
-import Abstract from '../../assets/abstract.jpg'
+import Background from 'assets/abstract.jpg'
 
 const useStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
-        justifyContent: 'flex-start',
-        width: '100%',
-        height: "100%",
+        flexDirection: 'column',
+        color: "white",
+        background: 'linear-gradient(180deg, rgba(0,0,0,0.5) 50%, rgba(255,255,255,0.5) 50%)',
         [theme.breakpoints.up('sm')]: {
-            justifyContent: 'flex-end',
-            alignContent: "flex-end",
+            flexDirection: 'row'
         }
     },
     leftWrapper: {
         display: 'flex',
-        alignItems: 'flex-end',
-        color: 'white',
-        maxWidth: '100%',
-        padding: 30,
-        flex: 1,
-        [theme.breakpoints.up('sm')]: {
-            maxWidth: '50%',
-        }
     },
     rightWrapper: {
-        color: "white",
-        display: "flex",
-        alignItems: 'center',
-        justifyContent: "center",
-        flexFlow: 'row',
-        flexWrap: 'wrap',
-        backgroundColor: 'rgba(0,0,0,0.5)',
+        display: 'flex',
+        flexDirection: 'column',
+        background: 'rgba(0,0,0,0.5)',
         padding: 30,
-        flex: 1,
-        [theme.breakpoints.up('sm')]: {
-            flexFlow:"column",
-            minHeight: '100%',
-            width: '100%',
-            borderLeft: '2px solid rgba(255,255,255,0.2)',
-        }
     },
     contentWrapper: {
-        display: 'flex',
-        width: '100%',
-        minHeight: '60%',
-        [theme.breakpoints.up('sm')]: {
-            alignItems: 'flex-end'
-        }
+        display: 'flex', 
+        alignItems: 'flex-end'      
     },
     contactWrapper: {
         display: 'flex',
-        width: '100%',
-        flex: 1,
-        alignSelf: "bottom",
-        [theme.breakpoints.up('sm')]: {
-            paddingTop: 0,
-            alignItems: 'flex-end',
-        }
+        alignItems: 'flex-end'
     },
 })) 
 
@@ -77,42 +49,28 @@ const Home = () => {
     const theme = useTheme();
     const desktop = useMediaQuery(theme.breakpoints.up('sm'));
 
-    const leftAndBottom = () => {
-        return (
-            <Grid item xs={12} sm={6} className={classes.leftWrapper}>
-                <Links />
-            </Grid>
-        )
-    }
-
-    const rightAndTop = () => {
-        return (
-            <Grid item xs={12} sm={6} className={classes.rightWrapper}>
-                <Grid className={classes.contentWrapper}>
-                    <Content />
-                </Grid>
-                <Grid className={classes.contactWrapper}>
-                    <Contact />
-                </Grid>
-            </Grid>
-        )
-    }
-
     return (
-        <Page background={Abstract} useBackground={true} >
-        {
-            desktop ? 
-                <Grid container spacing={0} className={classes.root}>
-                    {leftAndBottom()}
-                    {rightAndTop()}
-                </Grid>
-                :
-                <Grid container spacing={0} className={classes.root}>
-                    {rightAndTop()}
-                    {leftAndBottom()}
-                </Grid>
-        }
+        <Page background={Background} useBackground={true} darken={false} >
+            <Grid item xs={12}><Textfit mode="single" max={1000} >ILLIA</Textfit></Grid>
+            <Grid item xs={12}></Grid>
         </Page>
+        /*
+        <Page background={Background} useBackground={true} darken={false} >
+            <Grid item xs={12} className={classes.root}>
+                <Visibility >
+                    <Slide in={true} timeout={2000} direction="right" >
+                        <Grid item xs={12} sm={6} className={classes.rightWrapper} >
+                            <Grid item xs={12} className={classes.contentWrapper} ><Content /></Grid>
+                            <Grid item xs={12} className={classes.contactWrapper} ><Contact /></Grid>
+                        </Grid>
+                    </Slide>
+                </Visibility>
+                <Grid item xs={12} sm={6} className={classes.leftWrapper} >
+
+                </Grid>
+            </Grid>
+        </Page>
+        */
     )
 };
 

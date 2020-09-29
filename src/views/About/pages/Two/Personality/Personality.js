@@ -155,7 +155,7 @@ const Personality = () => {
     return (
         <Grid item xs={12} className={classes.root}>
             <Grid item xs={12} className={clsx(classes.topHeader, classes.pageHeader)}>
-                {header(false, 'INNOVATE')}
+                {header(false, 'ENVISION')}
             </Grid>
             <Grid item xs={12} className={classes.content} >
                 <Grid item className={classes.qualityHeaderWrapper} >{qualityHeader()}</Grid>
@@ -170,7 +170,7 @@ const Personality = () => {
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid item xs={12} className={clsx(classes.bottomHeader, classes.pageHeader)}>{header(true, 'CREATE')}</Grid>
+            <Grid item xs={12} className={clsx(classes.bottomHeader, classes.pageHeader)}>{header(true, 'INNOVATE')}</Grid>
         </Grid>
     )
 };
