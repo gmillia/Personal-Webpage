@@ -4,43 +4,48 @@ import { makeStyles } from "@material-ui/styles";
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Slide from '@material-ui/core/Slide';
+import { Fade } from '@material-ui/core';
 
 //COMPONENTS
-import { Page, Visibility } from 'components'
-import { Content } from './Content';
-import { Contact } from './Contact';
-import { Links } from './Links';
+import { Page, Visibility, BackgroundImage, AnimateText } from 'components'
 
 //Images
-import Background from 'assets/abstract.jpg'
+import Background from 'assets/abstract.jpg';
+import TopBackground from 'assets/ml.jpg';
+import MiddleBackground from 'assets/ohsrank.jpg';
+import BottomBackground from 'assets/stopspot.jpg';
 
 const useStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
-        flexDirection: 'column',
-        color: "white",
-        background: 'linear-gradient(180deg, rgba(0,0,0,0.5) 50%, rgba(255,255,255,0.5) 50%)',
-        [theme.breakpoints.up('sm')]: {
-            flexDirection: 'row'
-        }
+
     },
-    leftWrapper: {
+    left: {
         display: 'flex',
     },
-    rightWrapper: {
+    firstName: {
+        fontSize: 40,
+
+    },
+    lastName: {
+        fontSize: 35,
+        writingMode: 'vertical-rl',
+        textOrientation: 'upright',
+    },
+    back: {
+        position: 'absolute',
+        top: 50,
+        left: 0,
         display: 'flex',
-        flexDirection: 'column',
-        background: 'rgba(0,0,0,0.5)',
-        padding: 30,
+        width: '100%',
+        height: theme.page.height,
     },
-    contentWrapper: {
-        display: 'flex', 
-        alignItems: 'flex-end'      
-    },
-    contactWrapper: {
+    front: {
         display: 'flex',
-        alignItems: 'flex-end'
     },
+    backLeft: {
+        background: 'rgba(0,0,0,0.5)'
+    }
 })) 
 
 const Home = () => {
@@ -50,26 +55,24 @@ const Home = () => {
 
     return (
         <Page background={Background} useBackground={true} darken={false} >
-            <Grid item xs={12}>ILLIA</Grid>
-            <Grid item xs={12}></Grid>
-        </Page>
-        /*
-        <Page background={Background} useBackground={true} darken={false} >
             <Grid item xs={12} className={classes.root}>
-                <Visibility >
-                    <Slide in={true} timeout={2000} direction="right" >
-                        <Grid item xs={12} sm={6} className={classes.rightWrapper} >
-                            <Grid item xs={12} className={classes.contentWrapper} ><Content /></Grid>
-                            <Grid item xs={12} className={classes.contactWrapper} ><Contact /></Grid>
-                        </Grid>
-                    </Slide>
-                </Visibility>
-                <Grid item xs={12} sm={6} className={classes.leftWrapper} >
-
+                <Grid item xs={12} className={classes.back}>
+                    <Fade in={true} timeout={3000}>
+                        <Grid item xs={12} sm={6} className={classes.backLeft} ></Grid>
+                    </Fade>
+                </Grid>
+                <Grid item xs={12} className={classes.front}>
+                    <Grid item xs={12} sm={6} className={classes.left}>
+                        <div className={classes.firstName}>
+                            <AnimateText textArray={'ILLIA'.split('')} />
+                        </div>
+                        <div className={classes.lastName}>
+                            <AnimateText textArray={'SHERSHUN'.split('')} />
+                        </div>
+                    </Grid>
                 </Grid>
             </Grid>
         </Page>
-        */
     )
 };
 

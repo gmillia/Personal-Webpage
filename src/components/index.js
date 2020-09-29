@@ -6,3 +6,4 @@ export * from './BackgroundImage';
 export * from './Foreground';
 export * from './PortfolioCard';
 export * from './Visibility';
+export * from './AnimateText';
