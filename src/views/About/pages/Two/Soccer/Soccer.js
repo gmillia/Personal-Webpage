@@ -4,10 +4,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { Fade } from '@material-ui/core';
-import { Textfit } from 'react-textfit';
 
 //Button
 import { Underline as Button, Visibility } from 'components';
+
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -55,12 +55,12 @@ const Soccer = () => {
             <Fade in={true} timeout={1000}>
                 <Grid item xs={12} className={classes.root} >
                     <Grid item xs={12} className={classes.wrapper}>
-                        { desktop ? <div></div> : <Textfit mode="single" >{desktop ? 'SOCCER' : 'Soccer' }</Textfit> }
+                        { desktop ? <div></div> : <div className={classes.header}>SOCCER</div> }
                         <div className={classes.text}>
                             Due to my ACL injury, my passion for this game transformed into coaching positions at a David Douglas High School and Portland State University.
                             <Button linkTo='/resume' name='Resume' />
                         </div>
-                        { desktop ? <div className={classes.header}><Textfit mode="multi" >SOCCER</Textfit></div> : null }
+                        { desktop ? <div className={classes.header}>SOCCER</div> : null }
                     </Grid>
                 </Grid>
             </Fade>

@@ -4,7 +4,6 @@ import { makeStyles } from "@material-ui/styles";
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Slide from '@material-ui/core/Slide';
-import { Textfit } from 'react-textfit';
 
 //COMPONENTS
 import { Page, Visibility } from 'components'
@@ -51,7 +50,7 @@ const Home = () => {
 
     return (
         <Page background={Background} useBackground={true} darken={false} >
-            <Grid item xs={12}><Textfit mode="single" max={1000} >ILLIA</Textfit></Grid>
+            <Grid item xs={12}>ILLIA</Grid>
             <Grid item xs={12}></Grid>
         </Page>
         /*

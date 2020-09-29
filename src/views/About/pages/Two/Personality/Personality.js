@@ -6,6 +6,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { Grow } from '@material-ui/core';
 import { Fade } from '@material-ui/core';
 import clsx from 'clsx';
+import FitText from '@kennethormandy/react-fittext'
  
 //Components
 import { BackgroundImage, Foreground, Visibility } from 'components';
@@ -35,7 +36,7 @@ const useStyles = makeStyles(theme => ({
         paddingBottom: 20,
         [theme.breakpoints.up('sm')]: {
             fontFamily: 'Nanum Myeongjo, serif',
-            fontSize: 35,
+            //fontSize: 35,
             fontWeight: 700,
             textOrientation: 'upright',
             writingMode: 'vertical-rl',
@@ -107,8 +108,30 @@ const useStyles = makeStyles(theme => ({
     },
     qualityHeaderWrapper: {
         display: 'flex',
-        flex: 0,
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: 'white',
+        fontFamily: 'Cinzel, serif',
+        fontSize: 24,
+        paddingBottom: 20,
+        [theme.breakpoints.up('sm')]: {
+            fontFamily: 'Nanum Myeongjo, serif',
+            //fontSize: 35,
+            fontWeight: 700,
+            textOrientation: 'upright',
+            writingMode: 'vertical-rl',
+            //Text transformation
+            background: 'linear-gradient(white 50%, black 50%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            paddingRight: 20,
+            paddingBottom: 0,
+        }
+    },
+    desktopQualityHeader: {
+        [theme.breakpoints.up('sm')]: {
+            height: 400
+        }
     }
 }))
 
@@ -129,11 +152,14 @@ const Personality = () => {
 
     const qualityHeader = () => {
         return (
+            <FitText vertical compressor={1.13} >QUALITITES</FitText>
+            /*
             <Visibility>
                 <Fade in={true} timeout={1500}>
                     <div className={classes.header}>{ desktop ? 'QUALITIES' : 'Qualities' }</div>
                 </Fade>
             </Visibility>
+            */
         )
     }
 
@@ -158,7 +184,11 @@ const Personality = () => {
                 {header(false, 'ENVISION')}
             </Grid>
             <Grid item xs={12} className={classes.content} >
-                <Grid item className={classes.qualityHeaderWrapper} >{qualityHeader()}</Grid>
+                <Grid item className={classes.qualityHeaderWrapper} >
+                    <Grid item className={desktop ? classes.desktopQualityHeader : null} >
+                    {qualityHeader()}
+                    </Grid>
+                </Grid>
                 <Grid item xs={12} className={classes.wrapper}>
                     <Grid item xs={12} className={classes.topContent}>
                         {quality(Analytics, 'Analytics', false, 500)}
