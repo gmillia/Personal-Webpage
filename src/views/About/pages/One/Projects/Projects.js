@@ -1,9 +1,10 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/styles";
 import Grid from '@material-ui/core/Grid';
+import { Fade } from '@material-ui/core';
 
 //Button
-import { Underline as Button } from 'components';
+import { Underline as Button, Visibility } from 'components';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -44,15 +45,19 @@ const Projects = () => {
     const classes = useStyles();
 
     return (
-        <Grid item xs={12} className={classes.root} >
-            <Grid item xs={12} className={classes.header}>Projects</Grid>
-            <Grid item xs={12} className={classes.text}>
-                Using those skills, I have written various projects throughout the years. 
-            </Grid>
-            <Grid item xs={12} className={classes.buttonWrapper}>
-                <Button linkTo='/portfolio' name='View' />
-            </Grid>
-        </Grid>
+        <Visibility partialVisibility="top" offset={{top: -190}}>
+            <Fade in={true} timeout={1500}>
+                <Grid item xs={12} className={classes.root} >
+                    <Grid item xs={12} className={classes.header}>Projects</Grid>
+                    <Grid item xs={12} className={classes.text}>
+                        Using those skills, I have written various projects throughout the years. 
+                    </Grid>
+                    <Grid item xs={12} className={classes.buttonWrapper}>
+                        <Button linkTo='/portfolio' name='View' />
+                    </Grid>
+                </Grid>
+            </Fade>
+        </Visibility>
     )
 };  
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/styles";
 import Grid from '@material-ui/core/Grid';
+import Slide from '@material-ui/core/Slide';
+import { Visibility } from 'components';
 
 //tests
 import { BackgroundImage, Foreground } from 'components';
@@ -57,32 +59,36 @@ const useStyles = makeStyles(theme => ({
 const Skills = () => {
     const classes = useStyles();
 
-    const skillColumn = (background, header, content) => {
+    const skillColumn = (background, header, content, timeout) => {
         return (
-            <Grid item xs={12} sm={4} style={{display: 'flex', flexDirection: 'column'}}>
-                <div><span className={classes.skillLevelHeader}>{header}</span></div>
-                <BackgroundImage background={background} minHeight={150} >
-                    <Foreground>
-                        <Grid item xs={12} className={classes.skillLevel}>
-                            <div className={classes.skillLevelContent}>
-                                <div>{content}</div>
-                            </div>
-                        </Grid>
-                    </Foreground>
-                </BackgroundImage>
-            </Grid>
+            <Slide in={true} direction='right' timeout={timeout} >
+                <Grid item xs={12} sm={4} style={{display: 'flex', flexDirection: 'column'}}>
+                    <div><span className={classes.skillLevelHeader}>{header}</span></div>
+                    <BackgroundImage background={background} minHeight={150} >
+                        <Foreground>
+                            <Grid item xs={12} className={classes.skillLevel}>
+                                <div className={classes.skillLevelContent}>
+                                    <div>{content}</div>
+                                </div>
+                            </Grid>
+                        </Foreground>
+                    </BackgroundImage>
+                </Grid>
+            </Slide>
         )
     }
 
     return (
-        <Grid item xs={12} className={classes.root} >
-            <Grid item xs={12} className={classes.skillsWrapper}>
-                <Grid item xs={12} className={classes.header}>Skills</Grid>
-                {skillColumn(WorkingSkills, 'Working', 'JavaScript / Python / C++ / React / HTML5')}
-                {skillColumn(OtherSkills, 'Other', 'MongoDB / SQL / NoSQL / Firebase / Bootstrap / CSS')}
-                {skillColumn(TouchedSkills, 'Touched', 'Java / C / SCSS')}
+        <Visibility partialVisibility="top" offset={{top: -190}} onChange={(value) => {console.log(value)}} >
+            <Grid item xs={12} className={classes.root} >
+                <Grid item xs={12} className={classes.skillsWrapper}>
+                    <Grid item xs={12} className={classes.header}>Skills</Grid>
+                    {skillColumn(WorkingSkills, 'Working', 'JavaScript / Python / C++ / React / HTML5', 1500)}
+                    {skillColumn(OtherSkills, 'Other', 'MongoDB / SQL / NoSQL / Firebase / Bootstrap / CSS', 1000)}
+                    {skillColumn(TouchedSkills, 'Touched', 'Java / C / SCSS', 500)}
+                </Grid>
             </Grid>
-        </Grid>
+        </Visibility>
     )
 };  
 

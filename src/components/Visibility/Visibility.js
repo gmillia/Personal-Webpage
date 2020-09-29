@@ -14,13 +14,19 @@ const useStyles = makeStyles(theme => ({
  * Hides children component(s) while keeping the space in the page. In Mobile views, elements that are fading in, seem to be appearing out of nowhere, thus
  * taking space and shifting elements. If we wrap element in FakeEmpty, we keep its dimensions on the page, thus it just fades in.
  */
-const Visibility = ({ children, active=true }) => {
+const Visibility = ({ children, active=true, minTopValue=0, partialVisibility=true, offset={}, onChange }) => {
     const classes = useStyles();
 
-    
+    /**
+     * Helpe function which returns value of visibility to the callback.
+     * @param {Boolean} newVisibility 
+     */
+    const handleChange = (newVisibility) => {
+        if(onChange) onChange(newVisibility)
+    }
 
     return (
-        <VisibilitySensor partialVisibility={true} active={active} >  
+        <VisibilitySensor partialVisibility={partialVisibility} active={active} minTopValue={minTopValue} offset={offset} onChange={(changed) => handleChange(changed)} >  
         {
             ({isVisible}) => 
                 isVisible ? 
