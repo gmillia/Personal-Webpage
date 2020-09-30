@@ -12,10 +12,10 @@ import FitText from '@kennethormandy/react-fittext'
 import { BackgroundImage, Foreground, Visibility } from 'components';
 
 //Bacgkround
-import Analytics from 'assets/skills/analytics.jpeg';
-import Leadership from 'assets/skills/leadership.jpeg';
-import Organization from 'assets/skills/organization.jpeg';
-import Communication from 'assets/skills/communication.jpeg';
+import Analytics from 'assets/about/analytics.webp';
+import Leadership from 'assets/about/leadership.webp';
+import Organization from 'assets/about/organization.webp';
+import Communication from 'assets/about/communication.webp';
 
 const useStyles = makeStyles(theme => ({
     root: {

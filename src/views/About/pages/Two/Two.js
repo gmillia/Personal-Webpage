@@ -10,7 +10,7 @@ import { Soccer } from './Soccer';
 import { Page } from '../../../../components'
 
 //Background image
-import Background from 'assets/about/backgroundTwo.jpg';
+import Background from 'assets/about/backgroundTwo.webp';
 
 const useStyles = makeStyles(theme => ({
     root: {

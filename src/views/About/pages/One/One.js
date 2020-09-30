@@ -12,7 +12,7 @@ import { Projects } from './Projects';
 import { Page } from 'components'
 
 //Background image
-import Background from 'assets/about/backgroundOne.jpg';
+import Background from 'assets/about/backgroundOne.webp';
 
 const useStyles = makeStyles(theme => ({
     root: {

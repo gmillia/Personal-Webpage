@@ -8,9 +8,9 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 //tests
 import { BackgroundImage, Foreground } from 'components';
-import WorkingSkills from 'assets/about/workingSkills.jpg';
-import OtherSkills from 'assets/about/otherSkills.jpg';
-import TouchedSkills from 'assets/about/touchedSkills.jpg';
+import WorkingSkills from 'assets/about/workingSkills.webp';
+import OtherSkills from 'assets/about/otherSkills.webp';
+import TouchedSkills from 'assets/about/touchedSkills.webp';
 
 const useStyles = makeStyles(theme => ({
     root: {
