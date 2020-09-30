@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "978987936da4525fb044db3438129c8b",
+    "revision": "1669ae767c2619c4f6d64807ea44c8ad",
     "url": "/illia/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/illia/static/js/2.8efc43c8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "05bcafb3338a0042d617",
-    "url": "/illia/static/js/main.ff2c72bd.chunk.js"
+    "revision": "a92b6a479aa5de457236",
+    "url": "/illia/static/js/main.5814b724.chunk.js"
   },
   {
     "revision": "65a13ac2ffc1e95ba30c",
@@ -64,8 +64,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/illia/static/media/organization.bce0197c.webp"
   },
   {
-    "revision": "b58edbb606981e9ca3f8891eb68a2941",
-    "url": "/illia/static/media/otherSkills.b58edbb6.webp"
+    "revision": "580ccf4fca2f64511d9006693bb1ec85",
+    "url": "/illia/static/media/otherSkills.580ccf4f.webp"
   },
   {
     "revision": "1355fdd0d0598d5f98cac2c15e613808",
@@ -80,11 +80,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/illia/static/media/stopspot.36851808.jpg"
   },
   {
-    "revision": "e213183a3f2b5faffe5b05522cb8e6dd",
-    "url": "/illia/static/media/touchedSkills.e213183a.webp"
+    "revision": "2c5a20fceee2d759b0c707a7ed89348e",
+    "url": "/illia/static/media/touchedSkills.2c5a20fc.webp"
   },
   {
-    "revision": "ab927ad6709e833c20f0cd498d40e2c5",
-    "url": "/illia/static/media/workingSkills.ab927ad6.webp"
+    "revision": "f7891dd6320b16155221347665bdb93b",
+    "url": "/illia/static/media/workingSkills.f7891dd6.webp"
   }
 ]);

@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/illia/static/js/main.ff2c72bd.chunk.js",
-    "main.js.map": "/illia/static/js/main.ff2c72bd.chunk.js.map",
+    "main.js": "/illia/static/js/main.5814b724.chunk.js",
+    "main.js.map": "/illia/static/js/main.5814b724.chunk.js.map",
     "runtime-main.js": "/illia/static/js/runtime-main.afbf09d6.js",
     "runtime-main.js.map": "/illia/static/js/runtime-main.afbf09d6.js.map",
     "static/js/2.8efc43c8.chunk.js": "/illia/static/js/2.8efc43c8.chunk.js",
     "static/js/2.8efc43c8.chunk.js.map": "/illia/static/js/2.8efc43c8.chunk.js.map",
     "index.html": "/illia/index.html",
-    "precache-manifest.3e68dc4cf185014787f931f6cfd872a1.js": "/illia/precache-manifest.3e68dc4cf185014787f931f6cfd872a1.js",
+    "precache-manifest.40a36d4bbf9eabe2e421418f25867caf.js": "/illia/precache-manifest.40a36d4bbf9eabe2e421418f25867caf.js",
     "service-worker.js": "/illia/service-worker.js",
     "static/js/2.8efc43c8.chunk.js.LICENSE.txt": "/illia/static/js/2.8efc43c8.chunk.js.LICENSE.txt",
     "static/media/abstract.jpg": "/illia/static/media/abstract.b2539969.jpg",
@@ -21,16 +21,16 @@
     "static/media/ml.jpg": "/illia/static/media/ml.1a2ba7f4.jpg",
     "static/media/ohsrank.jpg": "/illia/static/media/ohsrank.8feb4728.jpg",
     "static/media/organization.webp": "/illia/static/media/organization.bce0197c.webp",
-    "static/media/otherSkills.webp": "/illia/static/media/otherSkills.b58edbb6.webp",
+    "static/media/otherSkills.webp": "/illia/static/media/otherSkills.580ccf4f.webp",
     "static/media/relay.jpg": "/illia/static/media/relay.1355fdd0.jpg",
     "static/media/rightArrow.svg": "/illia/static/media/rightArrow.169413c8.svg",
     "static/media/stopspot.jpg": "/illia/static/media/stopspot.36851808.jpg",
-    "static/media/touchedSkills.webp": "/illia/static/media/touchedSkills.e213183a.webp",
-    "static/media/workingSkills.webp": "/illia/static/media/workingSkills.ab927ad6.webp"
+    "static/media/touchedSkills.webp": "/illia/static/media/touchedSkills.2c5a20fc.webp",
+    "static/media/workingSkills.webp": "/illia/static/media/workingSkills.f7891dd6.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.afbf09d6.js",
     "static/js/2.8efc43c8.chunk.js",
-    "static/js/main.ff2c72bd.chunk.js"
+    "static/js/main.5814b724.chunk.js"
   ]
 }
