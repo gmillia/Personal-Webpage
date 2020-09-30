@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b6925f747068fdfedaeaed583e80ee83",
+    "revision": "978987936da4525fb044db3438129c8b",
     "url": "/illia/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/illia/static/js/2.8efc43c8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "aedddcaf9261c3fb6300",
-    "url": "/illia/static/js/main.1bf1a27f.chunk.js"
+    "revision": "05bcafb3338a0042d617",
+    "url": "/illia/static/js/main.ff2c72bd.chunk.js"
   },
   {
     "revision": "65a13ac2ffc1e95ba30c",
@@ -24,16 +24,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/illia/static/media/abstract.b2539969.jpg"
   },
   {
-    "revision": "2eb36274246be084970f3d11ecce8ab4",
-    "url": "/illia/static/media/analytics.2eb36274.jpeg"
+    "revision": "6025338f7009320980e1bc6ade0a81d9",
+    "url": "/illia/static/media/analytics.6025338f.webp"
   },
   {
-    "revision": "ba792ffd22c283c0f41012e5456a0a83",
-    "url": "/illia/static/media/backgroundOne.ba792ffd.jpg"
+    "revision": "8544425cfd780aea88e04413a33d7484",
+    "url": "/illia/static/media/backgroundOne.8544425c.webp"
   },
   {
-    "revision": "18a47739c16b298fa5342078aa66d510",
-    "url": "/illia/static/media/backgroundTwo.18a47739.jpg"
+    "revision": "e05ba3bac86f09478ed6cad8214cb138",
+    "url": "/illia/static/media/backgroundTwo.e05ba3ba.webp"
   },
   {
     "revision": "748e7ce4d94be67a5c232444990da620",
@@ -44,12 +44,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/illia/static/media/car.92fb6c90.jpg"
   },
   {
-    "revision": "f39001fd9ae081cc98f98eac951ad07b",
-    "url": "/illia/static/media/communication.f39001fd.jpeg"
+    "revision": "f95117ccbad52a153667c0937e38d789",
+    "url": "/illia/static/media/communication.f95117cc.webp"
   },
   {
-    "revision": "9a55e69be49748b6a835bf4b89b1b837",
-    "url": "/illia/static/media/leadership.9a55e69b.jpeg"
+    "revision": "500767f94081799548a588d9dbf27228",
+    "url": "/illia/static/media/leadership.500767f9.webp"
   },
   {
     "revision": "1a2ba7f441ac99c642e77ed0bf6457f0",
@@ -60,12 +60,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/illia/static/media/ohsrank.8feb4728.jpg"
   },
   {
-    "revision": "0c76a7074069a5459f8d6df6648a04dc",
-    "url": "/illia/static/media/organization.0c76a707.jpeg"
+    "revision": "bce0197c0f84ee14d64b507776153cb6",
+    "url": "/illia/static/media/organization.bce0197c.webp"
   },
   {
-    "revision": "554fa3187852301c1600b328d8478071",
-    "url": "/illia/static/media/otherSkills.554fa318.jpg"
+    "revision": "b58edbb606981e9ca3f8891eb68a2941",
+    "url": "/illia/static/media/otherSkills.b58edbb6.webp"
   },
   {
     "revision": "1355fdd0d0598d5f98cac2c15e613808",
@@ -80,11 +80,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/illia/static/media/stopspot.36851808.jpg"
   },
   {
-    "revision": "b509c9331bb6eb63ac4e6e6d99965eea",
-    "url": "/illia/static/media/touchedSkills.b509c933.jpg"
+    "revision": "e213183a3f2b5faffe5b05522cb8e6dd",
+    "url": "/illia/static/media/touchedSkills.e213183a.webp"
   },
   {
-    "revision": "d6c7f3b3e3dcc127e379e299aa61a954",
-    "url": "/illia/static/media/workingSkills.d6c7f3b3.jpg"
+    "revision": "ab927ad6709e833c20f0cd498d40e2c5",
+    "url": "/illia/static/media/workingSkills.ab927ad6.webp"
   }
 ]);
