@@ -7,3 +7,4 @@ export * from './Foreground';
 export * from './PortfolioCard';
 export * from './Visibility';
 export * from './AnimateText';
+export * from './Delay';

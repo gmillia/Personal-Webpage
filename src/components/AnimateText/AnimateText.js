@@ -6,7 +6,7 @@ import { AnimateGroup, Animate } from 'react-simple-animate';
  * @param {Array} textArray array of letters 
  * @param {String} direction specifies where the letters will be falling from (which side)
  */
-const AnimateText = ({ textArray=[], direction='top' }) => {
+const AnimateText = ({ textArray=[], direction='top', delay=0 }) => {    
     return (
         <AnimateGroup play>
             {
@@ -15,9 +15,9 @@ const AnimateText = ({ textArray=[], direction='top' }) => {
                         <Animate
                             key={index}
                             sequenceIndex={index}
-                            end={{ opacity: 1, transform: 'translateY(0), translateX(10px)' }}
-                            start={{ opacity: 0, transform: 'translateY(0)' }}
-                            duration={0.1}
+                            start={{ opacity: 0, transform: 'translateY(-10px)' }}
+                            end={{ opacity: 1, transform: 'translateY(0)' }}
+                            duration={0.2}
                         >
                         {item}
                         </Animate>

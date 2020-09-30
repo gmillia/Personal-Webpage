@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { Fade } from '@material-ui/core';
+import ScaleText from "react-scale-text";
 
 //Button
 import { Underline as Button, Visibility } from 'components';
