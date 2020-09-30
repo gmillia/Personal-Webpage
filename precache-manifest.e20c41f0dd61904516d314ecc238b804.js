@@ -1,31 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "86d74792bafe0afd38d6897c872a9472",
+    "revision": "b6925f747068fdfedaeaed583e80ee83",
     "url": "/illia/index.html"
   },
   {
-    "revision": "f11904036d674c7e57d3",
-    "url": "/illia/static/js/2.3a01a74d.chunk.js"
+    "revision": "d352c9c2f4f7049ee5d1",
+    "url": "/illia/static/js/2.8efc43c8.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/illia/static/js/2.3a01a74d.chunk.js.LICENSE.txt"
+    "url": "/illia/static/js/2.8efc43c8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6e09f62be53d3ea67c10",
-    "url": "/illia/static/js/main.39d7230e.chunk.js"
+    "revision": "aedddcaf9261c3fb6300",
+    "url": "/illia/static/js/main.1bf1a27f.chunk.js"
   },
   {
     "revision": "65a13ac2ffc1e95ba30c",
     "url": "/illia/static/js/runtime-main.afbf09d6.js"
-  },
-  {
-    "revision": "ba792ffd22c283c0f41012e5456a0a83",
-    "url": "/illia/static/media/aboutOne.ba792ffd.jpg"
-  },
-  {
-    "revision": "18a47739c16b298fa5342078aa66d510",
-    "url": "/illia/static/media/aboutTwo.18a47739.jpg"
   },
   {
     "revision": "b253996966aba7b7e79c4be32223755f",
@@ -34,6 +26,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2eb36274246be084970f3d11ecce8ab4",
     "url": "/illia/static/media/analytics.2eb36274.jpeg"
+  },
+  {
+    "revision": "ba792ffd22c283c0f41012e5456a0a83",
+    "url": "/illia/static/media/backgroundOne.ba792ffd.jpg"
+  },
+  {
+    "revision": "18a47739c16b298fa5342078aa66d510",
+    "url": "/illia/static/media/backgroundTwo.18a47739.jpg"
   },
   {
     "revision": "748e7ce4d94be67a5c232444990da620",
@@ -72,16 +72,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/illia/static/media/relay.1355fdd0.jpg"
   },
   {
-    "revision": "4272e87120bcd57bd780b74e9cd22c5b",
-    "url": "/illia/static/media/right.4272e871.svg"
-  },
-  {
     "revision": "169413c82ea4ec62b04fa6afdb4869fc",
     "url": "/illia/static/media/rightArrow.169413c8.svg"
-  },
-  {
-    "revision": "cb229a99896875caeba5eca26d416298",
-    "url": "/illia/static/media/rightWhite.cb229a99.svg"
   },
   {
     "revision": "368518083f4664312791755f07a7222c",
