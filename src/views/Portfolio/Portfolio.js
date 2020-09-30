@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/styles";
 import Grid from '@material-ui/core/Grid';
 
 //COMPONENTS
-import { PortfolioCard } from '../../components';
+import { Card } from 'components';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -27,6 +27,15 @@ const Portfolio = () => {
         <Grid container spacing={0} item xs={12} alignContent='flex-start' justify="center" className={classes.root}>
             <Grid container spacing={0} item xs={11} md={8} alignContent='flex-start' justify="center">
                 <Grid item xs={12} className={classes.name}>My Projects</Grid>
+                <Grid item xs={10} sm={6} className={classes.card}>
+                    <Card />
+                </Grid>
+            </Grid>
+        </Grid>
+        /*
+        <Grid container spacing={0} item xs={12} alignContent='flex-start' justify="center" className={classes.root}>
+            <Grid container spacing={0} item xs={11} md={8} alignContent='flex-start' justify="center">
+                <Grid item xs={12} className={classes.name}>My Projects</Grid>
                 <Grid item xs={10} md={6} className={classes.card}>
                     <PortfolioCard name="OHSRank" link='https://ohsrank.web.app/' />
                 </Grid>
@@ -47,6 +56,7 @@ const Portfolio = () => {
                 </Grid>
             </Grid>
         </Grid>
+        */
     )
 };
 
