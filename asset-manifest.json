@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.js": "/illia/static/js/main.988c51dc.chunk.js",
-    "main.js.map": "/illia/static/js/main.988c51dc.chunk.js.map",
+    "main.js": "/illia/static/js/main.9abc2718.chunk.js",
+    "main.js.map": "/illia/static/js/main.9abc2718.chunk.js.map",
     "runtime-main.js": "/illia/static/js/runtime-main.afbf09d6.js",
     "runtime-main.js.map": "/illia/static/js/runtime-main.afbf09d6.js.map",
-    "static/js/2.ca1beb7e.chunk.js": "/illia/static/js/2.ca1beb7e.chunk.js",
-    "static/js/2.ca1beb7e.chunk.js.map": "/illia/static/js/2.ca1beb7e.chunk.js.map",
+    "static/js/2.9e6c99c0.chunk.js": "/illia/static/js/2.9e6c99c0.chunk.js",
+    "static/js/2.9e6c99c0.chunk.js.map": "/illia/static/js/2.9e6c99c0.chunk.js.map",
     "index.html": "/illia/index.html",
-    "precache-manifest.9b51777d437f7c765effad493b393443.js": "/illia/precache-manifest.9b51777d437f7c765effad493b393443.js",
+    "precache-manifest.2bc1ed8b5746719d542e41bfb4ecfe37.js": "/illia/precache-manifest.2bc1ed8b5746719d542e41bfb4ecfe37.js",
     "service-worker.js": "/illia/service-worker.js",
-    "static/js/2.ca1beb7e.chunk.js.LICENSE.txt": "/illia/static/js/2.ca1beb7e.chunk.js.LICENSE.txt",
+    "static/js/2.9e6c99c0.chunk.js.LICENSE.txt": "/illia/static/js/2.9e6c99c0.chunk.js.LICENSE.txt",
     "static/media/abstract.jpg": "/illia/static/media/abstract.b2539969.jpg",
     "static/media/analytics.webp": "/illia/static/media/analytics.0995f804.webp",
     "static/media/b4.webp": "/illia/static/media/b4.89396307.webp",
+    "static/media/background.webp": "/illia/static/media/background.424cb351.webp",
     "static/media/backgroundOne.webp": "/illia/static/media/backgroundOne.8544425c.webp",
     "static/media/backgroundTwo.webp": "/illia/static/media/backgroundTwo.e05ba3ba.webp",
     "static/media/betting.webp": "/illia/static/media/betting.ea7007d3.webp",
+    "static/media/c++.png": "/illia/static/media/c++.bee53a59.png",
     "static/media/car.webp": "/illia/static/media/car.69563bbd.webp",
     "static/media/communication.webp": "/illia/static/media/communication.12146351.webp",
+    "static/media/ddhs.png": "/illia/static/media/ddhs.883e3f5a.png",
     "static/media/external.svg": "/illia/static/media/external.702e5c5d.svg",
     "static/media/irc.webp": "/illia/static/media/irc.84a659f9.webp",
     "static/media/leadership.webp": "/illia/static/media/leadership.457a3b82.webp",
@@ -27,6 +30,7 @@
     "static/media/ohsrank.webp": "/illia/static/media/ohsrank.51c4b357.webp",
     "static/media/organization.webp": "/illia/static/media/organization.3c366c87.webp",
     "static/media/otherSkills.webp": "/illia/static/media/otherSkills.580ccf4f.webp",
+    "static/media/psu.png": "/illia/static/media/psu.ae165e85.png",
     "static/media/python.svg": "/illia/static/media/python.b26f61be.svg",
     "static/media/redux.svg": "/illia/static/media/redux.db086be8.svg",
     "static/media/rightArrow.svg": "/illia/static/media/rightArrow.169413c8.svg",
@@ -37,7 +41,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.afbf09d6.js",
-    "static/js/2.ca1beb7e.chunk.js",
-    "static/js/main.988c51dc.chunk.js"
+    "static/js/2.9e6c99c0.chunk.js",
+    "static/js/main.9abc2718.chunk.js"
   ]
 }

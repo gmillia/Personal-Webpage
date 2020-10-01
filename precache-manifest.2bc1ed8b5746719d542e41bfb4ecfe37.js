@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f2156bac4249c156e876df0e071a5c2b",
+    "revision": "2c6058c9938469ba9f0fe2adb7a18b0e",
     "url": "/illia/index.html"
   },
   {
-    "revision": "7bf25e06548217ee7f2c",
-    "url": "/illia/static/js/2.ca1beb7e.chunk.js"
+    "revision": "eb7f5ede47d6c03e844e",
+    "url": "/illia/static/js/2.9e6c99c0.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/illia/static/js/2.ca1beb7e.chunk.js.LICENSE.txt"
+    "url": "/illia/static/js/2.9e6c99c0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9513c2b8b212515f1a22",
-    "url": "/illia/static/js/main.988c51dc.chunk.js"
+    "revision": "ac3f7b2fa38ff9003839",
+    "url": "/illia/static/js/main.9abc2718.chunk.js"
   },
   {
     "revision": "65a13ac2ffc1e95ba30c",
@@ -32,6 +32,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/illia/static/media/b4.89396307.webp"
   },
   {
+    "revision": "424cb35170bb9405d0c3a5712f6314b4",
+    "url": "/illia/static/media/background.424cb351.webp"
+  },
+  {
     "revision": "8544425cfd780aea88e04413a33d7484",
     "url": "/illia/static/media/backgroundOne.8544425c.webp"
   },
@@ -44,12 +48,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/illia/static/media/betting.ea7007d3.webp"
   },
   {
+    "revision": "bee53a59a415e920e62d71520666134c",
+    "url": "/illia/static/media/c++.bee53a59.png"
+  },
+  {
     "revision": "69563bbd7487df17d6c5c7b1f26f257f",
     "url": "/illia/static/media/car.69563bbd.webp"
   },
   {
     "revision": "12146351aa948229a801d5af18875807",
     "url": "/illia/static/media/communication.12146351.webp"
+  },
+  {
+    "revision": "883e3f5a289fbb7ecfd289121b838f31",
+    "url": "/illia/static/media/ddhs.883e3f5a.png"
   },
   {
     "revision": "702e5c5d7cf98d6a0d47807bf3f60195",
@@ -86,6 +98,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "580ccf4fca2f64511d9006693bb1ec85",
     "url": "/illia/static/media/otherSkills.580ccf4f.webp"
+  },
+  {
+    "revision": "ae165e855e600811c87fff9a672ce7fc",
+    "url": "/illia/static/media/psu.ae165e85.png"
   },
   {
     "revision": "b26f61bebe0ee79ab90b0f2735d00316",
