@@ -83,7 +83,7 @@ const Card = ({ name='Project Name', linkTo='/', description='Project Descriptio
                         <Grid item xs={12} className={classes.link} >
                             <a href={linkTo} target='_blank' rel="noopener noreferrer">
                                 <Grid item className={classes.linkBox}>
-                                    <img src={ExternalIcon} alt=' ' width='40' height='40' />
+                                    <img src={ExternalIcon} alt=' ' width='30' height='30' />
                                 </Grid>
                             </a>
                         </Grid>

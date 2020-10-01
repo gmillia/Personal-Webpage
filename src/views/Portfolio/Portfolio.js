@@ -11,6 +11,8 @@ import OHSRankBackground from 'assets/portfolio/ohsrank.webp';
 import StopSpotBackground from 'assets/portfolio/stopspot.webp';
 import IRCBackground from 'assets/portfolio/irc.webp';
 import BettingBackground from 'assets/portfolio/betting.webp';
+import MLBackground from 'assets/portfolio/ml.webp';
+import CarBackground from 'assets/portfolio/car.webp';
 
 //Stack icons
 import ReactIcon from 'assets/portfolio/react.png';
@@ -98,37 +100,30 @@ const Portfolio = () => {
                             description='Program scrapes game lines and makes game predictions using Poisson Process.' 
                             image={BettingBackground} 
                             stack={[NodeIcon]}
+                            linkTo='https://github.com/gmillia/FIFA-Rate-Prediction'
+                        />
+                    </Grid>
+                    <Grid item xs={12} sm={6} className={classes.card}>
+                        <Card 
+                            name='EPL' 
+                            description='Program makes game predictions for English Premiere League using Machine Learning algorithm.' 
+                            image={MLBackground} 
+                            stack={[PythonIcon, MLIcon]}
                             linkTo='https://github.com/gmillia/Betting'
+                        />
+                    </Grid>
+                    <Grid item xs={12} sm={6} className={classes.card}>
+                        <Card 
+                            name='Car Classifier' 
+                            description='Machine Learning program which classifies cars based on its pictures.' 
+                            image={CarBackground} 
+                            stack={[PythonIcon, MLIcon]}
+                            linkTo='https://github.com/gmillia/Car-Classifier'
                         />
                     </Grid>
                 </Grid>
             </Grid>
         </Page>
-        /*
-        <Grid container spacing={0} item xs={12} alignContent='flex-start' justify="center" className={classes.root}>
-            <Grid container spacing={0} item xs={11} md={8} alignContent='flex-start' justify="center">
-                <Grid item xs={12} className={classes.name}>My Projects</Grid>
-                <Grid item xs={10} md={6} className={classes.card}>
-                    <PortfolioCard name="OHSRank" link='https://ohsrank.web.app/' />
-                </Grid>
-                <Grid item xs={10} md={6} className={classes.card}>
-                    <PortfolioCard name="Stop Spot" link='https://github.com/gmillia/StopSpotDataPipeline' />
-                </Grid>
-                <Grid item xs={10} md={8} className={classes.card}>
-                    <PortfolioCard name='IRC' link='https://github.com/gmillia/IRC' />
-                </Grid>
-                <Grid item xs={10} md={4} className={classes.card}>
-                    <PortfolioCard name='Betting' link='https://github.com/gmillia/Betting' />
-                </Grid>
-                <Grid item xs={10} md={5} className={classes.card}>
-                    <PortfolioCard name='EPL' link='https://github.com/gmillia/FIFA-Rate-Prediction' />
-                </Grid>
-                <Grid item xs={10} md={7} className={classes.card}>
-                    <PortfolioCard name='Car Classifier' link='https://github.com/gmillia/Car-Classifier' />
-                </Grid>
-            </Grid>
-        </Grid>
-        */
     )
 };
 
