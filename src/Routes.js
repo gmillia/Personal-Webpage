@@ -10,7 +10,8 @@ import {
     About,
     Contact,
     Home,
-    Portfolio
+    Portfolio,
+    Resume
 }
 from './views'
 
@@ -39,6 +40,12 @@ const Routes = () => {
                 layout={Desktop}
                 view={Portfolio}
                 path='/portfolio'
+                exact
+            />
+            <RouteWithLayout 
+                layout={Desktop}
+                view={Resume}
+                path='/resume'
                 exact
             />
         </Switch>

@@ -15,15 +15,15 @@ import MLBackground from 'assets/portfolio/ml.webp';
 import CarBackground from 'assets/portfolio/car.webp';
 
 //Stack icons
-import ReactIcon from 'assets/portfolio/react.png';
-import NodeIcon from 'assets/portfolio/node.png';
-import CSSIcon from 'assets/portfolio/css.png';
-import MongoIcon from 'assets/portfolio/mongodb.png';
-import ReduxIcon from 'assets/portfolio/redux.svg';
-import PythonIcon from 'assets/portfolio/python.svg';
-import DockerIcon from 'assets/portfolio/docker.png';
-import SQLIcon from 'assets/portfolio/sql.svg';
-import MLIcon from 'assets/portfolio/ml.svg';
+import ReactIcon from 'assets/skills/react.png';
+import NodeIcon from 'assets/skills/node.png';
+import CSSIcon from 'assets/skills/css.png';
+import MongoIcon from 'assets/skills/mongodb.png';
+import ReduxIcon from 'assets/skills/redux.svg';
+import PythonIcon from 'assets/skills/python.svg';
+import DockerIcon from 'assets/skills/docker.png';
+import SQLIcon from 'assets/skills/sql.svg';
+import MLIcon from 'assets/skills/ml.svg';
 
 const useStyles = makeStyles(theme => ({
     root: {
