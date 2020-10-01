@@ -66,8 +66,8 @@ const Portfolio = () => {
     return (
         <Page background={Background} useBackground={true} darken={true} useGradient={true} >
             <Grid container spacing={0} item xs={12} alignContent='flex-start' justify="center" className={classes.root}>
-                <Grid container spacing={0} item xs={11} md={8} alignContent='flex-start' justify="center">
-                    <Grid item xs={12} sm={6} className={classes.card}>
+                <Grid container spacing={0} item xs={12} md={8} alignContent='flex-start' justify="center">
+                    <Grid item xs={12} sm={6} xl={4} className={classes.card}>
                         <Card 
                             name='OHSRank' 
                             description='Website provides predictions and statistics for Oregon High School sport teams.' 
@@ -76,7 +76,7 @@ const Portfolio = () => {
                             linkTo='https://ohsrank.web.app/'
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6} className={classes.card}>
+                    <Grid item xs={12} sm={6} xl={4} className={classes.card}>
                         <Card 
                             name='Stop Spot' 
                             description='Analytical pipeline for local bus company.' 
@@ -85,7 +85,7 @@ const Portfolio = () => {
                             linkTo='https://github.com/gmillia/StopSpotDataPipeline'
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6} className={classes.card}>
+                    <Grid item xs={12} sm={6} xl={4} className={classes.card}>
                         <Card 
                             name='IRC' 
                             description='Internet relay chat supporting multiple clients.' 
@@ -94,7 +94,7 @@ const Portfolio = () => {
                             linkTo='https://github.com/gmillia/IRC'
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6} className={classes.card}>
+                    <Grid item xs={12} sm={6} xl={4} className={classes.card}>
                         <Card 
                             name='Betting' 
                             description='Program scrapes game lines and makes game predictions using Poisson Process.' 
@@ -103,7 +103,7 @@ const Portfolio = () => {
                             linkTo='https://github.com/gmillia/FIFA-Rate-Prediction'
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6} className={classes.card}>
+                    <Grid item xs={12} sm={6} xl={4} className={classes.card}>
                         <Card 
                             name='EPL' 
                             description='Program makes game predictions for English Premiere League using Machine Learning algorithm.' 
@@ -112,7 +112,7 @@ const Portfolio = () => {
                             linkTo='https://github.com/gmillia/Betting'
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6} className={classes.card}>
+                    <Grid item xs={12} sm={6} xl={4} className={classes.card}>
                         <Card 
                             name='Car Classifier' 
                             description='Machine Learning program which classifies cars based on its pictures.' 
