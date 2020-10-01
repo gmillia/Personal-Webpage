@@ -4,7 +4,6 @@ export * from './RouteWithLayout';
 export * from './Buttons';
 export * from './BackgroundImage';
 export * from './Foreground';
-export * from './PortfolioCard';
 export * from './Visibility';
 export * from './AnimateText';
 export * from './Delay';
