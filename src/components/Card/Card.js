@@ -14,7 +14,6 @@ const useStyles = makeStyles(theme => ({
         padding: 15,
         fontFamily: 'Cinzel, serif',
         maxWidth: 400,
-        boxShadow: '0 0.2rem 8.4rem 0 rgba(0, 0, 0, 0.5)'
     },
     wrapper: {
         display: 'flex',
