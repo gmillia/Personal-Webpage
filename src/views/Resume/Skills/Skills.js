@@ -14,6 +14,7 @@ import PythonIcon from 'assets/skills/python.svg';
 import DockerIcon from 'assets/skills/docker.png';
 import SQLIcon from 'assets/skills/sql.svg';
 import MLIcon from 'assets/skills/ml.svg';
+import CPlusPlusIcon from 'assets/skills/c++.png';
 
 const useStyles = makeStyles(theme => ({
     skillRoot: {
@@ -21,10 +22,17 @@ const useStyles = makeStyles(theme => ({
         height: 100,
         padding: 15
     },
+    wrapper: {
+        display: 'flex',
+        flexDirection: 'row'
+    },
     name: {
         color: 'white',
         fontSize: 25
     },
+    row: {
+        display: 'flex'
+    }
 }));
 
 const Skills = () => {
@@ -40,9 +48,12 @@ const Skills = () => {
 
     return (
         <Grid item xs={12} className={classes.root} >
-            <Grid item xs={12} className={classes.name} > Work </Grid>
             <Grid item xs={12} className={classes.wrapper}>
-            
+                <Grid className={classes.row}>
+                    {skill(ReactIcon)}
+                    {skill(PythonIcon)}
+                    {skill(CPlusPlusIcon)}
+                </Grid>
             </Grid>  
         </Grid>
     )

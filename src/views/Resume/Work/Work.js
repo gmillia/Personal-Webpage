@@ -15,10 +15,6 @@ const useStyles = makeStyles(theme => ({
         flexDirection: 'row',
         flexWrap: 'wrap',
     },
-    name: {
-        color: 'white',
-        fontSize: 25
-    },
     wrapper: {
         padding: 10
     }
@@ -29,7 +25,6 @@ const Work = ({ icon, workPlace='', workDetails='' }) => {
 
     return (
         <Grid item xs={12} className={classes.root} >
-            <Grid item xs={12} className={classes.name} > Work </Grid>
             <Grid item className={classes.wrapper} >
                 <WorkComponent icon={PSU} workPlace="Portland State University" workDetails='Soccer Coach' />
             </Grid>
