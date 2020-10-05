@@ -159,7 +159,7 @@ const Contact = () => {
     const send = () => {
         return (
             <Grid item xs={12} sm={7} style={{display: 'flex', alignSelf: 'flex-end'}} >
-                <Button variant='contained' typeof="submit" color='primary' style={{width: desktop ? 'auto' : '100%'}} >{ desktop ? 'Send' : 'Send Message' }</Button>
+                <Button variant='contained' type="submit" color='primary' style={{width: desktop ? 'auto' : '100%'}} >{ desktop ? 'Send' : 'Send Message' }</Button>
             </Grid>
         )
     }
@@ -179,7 +179,7 @@ const Contact = () => {
                     name={id} 
                     placeholder={placeholder} 
                     id={id} 
-                    inputProps={{ 'aria-label': {placeholder} }} 
+                    inputProps={{ 'aria-label': {placeholder}, 'maxLength': 500 }} 
                     required={true} 
                     type={id === 'email' ? id : "text"} 
                     fullWidth={true} 
