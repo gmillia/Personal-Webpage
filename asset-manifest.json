@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/illia/static/js/main.87a324ff.chunk.js",
-    "main.js.map": "/illia/static/js/main.87a324ff.chunk.js.map",
+    "main.js": "/illia/static/js/main.1c7e5fad.chunk.js",
+    "main.js.map": "/illia/static/js/main.1c7e5fad.chunk.js.map",
     "runtime-main.js": "/illia/static/js/runtime-main.afbf09d6.js",
     "runtime-main.js.map": "/illia/static/js/runtime-main.afbf09d6.js.map",
-    "static/js/2.bbcd94fa.chunk.js": "/illia/static/js/2.bbcd94fa.chunk.js",
-    "static/js/2.bbcd94fa.chunk.js.map": "/illia/static/js/2.bbcd94fa.chunk.js.map",
+    "static/js/2.f9d150ee.chunk.js": "/illia/static/js/2.f9d150ee.chunk.js",
+    "static/js/2.f9d150ee.chunk.js.map": "/illia/static/js/2.f9d150ee.chunk.js.map",
     "index.html": "/illia/index.html",
-    "precache-manifest.338e76a398668623a34db69484926e84.js": "/illia/precache-manifest.338e76a398668623a34db69484926e84.js",
+    "precache-manifest.ebb5eff67247d6baccb9c500181b3705.js": "/illia/precache-manifest.ebb5eff67247d6baccb9c500181b3705.js",
     "service-worker.js": "/illia/service-worker.js",
-    "static/js/2.bbcd94fa.chunk.js.LICENSE.txt": "/illia/static/js/2.bbcd94fa.chunk.js.LICENSE.txt",
+    "static/js/2.f9d150ee.chunk.js.LICENSE.txt": "/illia/static/js/2.f9d150ee.chunk.js.LICENSE.txt",
     "static/media/abstract.jpg": "/illia/static/media/abstract.b2539969.jpg",
     "static/media/analytics.webp": "/illia/static/media/analytics.0995f804.webp",
     "static/media/b4.webp": "/illia/static/media/b4.89396307.webp",
@@ -21,6 +21,7 @@
     "static/media/car.webp": "/illia/static/media/car.69563bbd.webp",
     "static/media/communication.webp": "/illia/static/media/communication.12146351.webp",
     "static/media/ddhs.png": "/illia/static/media/ddhs.883e3f5a.png",
+    "static/media/email.svg": "/illia/static/media/email.2d88a499.svg",
     "static/media/external.svg": "/illia/static/media/external.702e5c5d.svg",
     "static/media/irc.webp": "/illia/static/media/irc.84a659f9.webp",
     "static/media/leadership.webp": "/illia/static/media/leadership.457a3b82.webp",
@@ -30,6 +31,7 @@
     "static/media/ohsrank.webp": "/illia/static/media/ohsrank.51c4b357.webp",
     "static/media/organization.webp": "/illia/static/media/organization.3c366c87.webp",
     "static/media/otherSkills.webp": "/illia/static/media/otherSkills.580ccf4f.webp",
+    "static/media/phone.svg": "/illia/static/media/phone.a508f84e.svg",
     "static/media/psu.png": "/illia/static/media/psu.ae165e85.png",
     "static/media/python.svg": "/illia/static/media/python.b26f61be.svg",
     "static/media/redux.svg": "/illia/static/media/redux.db086be8.svg",
@@ -41,7 +43,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.afbf09d6.js",
-    "static/js/2.bbcd94fa.chunk.js",
-    "static/js/main.87a324ff.chunk.js"
+    "static/js/2.f9d150ee.chunk.js",
+    "static/js/main.1c7e5fad.chunk.js"
   ]
 }
