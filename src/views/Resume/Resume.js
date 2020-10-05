@@ -8,41 +8,90 @@ import { Skills } from './Skills'
 import Background from 'assets/resume/background.webp'
 
 const useStyles = makeStyles(theme => ({
+    /*
     root: {
         color: "white",
-        padding: '50px 15px 15px 15px'
+        width: '100%'
     },
-    rowRoot: {
+    wrapper: {
+        flex: 1,
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+        background: "yellow",
+        '&:nth-child(2)': {
+            background: 'red'
+        },
+        padding: '15px 15px 15px 15px',
+        [theme.breakpoints.up('sm')]: { 
+            padding: '50px 200px 50px 200px',
+        }
+    },
+    name: {
+        flex: 1,
+        fontSize: 30,
+        color: 'black',
+        paddingBottom: 15,
+        [theme.breakpoints.up('sm')]: { 
+            paddingBottom: 25
+        }
+    }
+    */
+    root: {
+        flexGrow: 1
+    },
+    wrapper: {
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
-        padding: '15px 0px 15px 0px'
+        background: "yellow",
+        '&:nth-child(2)': {
+            background: 'red'
+        },
+        padding: '15px 15px 15px 15px',
+        [theme.breakpoints.up('sm')]: { 
+            padding: '50px 200px 50px 200px',
+        }
     },
     name: {
-        color: 'white',
-        fontSize: 25
-    },
+
+        fontSize: 30,
+        color: 'black',
+        paddingBottom: 15,
+        [theme.breakpoints.up('sm')]: { 
+            paddingBottom: 25
+        }
+    }
 }));
 
 const Resume = ({ name='Project Name', linkTo='/', description='Project Description', image, stack=[] }) => {
     const classes = useStyles();
 
-    const row = (name, component) => {
-        return (
-            <Grid item xs={12} className={classes.rowRoot}>
-                <Grid item xs={12} sm={3}>{name}</Grid>
-                <Grid item xs={12} sm={9}>{component}</Grid>
-            </Grid>
-        )
-    }
-
     return (
-        <Page  >
-            <Grid item xs={12} className={classes.root} >
-                {row('Work', <Work />)}
-                {row('Skills', <Skills />)}
+        <div className={classes.root}>
+            <Grid container spacing={0}>
+                <Grid container spacing={0} className={classes.wrapper}>
+                    <Grid item className={classes.name}>Work</Grid>
+                    <Work />
+                </Grid>
+            </Grid>
+        </div>
+        /*
+        <Page>
+            <Grid container spacing={0} className={classes.root} >
+                <Grid item className={classes.wrapper}>
+                    <Grid item xs={12} className={classes.name}> Work </Grid>
+                    <Grid item >
+                        <Work />
+                    </Grid>
+                </Grid>
+                <Grid container spacing={0} className={classes.wrapper}>
+                    <Grid item className={classes.name}> Skills </Grid>
+                    <Skills />
+                </Grid>
             </Grid>
         </Page>
+        */
     )
 };  
 

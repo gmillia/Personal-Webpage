@@ -44,10 +44,11 @@ const Routes = () => {
             />
             <RouteWithLayout 
                 layout={Desktop}
-                view={Resume}
-                path='/resume'
+                view={Contact}
+                path='/contact'
                 exact
             />
+            <Redirect to="/" />
         </Switch>
     )
 };

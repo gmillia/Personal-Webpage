@@ -15,20 +15,17 @@ const useStyles = makeStyles(theme => ({
         flexDirection: 'row',
         flexWrap: 'wrap',
     },
-    wrapper: {
-        padding: 10
-    }
 }));
 
 const Work = ({ icon, workPlace='', workDetails='' }) => {
     const classes = useStyles();
 
     return (
-        <Grid item xs={12} className={classes.root} >
-            <Grid item className={classes.wrapper} >
+        <Grid container spacing={0} className={classes.root} >
+            <Grid item xs={12} sm={6}>
                 <WorkComponent icon={PSU} workPlace="Portland State University" workDetails='Soccer Coach' />
             </Grid>
-            <Grid item className={classes.wrapper} >
+            <Grid item xs={12} sm={6}>
                 <WorkComponent icon={DDHS} workPlace="David Douglas High School" workDetails='Soccer Coach' />
             </Grid>
         </Grid>

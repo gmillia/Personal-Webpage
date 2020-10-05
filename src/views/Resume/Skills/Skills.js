@@ -17,21 +17,33 @@ import MLIcon from 'assets/skills/ml.svg';
 import CPlusPlusIcon from 'assets/skills/c++.png';
 
 const useStyles = makeStyles(theme => ({
+    root: {
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+    },
     skillRoot: {
-        width: 100,
-        height: 100,
-        padding: 15
+        width: 75,
+        height:75,
+        padding: 15,
+        background: 'rgb(230,230,230)',
+        margin: 15,
+        '&:nth-child(1n)': {
+            marginLeft: 0,
+        },
+        [theme.breakpoints.up('sm')]: {
+            margin: '0px 15px 15px 0px',
+        }
     },
     wrapper: {
         display: 'flex',
         flexDirection: 'row'
     },
-    name: {
-        color: 'white',
-        fontSize: 25
-    },
     row: {
-        display: 'flex'
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        flex: 0
     }
 }));
 
@@ -48,13 +60,12 @@ const Skills = () => {
 
     return (
         <Grid item xs={12} className={classes.root} >
-            <Grid item xs={12} className={classes.wrapper}>
-                <Grid className={classes.row}>
-                    {skill(ReactIcon)}
-                    {skill(PythonIcon)}
-                    {skill(CPlusPlusIcon)}
-                </Grid>
-            </Grid>  
+            {skill(ReactIcon)}
+            {skill(PythonIcon)}
+            {skill(CPlusPlusIcon)}
+            {skill(ReactIcon)}
+            {skill(PythonIcon)}
+            {skill(CPlusPlusIcon)}
         </Grid>
     )
 };  

@@ -5,11 +5,22 @@ import Grid from '@material-ui/core/Grid';
 const useStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
-        flexDirection: 'row',
         color: 'white',
         padding: 15,
-        background: "rgba(255,255,255,0.5)",
-        maxWidth: 450
+        margin: '0px 0px 15px 0px',
+        background: "#11296b",
+        minWidth: 345,
+        border: '1px solid #ffd100',
+        borderRadius: '2%',
+        [theme.breakpoints.up('sm')]: {
+            margin: '0px 15px 15px 0px',
+            '&:nth-child(2)': {
+                marginLeft: 0
+            },
+            '&:nth-child(3)': {
+                marginRight: 0
+            }
+        }
     },
     iconWrapper: {
         display: 'flex',
@@ -36,13 +47,13 @@ const Work = ({ icon, workPlace='', workDetails='' }) => {
 
     return (
         <Grid item xs={12} className={classes.root} >
-            <div className={classes.iconWrapper}>
+            <Grid item className={classes.iconWrapper}>
                 <img src={icon} alt=' ' width="40" height='40' />
-            </div>
-            <div className={classes.contentWrapper}>
+            </Grid>
+            <Grid item className={classes.contentWrapper}>
                 <div className={classes.workPlace} > {workPlace} </div>
                 <div className={classes.workDetails} > {workDetails} </div>
-            </div>
+            </Grid>
         </Grid>
     )
 };  
