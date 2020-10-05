@@ -164,7 +164,7 @@ const Contact = () => {
         )
     }
 
-    const input = (id, placeholder) => {
+    const input = (id, name, placeholder) => {
         return (
             <Grid item xs={12}>
                 <InputLabel 
@@ -172,7 +172,7 @@ const Contact = () => {
                     style={{fontWeight: 700}} 
                     classes={{root: classes.inputLabel }} 
                 >
-                    {placeholder}
+                    {name}
                 </InputLabel>
 
                 <Input 
@@ -200,13 +200,13 @@ const Contact = () => {
                         </Grid>
                         <Grid item xs={12} sm={7} className={classes.row}>
                             <Grid item xs={12} sm={4} className={clsx(classes.nameInput, classes.inputRow)} >
-                                {input('name', 'Name')}
+                                {input('name', 'Name', 'Your name')}
                             </Grid>
                             <Grid item xs={12} sm={8} className={classes.inputRow}>
-                                {input('email', 'Email')}
+                                {input('email', 'Email', 'Email address')}
                             </Grid>
                             <Grid item xs={12}  className={classes.inputRow} >
-                                {input('message', 'Message')}
+                                {input('message', 'Message', 'Start typing here')}
                             </Grid>
                         </Grid>
                     </Grid>
