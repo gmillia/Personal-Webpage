@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from "@material-ui/styles";
 
 //COMPONENTS
-import { Navbar } from '../components';
+import { Menu } from '../components';
 
 //IMAGE
 
@@ -21,7 +21,7 @@ const Desktop = ({ children }) => {
 
     return (
         <div className={classes.root}>
-            <Navbar />
+            <Menu />
             {children}
         </div>
     )

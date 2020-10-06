@@ -9,3 +9,4 @@ export * from './AnimateText';
 export * from './Delay';
 export * from './Card';
 export * from './Work';
+export * from './Menu';
