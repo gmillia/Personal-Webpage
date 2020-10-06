@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e372625b57b2220699fb5e44e99d2fc7",
+    "revision": "19bf497cda568db42da70e033732770f",
     "url": "/illia/index.html"
   },
   {
-    "revision": "86804c16c6f268a86302",
-    "url": "/illia/static/js/2.f9d150ee.chunk.js"
+    "revision": "47bfd3cb9ba4806cc3ec",
+    "url": "/illia/static/js/2.cb95d7ef.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/illia/static/js/2.f9d150ee.chunk.js.LICENSE.txt"
+    "url": "/illia/static/js/2.cb95d7ef.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "dd477f2c122a15d56e1e",
-    "url": "/illia/static/js/main.aefe06c9.chunk.js"
+    "revision": "e45018190657fecc3de1",
+    "url": "/illia/static/js/main.13ed0acb.chunk.js"
   },
   {
     "revision": "65a13ac2ffc1e95ba30c",
     "url": "/illia/static/js/runtime-main.afbf09d6.js"
+  },
+  {
+    "revision": "bd7673133276d35bdfb60a70e576dcaa",
+    "url": "/illia/static/media/about.bd767313.svg"
   },
   {
     "revision": "b253996966aba7b7e79c4be32223755f",
@@ -72,12 +76,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/illia/static/media/external.702e5c5d.svg"
   },
   {
+    "revision": "e36b04120a605af6f7ea74a3cc43b30c",
+    "url": "/illia/static/media/home.e36b0412.svg"
+  },
+  {
     "revision": "84a659f9a66fe6ee181e7f548662f58c",
     "url": "/illia/static/media/irc.84a659f9.webp"
   },
   {
     "revision": "457a3b8221527e2200f29e8e2e2b8fc7",
     "url": "/illia/static/media/leadership.457a3b82.webp"
+  },
+  {
+    "revision": "b2f432837dcd59d9450e27e8123f81f2",
+    "url": "/illia/static/media/menu.b2f43283.svg"
   },
   {
     "revision": "0ae7ae883de85fd962f945693a8f6a9a",
@@ -106,6 +118,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a508f84eb446876225749ac975550e8f",
     "url": "/illia/static/media/phone.a508f84e.svg"
+  },
+  {
+    "revision": "a1f2aefe2ff28711d426b9d7c5f59868",
+    "url": "/illia/static/media/portfolio.a1f2aefe.svg"
   },
   {
     "revision": "ae165e855e600811c87fff9a672ce7fc",
