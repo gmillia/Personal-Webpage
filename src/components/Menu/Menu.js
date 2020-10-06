@@ -6,12 +6,31 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Desktop from './Desktop';
 import Mobile from './Mobile';
 
+const options = [
+    {
+        path: '/',
+        name: 'HOME'
+    },
+    {
+        path: '/about',
+        name: 'ABOUT'
+    },
+    {
+        path: '/portfolio',
+        name: 'PORTFOLIO'
+    },
+    {
+        path: '/contact',
+        name: 'CONTACT'
+    },
+]
+
 const Menu = () => {
     const theme = useTheme();
     const desktop = useMediaQuery(theme.breakpoints.up('sm'));
 
     return (
-        desktop ? <Desktop /> : <Mobile />
+        desktop ? <Desktop options={options} /> : <Mobile options={options} />
     )
 };
 

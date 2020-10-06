@@ -4,13 +4,14 @@ import React from 'react';
 import { Navbar } from '../../Navbar';
 import { NavbarButton } from '../../Buttons';
 
-const Desktop = () => {
+const Desktop = ({ options=[] }) => {
     return (
         <Navbar>
-            <NavbarButton linkTo='/' name='HOME'  />
-            <NavbarButton linkTo='/about' name='ABOUT'  />
-            <NavbarButton linkTo='/portfolio' name='PORTFOLIO'  />
-            <NavbarButton linkTo='/contact' name='CONTACT'  />
+        {
+            options.map((option, index) => {
+                return <NavbarButton key={index} linkTo={option.path} name={option.name} />
+            })
+        }
         </Navbar>
     )
 };

@@ -3,13 +3,14 @@ import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles(theme => ({
     root: {
-        width: '100%',
+        paddingLeft: 15,
+        paddingRight: 15,
         height: 50,
         minHeight: 50,
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-evenly',
+        justifyContent: props => props.desktop ? 'space-evenly' : 'space-between',
         background: 'black',
         position: 'sticky',
         top: 0,
@@ -18,8 +19,8 @@ const useStyles = makeStyles(theme => ({
     },
 }))
 
-const Navbar = ({children}) => {
-    const classes = useStyles();
+const Navbar = ({children, isDesktop=true }) => {
+    const classes = useStyles({desktop: isDesktop});
 
     return (
         <div className={classes.root}>
