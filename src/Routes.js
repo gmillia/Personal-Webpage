@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Redirect } from "react-router-dom";
+import { Switch, Redirect, useLocation } from "react-router-dom";
 import { RouteWithLayout } from './components';
 
 //Layouts
@@ -16,6 +16,8 @@ import {
 from './views'
 
 const Routes = () => {
+
+
     return (
         <Switch>
             <RouteWithLayout 

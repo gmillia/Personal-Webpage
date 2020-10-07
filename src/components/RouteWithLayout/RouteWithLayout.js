@@ -4,8 +4,8 @@ import { Route } from 'react-router-dom';
 const RouteWithLayout = ({ layout: Layout, view: View }) => {
     return (
         <Route
-            render={() =>
-                <Layout>
+            render={({match}) =>
+                <Layout match={match}>
                     <View />
                 </Layout>
             }

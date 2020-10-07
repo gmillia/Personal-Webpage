@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from "@material-ui/styles";
 
 //COMPONENTS
-import { Menu } from '../components';
+import { Menu } from 'components';
 
 //IMAGE
 
@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-const Desktop = ({ children }) => {
+const Desktop = ({ children, match }) => {
     const classes = useStyles();
 
     return (
