@@ -9,21 +9,25 @@ const useStyles = makeStyles(theme => ({
     },
     button: {
         border: 'none',
-        color: 'lightgrey',
         paddingLeft: 10,
         paddingRight: 10,
         paddingTop: 5,
         paddingBottom: 5,
-        fontSize: 14,
         fontFamily: 'Raleway, sans-serif',
         background: 'none',
         cursor: 'pointer',
         outline: 'none',
-        fontWeight: 400
+    },
+    text: {
+        color: 'lightgrey',
+        fontSize: 14,
+        fontWeight: 400,
+        paddingBottom: 2,
     },
     selected: {
         color: 'white',
-        fontWeight: 600
+        fontWeight: 600,
+        borderBottom: '1px solid white'
     }
 }))
 
@@ -38,7 +42,11 @@ const NavbarButton = ({ linkTo, name, isSelected }) => {
 
     return (
         <Link to={linkTo} className={classes.link}>
-            <button className={clsx(classes.button, isSelected ? classes.selected : '')}>{name}</button>
+            <button className={classes.button}>
+                <span className={clsx(classes.text, isSelected ? classes.selected : '' )}>
+                    {name}
+                </span>
+            </button>
         </Link>
     )
 };

@@ -3,6 +3,7 @@ import Drawer from '@material-ui/core/Drawer';
 import { makeStyles } from "@material-ui/styles";
 import { Link } from 'react-router-dom';
 import Divider from '@material-ui/core/Divider';
+import clsx from 'clsx';
 
 //Components
 import { Navbar } from 'components';
@@ -17,12 +18,14 @@ import ContactIcon from 'assets/email.svg';
 const useStyles = makeStyles(theme => ({
     logo: {
         fontSize: 30,
-        color: 'white'
+        color: 'white',
+        textDecoration: 'none',
+        cursor: 'pointer'
     },
     options: {
         width: 250,
         height: '100%',
-        background: 'black',
+        background: 'rgba(0,0,0,0.8)',
         display: 'flex',
         flexDirection: 'column'
     },
@@ -31,10 +34,10 @@ const useStyles = makeStyles(theme => ({
         flexDirection: 'row',
         padding: 15,
         color: 'white',
-        fontSize: 16,
+        fontSize: 14,
         textDecoration: 'none',
         '&:nth-child(1)': {
-            paddingTop: 30
+            marginTop: 30
         }
     },
     buttonIconWrapper: {
@@ -48,10 +51,13 @@ const useStyles = makeStyles(theme => ({
     },
     dividerRoot: {
         background: 'rgba(255,255,255,0.5)'
+    },
+    selected: {
+        background: 'rgba(255,255,255,0.1)'
     }
 }))
 
-const Desktop = ({ options=[] }) => {
+const Mobile = ({ options=[], selected='' }) => {
     const classes = useStyles();
     const [opened, setOpened] = useState(false);
 
@@ -59,7 +65,7 @@ const Desktop = ({ options=[] }) => {
         setOpened(!opened)
     }
 
-    const button = (index, path, name) => {
+    const button = (index, path, name, selected) => {
         let icon = MenuIcon;
         if(name.toUpperCase() === 'HOME') icon = HomeIcon;
         if(name.toUpperCase() === 'ABOUT') icon = AboutIcon;
@@ -67,9 +73,9 @@ const Desktop = ({ options=[] }) => {
         if(name.toUpperCase() === 'CONTACT') icon = ContactIcon;
 
         return (
-            <Link key={index} to={path} className={classes.button} >
+            <Link key={index} to={path} className={clsx(classes.button, selected === path ? classes.selected : '')} >
                 <div className={classes.buttonIconWrapper}>
-                    <img src={icon} alt=' ' width='20' height='20' />
+                    <img src={icon} alt=' ' width='15' height='15' />
                 </div>
                 <div className={classes.buttonTextWrapper}>{name}</div>
             </Link>
@@ -78,7 +84,9 @@ const Desktop = ({ options=[] }) => {
 
     return (
         <Navbar isDesktop={false} >
-            <div className={classes.logo}>IS</div>
+            <Link to='/' className={classes.logo}>
+                IS
+            </Link>
             <img src={MenuIcon} alt=' ' width='25' height='25' onClick={() => { toggleDrawer() }} />
             <Drawer
                 anchor={'right'}
@@ -88,7 +96,7 @@ const Desktop = ({ options=[] }) => {
                 <div className={classes.options} onClick={() => { toggleDrawer() }} >
                 {
                     options.map((option, index) => {
-                        return button(index, option.path, option.name)
+                        return button(index, option.path, option.name, selected)
                     })
                 }
                 <Divider classes={{root: classes.dividerRoot}} />
@@ -98,4 +106,4 @@ const Desktop = ({ options=[] }) => {
     )
 };
 
-export default Desktop;
+export default Mobile;
