@@ -50,6 +50,12 @@ const Routes = () => {
                 path='/contact'
                 exact
             />
+            <RouteWithLayout 
+                layout={Desktop}
+                view={Resume}
+                path='/resume'
+                exact
+            />
             <Redirect to="/" />
         </Switch>
     )
