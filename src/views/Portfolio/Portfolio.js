@@ -121,6 +121,15 @@ const Portfolio = () => {
                             linkTo='https://github.com/gmillia/Car-Classifier'
                         />
                     </Grid>
+                    <Grid item xs={12} sm={6} xl={4} className={classes.card}>
+                        <Card 
+                            name='React Task App' 
+                            description='Simple Task app that allows user to add/remove/modify tasks. ' 
+                            image={CarBackground} 
+                            stack={[ReactIcon, CSSIcon]}
+                            linkTo='https://github.com/gmillia/Creative-Softwares'
+                        />
+                    </Grid>
                 </Grid>
             </Grid>
         </Page>
