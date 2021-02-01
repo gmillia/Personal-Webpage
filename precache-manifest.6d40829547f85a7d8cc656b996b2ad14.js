@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c1899bb6983f8d289aeccbf3354c0923",
+    "revision": "5a49eafe043668f0a9fdd50503820622",
     "url": "/illia/index.html"
   },
   {
-    "revision": "5c200335acac046309a3",
-    "url": "/illia/static/js/2.93ed0c05.chunk.js"
+    "revision": "ffb5558a78ab3b142d62",
+    "url": "/illia/static/js/2.77c6c889.chunk.js"
   },
   {
-    "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/illia/static/js/2.93ed0c05.chunk.js.LICENSE.txt"
+    "revision": "5a1f67c30be520163768425364e600bd",
+    "url": "/illia/static/js/2.77c6c889.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2210fb494ecf26c36b2d",
-    "url": "/illia/static/js/main.f8df28c3.chunk.js"
+    "revision": "890e1e4d01e391886635",
+    "url": "/illia/static/js/main.47eb4f38.chunk.js"
   },
   {
     "revision": "65a13ac2ffc1e95ba30c",
     "url": "/illia/static/js/runtime-main.afbf09d6.js"
+  },
+  {
+    "revision": "93f04c6685e4f0f97c1b6f90811b7bdb",
+    "url": "/illia/static/media/Resume.93f04c66.pdf"
   },
   {
     "revision": "bd7673133276d35bdfb60a70e576dcaa",
@@ -36,10 +40,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/illia/static/media/b4.89396307.webp"
   },
   {
-    "revision": "424cb35170bb9405d0c3a5712f6314b4",
-    "url": "/illia/static/media/background.424cb351.webp"
-  },
-  {
     "revision": "8544425cfd780aea88e04413a33d7484",
     "url": "/illia/static/media/backgroundOne.8544425c.webp"
   },
@@ -52,20 +52,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/illia/static/media/betting.ea7007d3.webp"
   },
   {
-    "revision": "bee53a59a415e920e62d71520666134c",
-    "url": "/illia/static/media/c++.bee53a59.png"
-  },
-  {
     "revision": "69563bbd7487df17d6c5c7b1f26f257f",
     "url": "/illia/static/media/car.69563bbd.webp"
   },
   {
     "revision": "12146351aa948229a801d5af18875807",
     "url": "/illia/static/media/communication.12146351.webp"
-  },
-  {
-    "revision": "883e3f5a289fbb7ecfd289121b838f31",
-    "url": "/illia/static/media/ddhs.883e3f5a.png"
   },
   {
     "revision": "2d88a499aa47c2b1fa935318b339e134",
@@ -122,10 +114,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a1f2aefe2ff28711d426b9d7c5f59868",
     "url": "/illia/static/media/portfolio.a1f2aefe.svg"
-  },
-  {
-    "revision": "ae165e855e600811c87fff9a672ce7fc",
-    "url": "/illia/static/media/psu.ae165e85.png"
   },
   {
     "revision": "b26f61bebe0ee79ab90b0f2735d00316",
