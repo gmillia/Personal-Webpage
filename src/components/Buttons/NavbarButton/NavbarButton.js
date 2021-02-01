@@ -5,7 +5,8 @@ import clsx from 'clsx';
 
 const useStyles = makeStyles(theme => ({
     link: {
-        textDecoration: 'none'
+        textDecoration: 'none',
+
     },
     button: {
         border: 'none',
@@ -31,22 +32,38 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
+const Button = ({
+    classes,
+    isSelected=false,
+    name
+}) => {
+    return (
+        <button className={classes.button}>
+            <span className={clsx(classes.text, isSelected ? classes.selected : '')}>
+                {name}
+            </span>
+        </button>
+    )
+}
+
 /**
  * Component which creates button to be used in the navbar
  * @param {String} linkTo link to whcih user will be taken upon clickin on the button
  * @param {String} name name displayed in the button
  * @param {Boolean} isSelected specifies whether thus button is currently selected
  */
-const NavbarButton = ({ linkTo, name, isSelected }) => {
+const NavbarButton = ({ linkTo, name, isSelected=false }) => {
     const classes = useStyles();
 
     return (
+        name.toUpperCase() === 'RESUME'
+        ? 
+        <a className={classes.link} href={linkTo} target='_blank'>
+            <Button classes={classes} name={name} />
+        </a>
+        : 
         <Link to={linkTo} className={classes.link}>
-            <button className={classes.button}>
-                <span className={clsx(classes.text, isSelected ? classes.selected : '' )}>
-                    {name}
-                </span>
-            </button>
+            <Button classes={classes} isSelected={isSelected} name={name} />
         </Link>
     )
 };

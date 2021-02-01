@@ -1,6 +1,9 @@
 import React from 'react';
-import { Switch, Redirect, useLocation } from "react-router-dom";
+import { Switch, Redirect, useLocation, Route } from "react-router-dom";
 import { RouteWithLayout } from './components';
+
+//RESUME
+import { ResumePDF } from 'assets/resume/Resume.pdf'
 
 //Layouts
 import Desktop from './layout/Desktop';
@@ -48,12 +51,6 @@ const Routes = () => {
                 layout={Desktop}
                 view={Contact}
                 path='/contact'
-                exact
-            />
-            <RouteWithLayout 
-                layout={Desktop}
-                view={Resume}
-                path='/resume'
                 exact
             />
             <Redirect to="/" />
